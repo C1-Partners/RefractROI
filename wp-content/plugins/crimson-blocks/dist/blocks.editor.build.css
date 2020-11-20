@@ -1,0 +1,47 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.block-hp-hero-wrapper {
+  position: relative; }
+  .block-hp-hero-wrapper .block-hp-hero-content {
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    text-align: center;
+    width: 100%; }
+    .block-hp-hero-wrapper .block-hp-hero-content .hero-content-buttons {
+      margin: 0 auto; }
+  .block-hp-hero-wrapper .components-button {
+    position: absolute;
+    z-index: 999; }

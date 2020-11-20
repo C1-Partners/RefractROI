@@ -1,0 +1,23 @@
+/* Vendor - unedited vendor base styles */
+@import 'vendor/bootstrap';
+@import 'vendor/slick';
+
+/* so we can override bootstrap */
+@import 'base/mixins';
+@import 'base/colors';
+@import 'base/global';
+
+
+/* Components - specific elements that make up a page */ 
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/site-footer';
+@import 'components/site-header';
+@import 'components/tables';
+
+
+/* Views - styles specific to templates */
+@import 'views/404';
+@import 'views/archive';
+@import 'views/home';
+@import 'views/single';

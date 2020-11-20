@@ -1,0 +1,11 @@
+{
+    "name": "crimson",
+    "version": "1.0.0",
+    "main": "webpack.mix.js",
+    "scripts": {
+        "dev": "npm run dev --prefix wp-content/themes/crimson-base/assets/",
+        "watch": "npm run watch --prefix wp-content/themes/crimson-base/assets/",
+        "hot": "npm run host --prefix wp-content/themes/crimson-base/assets/",
+        "production": "npm run production --prefix wp-content/themes/crimson-base/assets/"
+    }
+}

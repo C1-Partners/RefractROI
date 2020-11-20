@@ -1,0 +1,62 @@
+body {
+	font-size: 1.6rem;
+	// background: $color-white;
+	// color: $color-text;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+html {
+	font-size: 10px; // Set base font size for rem use
+}
+html,body {
+	//-webkit-overflow-scrolling : touch !important;
+	//overflow: auto !important;
+	//height: 100% !important;
+}
+
+h1, h2, h3, h4, h5, h6{}
+
+a{}
+
+ul, ol{}
+
+dl{
+	dt{}
+	dd{}
+}
+
+small{}
+strong{}
+em{}
+
+figure{}
+figcaption{}
+
+picture{
+
+	img {
+		width: 100%;
+	}
+}
+
+// WordPress Default Image Positioning Classes
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+.has-hiding {
+	@include transition();
+}
+
+.hiding {
+	opacity: 0;
+}
+
+.site-main {
+	max-width: 1680px;
+	margin: 0 auto;
+}

@@ -1,0 +1,21 @@
+.block-hp-hero-wrapper {
+    position: relative;
+
+    .block-hp-hero-content {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+
+        .hero-content-buttons {
+            margin: 0 auto;
+        }
+    }
+    //media library button
+    .components-button {
+        position: absolute;
+        z-index: 999;
+    }
+}
