@@ -88,7 +88,7 @@
 
             li {
                 margin: 0 22px;
-
+                //Styling for submenu hovering on desktop
                 @include media-breakpoint-up(md) {
                     .sub-menu {
                         display:none;
