@@ -46,17 +46,17 @@ add_action('enqueue_block_editor_assets', 'crimson_editor_assets');
 
 function crimson_custom_login()
 {
-    $highlight = '#a3d5d9';
-    $highlightHover = '#7bd1db';
-    $textColor = '#282f33';
+    $highlight = '#b20f1a';
+    $highlightHover = '#e61220';
+    $textColor = '#fff';
     $backgroundColor = '#fff';
-    $formBackground = '#efefef';
+    $formBackground = '#444444';
     $logoWidth = "300px";
-    $logoHeight = "150px";
+    $logoHeight = "110px";
 
     echo '<style type="text/css">
         h1 a {
-            background-image: url("'.get_stylesheet_directory_uri().'/assets/images/login-logo.svg") !important;
+            background-image: url("'.get_stylesheet_directory_uri().'/assets/images/branding/login-logo.png") !important;
             background-size: 100% !important;
             width: '.$logoWidth.' !important;
             height: '.$logoHeight.' !important;
@@ -64,6 +64,9 @@ function crimson_custom_login()
         /* Background Color */
         body.login {
             background: '.$backgroundColor.' !important;
+        }
+        .message {
+          color: #000!important;
         }
         /* Button Color */
         .wp-core-ui .button-primary {
