@@ -3,7 +3,7 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
 const { InnerBlocks, InspectorControls, MediaUpload } = wp.editor;
 const { PanelBody, TextControl, ColorPicker } = wp.components;
 
-import { renderImageUpload } from '../components/functions';
+import { renderImageUpload } from '../components/imageupload';
 
 /**
  * Registers a new block provided a unique name and an object defining its
@@ -23,10 +23,10 @@ registerBlockType( 'cgb/wrapper-block', {
 	icon: 'editor-code', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'formatting', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	attributes: {
-    blockId: {
-      type: 'string',
-      default: null,
-    },
+		blockId: {
+			type: 'string',
+			default: null,
+		},
 		backgroundImage: {
 			type: 'string',
 			default: null,

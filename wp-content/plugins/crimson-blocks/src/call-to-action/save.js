@@ -1,7 +1,11 @@
-const { Component } = wp.element
+const { Component } = wp.element;
 const { InnerBlocks } = wp.blockEditor;
 
+import { className } from './settings';
+
 class Save extends Component {
+
+    
 
     render() {
 
@@ -9,19 +13,19 @@ class Save extends Component {
 
         return (
 
-            <section className="block-hp-hero">
+            <section className={ className } style={{ backgroundColor: attributes.backgroundColor }}>
                 <picture>
                     <source media="(min-width: 768px)" srcSet={attributes.coverImage.url} />
                     <img src={attributes.coverImage.url} />
                 </picture>
-                <div className="hp-hero-content">
-                    <h1>{attributes.titleText}</h1>
+                <div className="cta-content">
+                    <h2>{attributes.titleText}</h2>
                     <p>{attributes.descriptionText}</p>
                     <div className="cta-buttons">
-						<InnerBlocks.Content />
+                        <InnerBlocks.Content />
                     </div>
                 </div>     
-            </section>  
+            </section>
         )
     } 
 }

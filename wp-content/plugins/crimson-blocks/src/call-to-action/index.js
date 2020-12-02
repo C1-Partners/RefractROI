@@ -2,7 +2,7 @@
  * WordPress dependencies
  */
 const { registerBlockType } = wp.blocks;
-const { InnerBlocks } = wp.blockEditor;
+
 /**
  * Internal dependencies
  */
@@ -14,7 +14,7 @@ import Save from './save';
 import { name, title, icon, category, keywords } from './settings';
 
 /**
- * Register
+ * Register our Block
  */
 registerBlockType( name, {
 	title: title,

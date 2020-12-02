@@ -3,7 +3,7 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
 const { InspectorControls, MediaUpload, InnerBlocks } = wp.editor;
 const { PanelBody, TextControl } = wp.components;
 
-import { renderImageUpload } from '../components/functions';
+import { renderImageUpload } from '../components/imageupload';
 
 /**
  * Registers a new block provided a unique name and an object defining its
