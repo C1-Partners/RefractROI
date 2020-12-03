@@ -7,6 +7,12 @@
  * @package C1_Base
  */
 
+function crimson_inline_icon($filename){
+	return file_get_contents(get_template_directory() . '/assets/images/' . $filename);
+}
+
+
+
 function crimson_favicons(){
 	// https://sympli.io/blog/2017/02/15/heres-everything-you-need-to-know-about-favicons-in-2017/
 	// Googles recommendations: https://developers.google.com/web/fundamentals/design-and-ux/browser-customization/ 

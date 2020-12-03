@@ -4,7 +4,11 @@
     transition: .3s;
     position: relative;
     z-index: 9999;
-    padding: 50px 0;
+    padding: 10px 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 20px;
+    }
 
     .primary-nav {
         border: none;
@@ -108,6 +112,65 @@
             }
         }
         
+        .search-form-wrap {
+            opacity: 0;
+            pointer-events: none;
+            flex: 1;
+            position: absolute;
+            top: 44px;
+            left: 0;
+
+            @include media-breakpoint-up(md) {
+                top: auto;
+                width: auto;
+                background: none;
+                padding: 0;
+                transition: none;
+                box-shadow: none;
+            }
+
+            .search-form {
+                border-radius: 100px;
+                background: #fff;
+                position: relative;
+                display: flex;
+
+                @include media-breakpoint-up(md) {
+                    margin-left: 300px;
+                    transition: margin 0.3s ease-out;
+                }
+
+                .search-field {
+                    border: 0;
+                    padding: 0;
+                    background: transparent;
+                    border-radius: 0;
+                    padding: 13px 17px 11px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .search-btns {
+
+            @include media-breakpoint-up(md) {
+                padding:0;
+            }
+
+            li {
+                list-style: none;
+
+                button {
+                    border:none;
+                    background:none;
+                    cursor: pointer;
+                }
+
+                #search-close {
+                    display:none;
+                }
+            }
+        }
         
         /*Menu Collapse Styling Mobile*/
         @include media-breakpoint-down(md) {
@@ -158,4 +221,39 @@
 			display: flex;
 		}
 	}
+}
+
+/*Show search form*/
+body {
+    &.search-shown {
+
+        .search-form-wrap {
+            position: static!important;
+            top: 54px;
+            pointer-events: initial;
+            opacity: 1!important;
+            z-index: 10000;
+
+            .search-form {
+                margin-left: 100px!important;
+            }
+        }
+
+        .nav-wrap {
+
+            @include media-breakpoint-up(md) {
+                position: absolute;
+                left: 223px;
+                opacity: 0;
+            }
+        }
+
+        #search-open {
+            display:none;
+        }
+
+        #search-close {
+            display:block!important;
+        }
+    }
 }

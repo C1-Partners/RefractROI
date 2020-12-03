@@ -43,7 +43,7 @@
 							<path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
 						</svg>
 					</button>
-				<div class="collapse navbar-collapse" id="PrimaryNav">
+				<div class="collapse navbar-collapse nav-wrap" id="PrimaryNav">
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'primary-menu',
@@ -53,6 +53,19 @@
 					) );
 					?>
 				</div>
+				<div id="site-search" class="search-form-wrap">
+					<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ) ?>">
+						<label class="sr-only" for="site-search-field">Search for</label>
+						<input type="search" id="site-search-field" class="search-field" placeholder="Search <?php bloginfo( 'name' ) ?>&hellip;" value="<?php echo get_search_query() ?>" name="s" />
+						<input type="submit" class="search-submit btn-primary btn-red" value="Go" />
+					</form>
+				</div>
+				<ul id="search-actions" class="search-btns">
+					<li>
+						<button id="search-open"><?php echo crimson_inline_icon('search.svg') ?><span class="sr-only">Open search</span></button>
+						<button id="search-close"><?php echo crimson_inline_icon('close.svg') ?><span class="sr-only">Close search</span></button>
+					</li>
+				</ul>
 			</nav>
 		</div>
 	</header>

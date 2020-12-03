@@ -2,7 +2,11 @@
  * Global
  * ------
  */
-// Sticky Nav
+
+/*
+  Fixed Navigation
+*/ 
+
 let stickyNav = $('.site-header').offset().top;
 
 $(window).scroll(function() {
@@ -20,3 +24,22 @@ $(window).scroll(function() {
   }
 });
 
+/*
+  Search
+*/
+
+const closeSearch = () => {
+	$b.removeClass('search-shown');
+  $('#search-overlay').remove();
+}
+
+$('#search-open').on('click', function(e){
+  e.preventDefault();
+  $b.addClass('search-shown');
+  $('.search-field').focus();
+  $('<div id="search-overlay"></div>').insertAfter('#site-utilities');
+});
+$('#search-close').on('click', function(e){
+  e.preventDefault();
+  closeSearch();
+});
