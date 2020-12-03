@@ -5,8 +5,6 @@ import { className } from './settings';
 
 class Save extends Component {
 
-    
-
     render() {
 
         let attributes = this.props.attributes;

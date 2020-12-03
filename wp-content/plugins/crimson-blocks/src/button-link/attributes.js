@@ -10,5 +10,9 @@ export default
         },
         buttonUrl: {
             url: 'string',
+        },
+        backgroundColor: {
+            type: 'string',
         }
+        
     }

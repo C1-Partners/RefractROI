@@ -7,16 +7,14 @@
 
  .block-cta-wrapper {
     position: relative;
+    background-color: #ccc;
 
     .block-cta-content {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
         text-align: center;
-        width: 100%;
+        padding: 30px 0;
 
         .cta-content-buttons {
+            max-width: 300px;
             margin: 0 auto;
         }
     }

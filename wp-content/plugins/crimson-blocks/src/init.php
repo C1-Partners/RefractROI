@@ -82,6 +82,8 @@ function crimson_blocks_cgb_block_assets() { // phpcs:ignore
 			'editor_script' => 'crimson_blocks-cgb-block-js',
 			// Enqueue blocks.editor.build.css in the editor only.
 			'editor_style'  => 'crimson_blocks-cgb-block-editor-css',
+			// Render php files
+			'render_callback' => 'render_loop_block',
 		)
 	);
 }

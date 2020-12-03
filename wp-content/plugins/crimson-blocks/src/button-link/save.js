@@ -1,16 +1,14 @@
 const { Component } = wp.element
 
-import ButtonWithLink from '../components/buttonlink.js';
-
 class Save extends Component { 
 
     render() {  
      
-        const { buttonText, buttonUrl } = this.props.attributes;
+        const { buttonText, buttonUrl, backgroundColor } = this.props.attributes;
 
         return (
             <div>
-                <a href={buttonUrl} class="btn btn--primary">
+                <a href={buttonUrl} className={`btn btn-primary ${backgroundColor}`}>
                     {buttonText}
                 </a>
             </div>
