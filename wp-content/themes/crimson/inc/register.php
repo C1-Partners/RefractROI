@@ -97,3 +97,43 @@ add_filter( 'gform_confirmation_anchor', '__return_true' );
  */
 add_theme_support( 'custom-logo' );
 
+function wpdocs_theme_slug_widgets_init() {
+  register_sidebar( array(
+      'name'          => __( 'Footer A1', 'textdomain' ),
+      'id'            => 'footer-a1',
+      'description'   => __( 'Footer A1.', 'textdomain' ),
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h2 class="widgettitle">',
+      'after_title'   => '</h2>',
+  ) );
+  register_sidebar( array(
+    'name'          => __( 'Footer B1', 'textdomain' ),
+    'id'            => 'footer-b1',
+    'description'   => __( 'Footer B1', 'textdomain' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => '</h2>',
+  ) );
+  register_sidebar( array(
+    'name'          => __( 'Footer B2', 'textdomain' ),
+    'id'            => 'footer-b2',
+    'description'   => __( 'Footer B2', 'textdomain' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => '</h2>',
+  ) );
+  register_sidebar( array(
+    'name'          => __( 'Footer B3', 'textdomain' ),
+    'id'            => 'footer-b3',
+    'description'   => __( 'Footer B3', 'textdomain' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'wpdocs_theme_slug_widgets_init' );
+

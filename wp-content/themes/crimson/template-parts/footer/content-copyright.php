@@ -1,6 +1,6 @@
 <div class="container-fluid" id="copyright">
   <div class="row" id="copyright-inner">
-    <div class="col-12 col-sm-12 col-lg-6 text-center text-lg-left">
+    <div class="col-12 text-center">
       <p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y'); ?> <?php if(get_theme_mod('crimson_sitemap_link_on') == 'yes') { ?> | <a href="<?php echo get_theme_mod('crimson_sitemap_link') ?>" title="sitemap">Sitemap</a> <?php } ?></p>
     </div>
     <div class="col-12 col-sm-12 col-lg-6 text-center text-lg-right">

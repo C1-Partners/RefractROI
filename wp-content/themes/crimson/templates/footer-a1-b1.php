@@ -1,4 +1,4 @@
-      <footer class="site-footer">
+      <footer class="site-footer c">
         <div class="container-fluid" id="footer-a">
           <?php dynamic_sidebar('footer-a1') ?>
         </div>
