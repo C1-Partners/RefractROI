@@ -5,6 +5,9 @@
     position: relative;
     z-index: 9999;
     padding: 10px 0;
+    background-color: #fff;
+    max-width: 1680px;
+    margin: 0 auto;
 
     @include media-breakpoint-up(md) {
         padding: 20px;
@@ -204,7 +207,8 @@
 	position: fixed;
 	width: 100%;
 	z-index: 9999;
-	max-width: 100%;
+	max-width: 1680px;
+    margin: 0 auto;
 
 	@include media-breakpoint-up(md) {
 		padding-bottom: 15px;

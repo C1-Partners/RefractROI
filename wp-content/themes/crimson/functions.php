@@ -82,3 +82,4 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Use a separate file for each post type, named as the plural for the type (member.php, books.php, etc)
  */
 require get_template_directory() . '/inc/custom-post-types/testimonials.php';
+require get_template_directory() . '/inc/custom-post-types/team-member.php';

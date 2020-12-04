@@ -3,7 +3,7 @@
 * Testimonials
  */
 
-function crimson_team_member_init() {
+function crimson_testimonial_init() {
 
     $labels = array(
         'name'               => _x( 'Testimonials', 'post type general name' ),
@@ -39,4 +39,4 @@ function crimson_team_member_init() {
 
 }
 
-add_action('init', 'crimson_team_member_init');
+add_action('init', 'crimson_testimonial_init');

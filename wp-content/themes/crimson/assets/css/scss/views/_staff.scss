@@ -1,0 +1,54 @@
+
+.page-staff {
+
+    .team-member {
+
+        .team-member-img {
+            position: relative;
+  
+            // @include media-breakpoint-up(md) {
+
+                &:hover {
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top:0;
+                        right:0;
+                        bottom: 0;
+                        left:0;
+                        background-color: #3a3939ab;
+                    }  
+
+                    .action {
+                        position: absolute;
+                        display: flex;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        background-color: transparent;
+                        color: #fff;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            // }
+
+            .action {
+                display: none;
+
+            }
+        }
+    }
+    
+    //this might be redundant and look at removing content from php
+    .team-member-bio {
+        display:none;
+    }
+
+    .modal {
+      z-index: 11000;  
+    }
+}

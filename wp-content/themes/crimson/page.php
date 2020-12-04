@@ -9,7 +9,7 @@ while ( have_posts() ) :
       // the_title( '<h1 class="entry-title">', '</h1>' );
        ?>
     </header>
-    <div class="page-content">
+    <div class="page-content container">
       <?php the_content(); ?>
     </div>
   </article>

@@ -97,7 +97,7 @@ add_filter( 'gform_confirmation_anchor', '__return_true' );
  */
 add_theme_support( 'custom-logo' );
 
-function wpdocs_theme_slug_widgets_init() {
+function crimson_register_widgets_init() {
   register_sidebar( array(
       'name'          => __( 'Footer A1', 'textdomain' ),
       'id'            => 'footer-a1',
@@ -135,5 +135,5 @@ function wpdocs_theme_slug_widgets_init() {
     'after_title'   => '</h2>',
   ) );
 }
-add_action( 'widgets_init', 'wpdocs_theme_slug_widgets_init' );
+add_action( 'widgets_init', 'crimson_register_widgets_init' );
 
