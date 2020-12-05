@@ -10,7 +10,7 @@
     margin: 0 auto;
 
     @include media-breakpoint-up(md) {
-        padding: 20px;
+        padding: 20px 0 20px;
     }
 
     .primary-nav {
@@ -31,6 +31,7 @@
         .site-logo {
             float: left;
             width: auto;
+            max-width: 250px;
         }
 
         //styles for mobile button toggle
@@ -91,35 +92,49 @@
             }
         }
 
-        .navbar-nav {
+        .nav-wrap {
 
-            li {
-                margin: 0 22px;
-                //Styling for submenu hovering on desktop
-                @include media-breakpoint-up(md) {
-                    .sub-menu {
-                        display:none;
-                        list-style: none;
-                        position: absolute;
-                        padding: 10px 5px 10px 0;
-                        box-shadow: 0 0 25px 0 rgba(0,0,0,0.10), 0 2px 2px 0 rgba(0,0,0,0.08);
-                        transition: .3s;
-                    }
-    
-                    &:hover {
+            .navbar-nav {
+                height: 80px;
+
+                .menu-item {
+                    margin: 0 22px;
+                    //prob a better way to vertically center li here:
+                    display:flex;
+                    align-items: center;
+
+                    //Styling for submenu hovering on desktop
+                    @include media-breakpoint-up(md) {
                         .sub-menu {
-                            display:block!important;
+                            display:none;
+                            list-style: none;
+                            position: absolute;
+                            padding: 10px 5px 10px 0;
+                            box-shadow: 0 0 25px 0 rgba(0,0,0,0.10), 0 2px 2px 0 rgba(0,0,0,0.08);
+                            transition: .3s;
+                            background-color: #fff;
                         }
-                    }
-                } 
+        
+                        &:hover {
+                            .sub-menu {
+                                display:block!important;
+                                top:98px;
+                                transition: .3s;
+                            }
+                        }
+                    } 
+                }
             }
         }
         
         .search-form-wrap {
+            position: absolute;
+            display: flex;
+            flex:1;
+            align-items: center;
+            height: 80px;
             opacity: 0;
             pointer-events: none;
-            flex: 1;
-            position: absolute;
             top: 44px;
             left: 0;
 
@@ -133,10 +148,12 @@
             }
 
             .search-form {
-                border-radius: 100px;
-                background: #fff;
                 position: relative;
                 display: flex;
+                width:100%;
+                max-height:50px;
+                border-radius: 100px;
+                background: #fff;
 
                 @include media-breakpoint-up(md) {
                     margin-left: 300px;
@@ -211,8 +228,8 @@
     margin: 0 auto;
 
 	@include media-breakpoint-up(md) {
-		padding-bottom: 15px;
-		padding-top: 15px;
+		padding-bottom: 10px;
+		padding-top: 10px;
 	}
 
 	&:hover {

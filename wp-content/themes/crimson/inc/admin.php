@@ -17,6 +17,11 @@ function crimson_setup_theme_supported_features()
           'slug' => 'white',
           'color' => '#ffffff',
       ),
+      array(
+        'name' => __('Red', 'crimson'),
+        'slug' => 'red',
+        'color' => '#b20f1a',
+    ),
   ) );
   add_theme_support('disable-custom-colors');
 //   add_theme_support('editor-gradient-presets',array());

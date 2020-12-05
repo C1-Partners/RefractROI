@@ -16,9 +16,16 @@ html,body {
 	//height: 100% !important;
 }
 
-h1, h2, h3, h4, h5, h6{}
+h1 { font-size: 2.5em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1.12em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
 
 a {
+	display:block;
+
 	&:hover {
 		text-decoration: none!important;
 	}
@@ -67,7 +74,6 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 }
 
 .site-main {
-	max-width: 1680px;
-	margin: 0 auto;
+
 	background-color: #fff;
 }

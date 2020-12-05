@@ -4,8 +4,8 @@
   while ( have_posts() ) :
   the_post();
 
-
   ?>
+
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="page-header">
       <?php 
@@ -16,6 +16,10 @@
       <?php the_content(); ?>
     </div>
   </article>
+
   <?php
+
 endwhile;
 get_footer();
+
+

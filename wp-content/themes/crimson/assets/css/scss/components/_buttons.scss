@@ -1,9 +1,17 @@
-.btn{
+// .btn{
   
-}
-.btn-secondary{
-  
-}
-.btn-outline{
-  
+
+
+.wp-block-buttons {
+
+   .wp-block-button {
+
+        .has-red-background-color {
+            background-color: $color-red;
+        } 
+        
+        .has-white-color {
+            color: $color-white;
+        }
+   }
 }

@@ -6,6 +6,7 @@
 
  .block-hp-hero {
     position: relative;
+    max-height: 700px;
   
    .hp-hero-content {
         position: absolute;
@@ -17,5 +18,12 @@
         bottom: 0;
         right: 0;
         left: 0;
+        padding: 20px;
+
+        @include media-breakpoint-up(md) {
+            align-items: flex-start;
+            max-width: 50%;
+            margin-left: auto;
+        }
    }
 }
