@@ -3,8 +3,8 @@
  */
 const { __ } = wp.i18n
 const { Component, Fragment } = wp.element
-const { MediaUpload, RichText, InspectorControls, InnerBlocks } = wp.blockEditor
-const { PanelBody, Button, SelectControl, ColorPicker } = wp.components
+const { MediaUpload, RichText, InspectorControls, InnerBlocks, withColors } = wp.blockEditor
+const { PanelBody, Button, ColorPicker } = wp.components
 
 
 /**
@@ -76,7 +76,7 @@ class Edit extends Component {
           <div className="block-cta-wrapper">
             <div className="block-cta-content">
               <RichText
-                tagName="h1"
+                tagName="h2"
                 value={titleText}
                 placeholder={__('Add title', '@@pkg.textdomain')}
                 onChange={value => setAttributes({ titleText: value })}

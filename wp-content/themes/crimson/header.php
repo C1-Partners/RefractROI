@@ -1,8 +1,16 @@
+<?php
+
+$phone = get_field('phone_number', 'options');
+$phoneReplaced = preg_replace('/\D+/', '', $phone);
+$siteAddr = get_field('site_address', 'options');
+$ctaText = get_field('cta_text', 'options');
+$ctaLink = get_field('cta_link', 'options');
+
+?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-
-    <?php // googleTagManagerHead('id-here'); ?>
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -23,6 +31,11 @@
 	<a class="skip-link sr-only" href="#site-main"><?php esc_html_e( 'Skip to content', 'crimson' ); ?></a>
 
 	<header class="site-header" role="banner">
+		<div class="site-info container-fluid">
+			<a class="site-phone" href="tel:+1<?php echo $phoneReplaced; ?>"><?php echo $phone ?></a>
+			<p class="site-address"><?php echo $siteAddr; ?></p>
+			<a class="head-cta" href="<?php echo $ctaLink; ?>"><?php echo $ctaText; ?></a>
+		</div>
 		<div class="container-fluid">
 			<nav class="primary-nav navbar-expand-md" id="site-navigation">
 				<div class="site-logo" id="site-branding">

@@ -17,6 +17,12 @@ export default
 			type: 'string',
 			default: 'full'
 		},
+		textColor: {
+			type: 'string',
+		},
+		customTextColor: {
+			type: 'string'
+		},
 		/**
 		* Content
 		*/
