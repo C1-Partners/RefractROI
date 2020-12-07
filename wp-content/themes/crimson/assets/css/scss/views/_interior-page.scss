@@ -1,0 +1,34 @@
+/* Styles for interior pages */
+
+.int-page {
+   
+    .page-hero {
+        background-image: url(../images/int-hero.jpg);
+        background-size: cover;
+        background-position: top center;
+        background-color: $color-white;
+
+        .page-hero-overlay {
+            padding: 100px 0 100px;
+            max-width: 1140px;
+            margin: 0 auto;
+
+            @include media-breakpoint-up(lg) {
+                padding: 140px 0 140px;
+            }
+
+            .page-title {
+                color: $color-white;
+                text-align: center;
+            }
+        } 
+    }
+
+    .breadcrumb-wrapper {
+        color: $color-white;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        transform: translateY(-100%);
+        text-align: center;
+    }
+}

@@ -17,7 +17,7 @@ $(window).scroll(function() {
       siteHeader = $('.site-header');
 
   if ($(window).scrollTop() > stickyNav) {
-    var $primaryWrap = siteHeader.addClass('is-fixed').css('top','0');
+    let $primaryWrap = siteHeader.addClass('is-fixed').css('top','0');
     siteMain.css('padding-top', $primaryWrap.outerHeight());
   }
   else {
