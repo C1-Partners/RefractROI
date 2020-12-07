@@ -19,11 +19,26 @@
         right: 0;
         left: 0;
         padding: 20px;
+        z-index: 5;
 
         @include media-breakpoint-up(md) {
             align-items: flex-start;
             max-width: 50%;
             margin-left: auto;
         }
+
+        .hero-title, .hero-subtitle {
+            color: #fff;
+        }
+   }
+
+   &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #00000073;
    }
 }

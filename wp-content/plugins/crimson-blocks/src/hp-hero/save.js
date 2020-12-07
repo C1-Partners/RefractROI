@@ -15,8 +15,8 @@ class Save extends Component {
                     <img src={attributes.coverImage.url} />
                 </picture>
                 <div className="hp-hero-content">
-                    <h1>{attributes.titleText}</h1>
-                    <p>{attributes.descriptionText}</p>
+                    <h1 className="hero-title">{attributes.titleText}</h1>
+                    <p className="hero-subtitle">{attributes.descriptionText}</p>
                     <div className="cta-buttons">
 						<InnerBlocks.Content />
                     </div>

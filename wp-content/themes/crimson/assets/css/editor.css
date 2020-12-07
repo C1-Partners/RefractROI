@@ -11284,7 +11284,13 @@ a > .wp-block code {
 }
 
 .wp-block h1 {
-  font-size: 5rem;
+  font-size: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .wp-block h1 {
+    font-size: 5rem;
+  }
 }
 
 .wp-block h2 {

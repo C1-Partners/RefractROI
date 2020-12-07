@@ -11268,7 +11268,13 @@ html {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
 
 h2 {

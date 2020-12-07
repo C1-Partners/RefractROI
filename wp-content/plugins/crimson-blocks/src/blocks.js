@@ -13,6 +13,5 @@
 import './button-link/index.js';
 import './loop-block/block.js';
 import './wrapper-block/block.js';
-import './hero-block/block.js';
 import './hp-hero/index.js';
 import './call-to-action/index.js';
