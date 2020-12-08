@@ -76,6 +76,10 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/woocommerce.php';
 
+/**
+ * Custom ACF Blocks
+ */
+require get_template_directory() . '/inc/acf-blocks.php';
 
 /**
  * Custom Post Types

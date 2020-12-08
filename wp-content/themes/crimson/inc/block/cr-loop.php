@@ -1,7 +1,7 @@
 <?php
 
 //Replacing Handlebars
-include(dirname(__FILE__).'./whitepaper-functions.php');
+// include(dirname(__FILE__).'./whitepaper-functions.php');
 
 //Storing Variables
 $title = get_field( 'title' );
