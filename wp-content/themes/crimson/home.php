@@ -12,10 +12,10 @@ Template Name: Blog
 
 <!--Content-->
 
-<main>
-  <article>
-    <div class="container-fluid" id="page-hero" <?php if (has_post_thumbnail()) { ?>style="background-image: url('<?php the_post_thumbnail_url() ?>')"<?php } ?>>
-      <div class="row" id="page-hero-overlay">
+
+  <article class="home-blog">
+    <div class="container-fluid page-hero" <?php if (has_post_thumbnail()) { ?>style="background-image: url('<?php the_post_thumbnail_url() ?>')"<?php } ?>>
+      <div class="row page-hero-overlay">
         <div class="col-12">
           <div class="row" id="title-bar">
             <div class="col-12">
@@ -39,7 +39,7 @@ Template Name: Blog
           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           $args = array( 'posts_per_page' => 10, 'orderby' => 'DESC', 'paged' => $paged);
           $temp = $wp_query;
-          $wp_query = null;
+          // $wp_query = null;
           $wp_query = new WP_Query( $args );
           if (have_posts()) :
             while (have_posts()) :
@@ -63,15 +63,11 @@ Template Name: Blog
               <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
               <h1>Not Found</h1>
               </div>
-              $wp_query = null;
-              $wp_query = $temp;
-               wp_reset_query();
           <?php endif; ?>
         </div>
       </div>
     </div>
   </article>
-</main>
 
 <!--End Content-->
 
