@@ -83,3 +83,5 @@ require get_template_directory() . '/inc/woocommerce.php';
  */
 require get_template_directory() . '/inc/custom-post-types/testimonials.php';
 require get_template_directory() . '/inc/custom-post-types/team-member.php';
+require get_template_directory() . '/inc/custom-post-types/cta.php';
+require get_template_directory() . '/inc/custom-post-types/steps.php';

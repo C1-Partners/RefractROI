@@ -11,7 +11,6 @@
 
 // import './block/block.js'; example block to start new blocks
 import './button-link/index.js';
-import './loop-block/block.js';
 import './wrapper-block/block.js';
 import './hp-hero/index.js';
 import './call-to-action/index.js';

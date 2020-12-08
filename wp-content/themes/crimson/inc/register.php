@@ -97,6 +97,9 @@ add_filter( 'gform_confirmation_anchor', '__return_true' );
  */
 add_theme_support( 'custom-logo' );
 
+/**
+ * Theme widgets
+ */
 function crimson_register_widgets_init() {
   register_sidebar( array(
       'name'          => __( 'Footer A1', 'textdomain' ),
@@ -136,4 +139,34 @@ function crimson_register_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'crimson_register_widgets_init' );
+
+/**
+ * Register Loop Block
+ */
+function c1partners_register_blocks() {
+
+	// Check function exists
+	if( function_exists('acf_register_block') ) {
+
+    // Steps
+    acf_register_block(array(
+      'name'				=> 'loop',
+      'title'				=> __( 'Loop' ),
+      'description'		=> __( 'A customizable loop block.' ),
+      'render_callback'	=> 'c1partners_blocks_render_callback',
+      'category'			=> 'formatting',
+      'icon'				=> 'controls-repeat',
+      'keywords'			=> array( 'query' ),
+    ));
+	}
+}
+
+add_action('acf/init', 'c1partners_register_blocks');
+
+/************ Render The Block ******************/
+function c1partners_blocks_render_callback( $block ) {
+  // include('block-steps.php');
+  include './block-loop.php';
+}
+
 
