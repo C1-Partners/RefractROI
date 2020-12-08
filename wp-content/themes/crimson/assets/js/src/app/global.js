@@ -27,7 +27,7 @@ $(window).scroll(function() {
 });
 
 /*
-  Search
+  Search 
 */
 
 const closeSearch = () => {
@@ -35,13 +35,17 @@ const closeSearch = () => {
   $('#search-overlay').remove();
 }
 
+let navToggler = $('.navbar-toggler');
+
 $('#search-open').on('click', function(e){
   e.preventDefault();
   $b.addClass('search-shown');
   $('.search-field').focus();
   $('<div id="search-overlay"></div>').insertAfter('#site-utilities');
+  navToggler.css('visibility', 'hidden');
 });
 $('#search-close').on('click', function(e){
   e.preventDefault();
   closeSearch();
+  navToggler.css('visibility', 'visible');
 });

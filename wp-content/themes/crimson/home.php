@@ -12,7 +12,6 @@ Template Name: Blog
 
 <!--Content-->
 
-
   <article class="home-blog">
     <div class="container-fluid page-hero" <?php if (has_post_thumbnail()) { ?>style="background-image: url('<?php the_post_thumbnail_url() ?>')"<?php } ?>>
       <div class="row page-hero-overlay">
