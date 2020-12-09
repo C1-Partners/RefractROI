@@ -34,3 +34,12 @@
     }
 
 }
+
+.page-template-frontpage {
+
+    .block-cta {
+        @include media-breakpoint-up(xxl) {
+            left: 0%;
+        }
+    }
+}
