@@ -75,7 +75,7 @@ a {
 }
 
 //custom ul/li {
-ul:not(.navbar-nav):not(.gfield_checkbox) {
+ul:not(.navbar-nav):not(.gfield_checkbox li) {
 	padding-left: 0;
 
 	li:not(.menu-item):not(.list):not(.gfield) {
