@@ -14,3 +14,11 @@ input[type="search"] {
     }
   }
   
+  .gfield_checkbox {
+      
+    li {
+        &:before {
+            content:none!important;
+        }
+    }
+  }
