@@ -60,7 +60,7 @@ $ctaLink = get_field('cta_link', 'options');
 				</div>
 				<div class="site-actions">
 					<ul id="search-actions" class="search-btns">
-						<li>
+						<li class="list">
 							<button id="search-open"><?php echo crimson_inline_icon('search.svg') ?><span class="sr-only">Open search</span></button>
 							<button id="search-close"><?php echo crimson_inline_icon('close.svg') ?><span class="sr-only">Close search</span></button>
 						</li>

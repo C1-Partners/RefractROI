@@ -74,11 +74,47 @@ a {
 	}
 }
 
-ul, ol{}
+//custom ul/li {
+ul:not(.navbar-nav) {
+	padding-left: 0;
 
-dl{
-	dt{}
-	dd{}
+	li:not(.menu-item):not(.list) {
+		list-style: none;
+		position: relative;
+		padding: 0 0 0 20px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 7px;
+			width: 10px;
+			height: 10px;
+			background-color: $color-red;
+			border-radius: 50%;
+		}
+
+		ul {
+
+			li:not(.menu-item):not(.list) {
+				list-style: none;
+				position: relative;
+				padding: 0 0 0 20px; 
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 7px;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					border: 2px solid $color-gray;
+					background-color: transparent;
+				}
+			}
+		}
+	}
 }
 
 small{}
