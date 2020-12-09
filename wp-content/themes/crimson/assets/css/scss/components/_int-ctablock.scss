@@ -9,7 +9,7 @@
     margin-right: -50vw;
 
     @include media-breakpoint-up(md) {
-
+        margin-top: 90px
     }
     //fix for very large screens
     @include media-breakpoint-up(xxl) {
@@ -44,7 +44,7 @@
         border-radius: 8px;
         position: relative;
         box-shadow: 3px 3px 9px #333;
-        border-top: 1px solid #b20f1a;
+        border: 1px solid #b20f1a;
         
         @include media-breakpoint-up(lg) {
             margin-top: 90px;
