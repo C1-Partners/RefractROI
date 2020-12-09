@@ -11,11 +11,13 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 30px 0;
+    padding: 25px 25px 35px;
       
     //special hack that im happy/sad about. Ask me about it sometime.
     @include media-breakpoint-up(xxl) {

@@ -1,0 +1,34 @@
+/* Styles for WP editor-built interior CTA */
+
+.block-int-cta {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    &.bg-color-red {
+        background-color: $color-red;
+    }
+    &.bg-color-gray {
+        background-color: $color-gray;
+    }
+
+    .left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right {
+        background-color: $color-white;
+        padding: 20px 20px 20px;
+        border-radius: 8px;
+        position: relative;
+        top: -100px;
+        box-shadow: 5px 5px 20px #333;
+        border-top: 10px solid #b20f1a;
+    }
+}
