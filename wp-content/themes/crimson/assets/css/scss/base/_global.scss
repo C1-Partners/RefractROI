@@ -78,7 +78,7 @@ a {
 ul:not(.navbar-nav):not(.gfield_checkbox) {
 	padding-left: 0;
 
-	li:not(.menu-item):not(.list) {
+	li:not(.menu-item):not(.list):not(.gfield) {
 		list-style: none;
 		position: relative;
 		padding: 0 0 0 20px;
