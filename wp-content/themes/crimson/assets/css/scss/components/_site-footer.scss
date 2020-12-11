@@ -2,29 +2,25 @@
 
 .site-footer {
     min-height: 200px;
-    background: linear-gradient(180deg, #313131 0%, #2b2b2b 31%, #151515 100%);
-    color: #fff;
+    background: $dark-gray-gradient;
+    color: $color-white;
     padding: 30px 0 10px;
 
     li {
         a {
-            color:#fff;
+            color:$color-white;
         }
     }
 
     p {
         a {
-            color: #fff;
+            color: $color-white;
         }
     }
 
     .widget_media_image {
-        max-width:200px;
+        max-width:150px;
         margin: 0 auto;
-
-        img {
-            max-width: 200px;
-        }
     }
 
     @include media-breakpoint-up(md) {
@@ -50,6 +46,6 @@
     }
 
     #copyright {
-        padding-top: 20px;   
+        padding-top: 30px;   
     }
 }

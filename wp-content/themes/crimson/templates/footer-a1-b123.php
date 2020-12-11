@@ -4,13 +4,13 @@
         </div>
         <div class="container-fluid" id="footer-b">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex align-items-center justify-content-center">
               <?php dynamic_sidebar('footer-b1') ?>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
               <?php dynamic_sidebar('footer-b2') ?>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex align-items-center justify-content-center">
               <?php dynamic_sidebar('footer-b3') ?>
             </div>
           </div>
