@@ -57,7 +57,7 @@
             }
         }
     }
-
+    //adding more menu items? Check-out padding here.
     .primary-nav {
         display: flex;
         justify-content: space-between;
@@ -79,10 +79,15 @@
             float: left;
             width: auto;
             max-width: 250px;
+            margin:6px;
         }
 
         .site-actions {
             display: flex;
+
+            @include media-breakpoint-up(md) {
+                margin-left: 35px;
+            }
 
             .search-btns {
                 display:flex;
@@ -99,7 +104,7 @@
             
                 .line {
                     fill: none;
-                    stroke: black;
+                    stroke: $color-black;
                     stroke-width: 6;
                     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
                     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -176,6 +181,8 @@
                             box-shadow: 0 0 25px -25px rgba(0,0,0,0.10), 0 2px 2px 0 rgba(0,0,0,0.08);
                             transition: .3s;
                             background-color: $color-white;
+                            border-bottom-left-radius: 5px;
+                            border-bottom-right-radius: 5px;
                         }
         
                         &:hover {
