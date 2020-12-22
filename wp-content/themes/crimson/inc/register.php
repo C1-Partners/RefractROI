@@ -93,6 +93,18 @@ add_action( 'after_setup_theme', 'crimson_content_width', 0 );
 add_filter( 'gform_confirmation_anchor', '__return_true' );
 
 /**
+ * Custom 
+ */
+add_filter( 'gform_confirmation_7', 'custom_confirmation', 10, 4 );
+function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
+  global $test;
+    
+      $confirmation = array( 'redirect' => $test );
+   
+    return $confirmation;
+}
+
+/**
  * A custom logo to Customizer
  */
 add_theme_support( 'custom-logo' );

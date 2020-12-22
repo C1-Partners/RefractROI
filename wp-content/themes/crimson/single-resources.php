@@ -58,8 +58,14 @@ get_header(); while ( have_posts() ) : the_post();
             <?php 
             the_content(); 
 
+            
             $count = 0; 
-            foreach( $freeResources as $freeResource ) : ?>
+            foreach( $freeResources as $freeResource ) : 
+            
+              global $test;
+              $test = $freeResource['resource']['url']; 
+              
+            ?>
 
               <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 resource-container">
                   <div class="resource text-center">
@@ -83,9 +89,13 @@ get_header(); while ( have_posts() ) : the_post();
                             </button>
                         </div>
                         <div class="modal-body">
+                          <div class="image-desc">
                             <?php echo $freeResource['image']; ?>
                             <?php echo $freeResource['description']; ?>
-                            <?php echo gravity_form( 7, false, false, false, '', false ); ?>
+                          </div>
+                          <div class="gform">
+                            <?php echo gravity_form( 7, false, false, false, '', true, 12 ); ?> 
+                          </div>  
                         </div>
                         <div class="modal-footer">
                             <button type="btn btn-primary" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -98,6 +108,7 @@ get_header(); while ( have_posts() ) : the_post();
             
             <?php $count++ ?>
             <?php endforeach; ?>
+
           </div>
         </div>
       </div>
@@ -108,7 +119,7 @@ get_header(); while ( have_posts() ) : the_post();
 
 <?php
 echo '<pre>';
-var_dump($freeResources);
+var_dump($test);
 echo '</pre>';
 ?>
 

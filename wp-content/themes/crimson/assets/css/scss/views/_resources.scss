@@ -19,4 +19,49 @@
             }
         }
     }
+
+    .modal {
+
+        .modal-dialog {
+            margin: 20vh auto;
+
+            @include media-breakpoint-up(md) {
+                max-width: 800px;
+                margin: 25vh auto;
+            }
+
+            .modal-content {
+                border-radius: 5px;
+
+                .modal-header {
+                    border:none;
+
+                }
+
+                .modal-body {
+
+                    @include media-breakpoint-up(md) {
+                        display:flex;
+                    }
+
+                    .image-desc {
+                        max-width: 350px;
+                        padding: 25px;
+
+                        img {
+                            margin-bottom: 15px;
+                        }
+                    }
+                    .gform {
+                        width: 100%;
+                        padding: 25px;
+                    }
+                }
+
+                .modal-footer {
+                    border:none;
+                }
+            }
+        }
+    }
 }
