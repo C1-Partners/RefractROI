@@ -9,7 +9,7 @@ function crimson_resources_init() {
 
 	// register the type
 	register_post_type(
-		'team-member',
+		'resource',
 		array(
 			'labels'              => array(
 				'name'                => _x($pluralLabel, 'Post Type General Name'),
