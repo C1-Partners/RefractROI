@@ -343,6 +343,7 @@ body {
 
         .search-form-wrap {
             opacity: 1!important;
+            pointer-events: initial!important;
 
             @include media-breakpoint-up(md) {
                 position: static!important;

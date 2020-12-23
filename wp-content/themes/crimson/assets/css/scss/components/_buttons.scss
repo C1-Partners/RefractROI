@@ -1,6 +1,18 @@
 // .btn{
   
+.btn-primary {
+    background-color: $color-red;
+    border: $color-red;
+    border-radius: 22px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: .3s;
 
+    &:hover {
+        background-color: $color-gray;
+        transition: .3s;
+    }
+}
 
 .wp-block-buttons {
 
@@ -14,4 +26,19 @@
             color: $color-white;
         }
    }
+}
+
+/* Nav Search Button */
+.search-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: $color-red;
+    border: $color-red;
+    transition: 3s;
+    color: $color-white;
+
+    &:hover {
+        background-color: $color-gray;
+        transition: .3s;
+    }
 }
