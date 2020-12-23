@@ -1,5 +1,7 @@
+/* Styles for site forms */
 
-//todo look into moving this into specific style in header.scss
+
+//Nav Search Form styles
 input[type="search"] {
     color: $color-black;
     background-color: $color-white;
@@ -14,6 +16,9 @@ input[type="search"] {
     }
   }
   
+// Custom gravity forms styles //
+
+  //remove custom li dots
   .gfield_checkbox {
       
     li {
@@ -22,3 +27,115 @@ input[type="search"] {
         }
     }
   }
+
+  //begin custom form styles
+  body {
+
+    .gform_wrapper {
+
+       .gfield_checkbox {
+            column-count: 2;
+
+            li {
+                
+                input[type=checkbox] {
+                    opacity: 0;
+                    position: absolute; 
+
+                    +label {
+
+                        position: relative;
+                        overflow: hidden;
+                        padding-left: 35px;
+                        cursor: pointer;
+                        display: inline-block;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            z-index: 1;
+                            -webkit-transition: .2s;
+                            transition: .2s;
+                        }
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            z-index: 1;
+                            -webkit-transition: .2s;
+                            transition: .2s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .gform_footer {
+
+            input[type=submit] {
+                display: block;
+                margin: 0 auto;
+                color: $color-white;
+                background-color: $color-red;
+                border: $color-red;
+                border-radius: 22px;
+                padding: 10px 20px;
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover {
+                    background-color: $color-gray;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+  }  
+      
+  //styles not converted into sass yet but still functional
+
+/* after */
+body .gform_wrapper .gfield_checkbox li input[type=checkbox]:not(:checked) + label:after{
+    width: 20px;
+    height: 20px;
+    border: 2px solid $color-black;
+    top: 0px;
+}
+body .gform_wrapper .gfield_checkbox li input[type=checkbox]:checked + label:after{
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $color-red;
+    background-color: $color-red;
+    z-index: 0;
+	border-radius: 2px
+}
+/* before */
+body .gform_wrapper .gfield_checkbox li input[type=checkbox]:not(:checked) + label:before{
+	    width: 0;
+    height: 0;
+    border: 3px solid transparent;
+    left: 6px;
+    top: 10px;
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+body .gform_wrapper .gfield_checkbox li input[type=checkbox]:checked + label:before{
+	    top: 0;
+    left: 1px;
+    width: 8px;
+    height: 13px;
+	margin-top:3px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid $color-white;;
+    border-bottom: 2px solid $color-white;;
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
