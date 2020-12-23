@@ -1,0 +1,40 @@
+/* Styles for Search page */
+
+.search-results {
+
+    .site-main {
+        padding-top: 60px;
+    }
+
+    .page-header {
+        padding: 0 10px;
+    }
+
+    .search-tile {
+        border-radius: 8px;
+        padding: 10px;
+        transition: .4s;
+        min-height: 450px;
+
+        &:hover {
+            box-shadow: -2px 9px 41px -9px #000000;
+            transition: .4s;
+        }
+    }
+
+    .posts-navigation {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+
+        .nav-links {
+            display: flex;
+
+            a {
+                padding: 10px;
+            }
+        }
+    }
+}
