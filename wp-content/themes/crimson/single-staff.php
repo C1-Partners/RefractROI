@@ -85,7 +85,7 @@ while ( have_posts() ) :
                                     <?php echo $teamMember['content']; ?>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="btn btn-primary" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="btn btn-primary" class="btn btn-primary" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>

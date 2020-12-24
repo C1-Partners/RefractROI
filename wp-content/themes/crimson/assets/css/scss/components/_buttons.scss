@@ -30,11 +30,12 @@
 
 /* Nav Search Button */
 .search-btn {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 30px;
+    padding: 5px 40px;
+    margin-left: -20px;
     background-color: $color-red;
     border: $color-red;
-    transition: 3s;
+    transition: .3s;
     color: $color-white;
 
     &:hover {

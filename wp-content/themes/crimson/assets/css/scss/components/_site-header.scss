@@ -80,13 +80,19 @@
             width: auto;
             max-width: 250px;
             margin:6px;
+
+            @include media-breakpoint-up(md) {
+                margin: 2px 4px 0 70px;
+            }
         }
 
         .site-actions {
             display: flex;
+            margin-left: 15px;
 
             @include media-breakpoint-up(md) {
-                margin-left: 35px;
+                margin-left: 30px;
+                margin-right: 70px;
             }
 
             .search-btns {
@@ -97,6 +103,7 @@
             .navbar-toggler {
                 position: relative;
                 width: auto;
+                align-items: center;
 
                 @include media-breakpoint-up(lg) {
                     display: none!important;
@@ -246,7 +253,7 @@
                     border: 0;
                     padding: 0;
                     background-color: $color-white;
-                    border-radius: 13px 0 0 13px;
+                    border-radius: 25px 0 0 25px;
                     padding: 13px 17px 11px;
                     width: 100%;
                 }
@@ -289,7 +296,7 @@
                 width: 100%;
                 z-index: 9;
                 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.08), 0px 0px 25px rgba(0, 0, 0, 0.1);
-                top:79px;
+                top:90px;
 
                 &.show {
                     opacity: 1;
@@ -353,6 +360,10 @@ body {
 
                 .search-form {
                     margin-left: 100px!important;
+
+                    .search-submit {
+                        z-index:10000;
+                    }
                 }
             }
         }

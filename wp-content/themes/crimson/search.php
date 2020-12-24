@@ -9,7 +9,7 @@ if( have_posts() ): ?>
       <?php printf( esc_html__( 'Search Results for: %s', 'crimson' ), '<span>' . get_search_query() . '</span>' ); ?>
     </h1>
   </header>
-    <div class="container">
+    <div class="container py-5">
       <div class="row">
   
       <?php while(have_posts()): the_post(); ?>
