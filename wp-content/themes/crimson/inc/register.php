@@ -96,7 +96,7 @@ add_filter( 'gform_confirmation_anchor', '__return_true' );
  * Custom 
  */
 add_filter( 'gform_confirmation_7', 'custom_confirmation', 10, 4 );
-function custom_confirmation( $confirmation, $form, $entry, $ajax ) {
+function custom_confirmation( $confirmation ) {
   global $test;
     
       $confirmation = array( 'redirect' => $test );

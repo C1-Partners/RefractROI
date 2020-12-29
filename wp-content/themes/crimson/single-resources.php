@@ -62,8 +62,8 @@ get_header(); while ( have_posts() ) : the_post();
             $count = 0; 
             foreach( $freeResources as $freeResource ) : 
             
-              // global $test;
-              // $test = $freeResource['resource']['url']; 
+              global $test;
+              $test = $freeResource['resource']['url']; 
               
             ?>
 
@@ -101,8 +101,8 @@ get_header(); while ( have_posts() ) : the_post();
                             <button type="btn btn-primary" class="btn btn-primary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
-                </div>
-            </div>
+                  </div>
+               </div>
 
             <!--End Modal-->
             
@@ -118,9 +118,9 @@ get_header(); while ( have_posts() ) : the_post();
 <!--End Content-->
 
 <?php
-// echo '<pre>';
-// var_dump($test);
-// echo '</pre>';
+echo '<pre>';
+var_dump($test);
+echo '</pre>';
 ?>
 
 <!--Footer-->
