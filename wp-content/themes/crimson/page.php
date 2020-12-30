@@ -26,7 +26,7 @@
 
     <!--End Breadcrumbs-->
 
-    <div class="container py-4" id="main-wrapper">
+    <div class="container pt-4" id="main-wrapper">
       <div class="row" id="content-wrapper">
         <div class="col-12">
           <?php get_template_part( 'template-parts/internal/content', 'loop' ); ?>
