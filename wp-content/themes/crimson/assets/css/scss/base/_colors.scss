@@ -11,3 +11,9 @@ $color-overlay-gray: #0000008c;
 /*Gradient colors*/
 $dark-gray-gradient: linear-gradient(180deg, #313131 0%, #2b2b2b 31%, #151515 100%);
 
+/* Background Colors */
+.bg-red {
+    background-color: $color-red;
+    color: $color-white;
+}
+
