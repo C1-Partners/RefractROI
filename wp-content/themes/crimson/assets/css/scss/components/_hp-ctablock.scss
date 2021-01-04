@@ -1,0 +1,59 @@
+/* Styles for Homepage CTA with form */
+
+.block-hp-cta {
+    // width: 100vw;
+    // position: relative;
+    // left: 50%;
+    // right: 50%;
+    // margin-left: -50vw;
+    // margin-right: -50vw;
+    // padding: 25px 0;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 90px
+    }
+    //fix for very large screens
+    @include media-breakpoint-up(xxl) {
+        // max-width: 1680px;
+        // margin: 90px 0 auto;
+        // left: -20%;
+    }
+
+    &.bg-color-red {
+        background-color: $color-red;
+        
+        p {color:$color-white};
+    }
+    &.bg-color-gray {
+        background-color: $color-gray;
+
+        p {color:$color-white};
+    }
+
+    .left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 0;
+
+        p:first-child {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
+
+    .right {
+        background-color: $color-white;
+        padding: 20px 20px 20px;
+        border-radius: 8px;
+        position: relative;
+        box-shadow: 3px 3px 9px #333;
+        
+        @include media-breakpoint-up(lg) {
+            margin-top: 90px;
+            margin-bottom: -125px;
+            top: -175px;
+        }
+    }
+}
