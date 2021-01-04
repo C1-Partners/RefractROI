@@ -26,6 +26,18 @@
             margin-left: auto;
         }
 
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+
+        .hero-title {
+
+            @include media-breakpoint-down(md) {
+                font-size: 2.5rem!important;
+                
+            }
+        }
+
         .hero-title, .hero-subtitle {
             color: #fff;
         }

@@ -1,23 +1,11 @@
 /* Styles for Homepage CTA with form */
 
 .block-hp-cta {
-    // width: 100vw;
-    // position: relative;
-    // left: 50%;
-    // right: 50%;
-    // margin-left: -50vw;
-    // margin-right: -50vw;
-    // padding: 25px 0;
 
     @include media-breakpoint-up(md) {
         margin-top: 90px
     }
-    //fix for very large screens
-    @include media-breakpoint-up(xxl) {
-        // max-width: 1680px;
-        // margin: 90px 0 auto;
-        // left: -20%;
-    }
+    
 
     &.bg-color-red {
         background-color: $color-red;
