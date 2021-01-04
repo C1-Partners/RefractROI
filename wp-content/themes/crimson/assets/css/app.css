@@ -11620,9 +11620,11 @@ input[type="search"]:focus {
   content: none !important;
 }
 
-body .gform_wrapper .gform_body .gfield_checkbox {
-  -webkit-column-count: 2;
-          column-count: 2;
+@media (min-width: 768px) {
+  body .gform_wrapper .gform_body .gfield_checkbox {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
 }
 
 body .gform_wrapper .gform_body .gfield_checkbox li input[type=checkbox] {
