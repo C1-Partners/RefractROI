@@ -117,11 +117,6 @@ get_header(); while ( have_posts() ) : the_post();
 
 <!--End Content-->
 
-<?php
-echo '<pre>';
-var_dump($test);
-echo '</pre>';
-?>
 
 <!--Footer-->
 
