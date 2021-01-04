@@ -12410,6 +12410,10 @@ a > .wp-block code {
   background-color: #eee;
 }
 
+.wp-block .block-hp-cta {
+  padding-bottom: 25px;
+}
+
 @media (min-width: 768px) {
   .wp-block .block-hp-cta {
     margin-top: 90px;

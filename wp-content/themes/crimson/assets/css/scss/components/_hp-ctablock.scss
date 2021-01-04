@@ -1,12 +1,12 @@
 /* Styles for Homepage CTA with form */
 
 .block-hp-cta {
+    padding-bottom:25px;
 
     @include media-breakpoint-up(md) {
         margin-top: 90px
     }
     
-
     &.bg-color-red {
         background-color: $color-red;
         

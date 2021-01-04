@@ -12394,6 +12394,10 @@ body.search-shown #search-close {
 }
 
 /* Styles for Homepage CTA with form */
+.block-hp-cta {
+  padding-bottom: 25px;
+}
+
 @media (min-width: 768px) {
   .block-hp-cta {
     margin-top: 90px;
