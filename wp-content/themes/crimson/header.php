@@ -37,7 +37,7 @@ $ctaLink = get_field('cta_link', 'options');
 			<a class="head-cta" href="<?php echo $ctaLink; ?>"><?php echo $ctaText; ?></a>
 		</div>
 		<div class="container-fluid">
-			<nav class="primary-nav navbar-expand-md" id="site-navigation">
+			<nav class="primary-nav navbar-expand-lg" id="site-navigation">
 				<div class="site-logo" id="site-branding">
 					<?php echo the_custom_logo(); ?>
 				</div>

@@ -175,7 +175,7 @@
                 height: auto;
                 padding:20px;
 
-                @include media-breakpoint-up(md) {
+                @include media-breakpoint-up(lg) {
                     height:80px;
                     padding:unset;
                 }
@@ -195,7 +195,7 @@
                         margin-left: 25px;
                     }
                     //Styling for submenu hovering on desktop
-                    @include media-breakpoint-up(md) {
+                    @include media-breakpoint-up(lg) {
                         display: flex;
 
                         .sub-menu {
