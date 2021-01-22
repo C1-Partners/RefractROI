@@ -161,3 +161,18 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 	background-color: #fff;
 }
+
+// Hire an expert button postioned lower right
+
+.btn-float {
+	display:none;
+
+	@include media-breakpoint-up(md) {
+		display:block!important;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		margin: 0 35px 20px 0;
+		box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.58);
+	}
+}
