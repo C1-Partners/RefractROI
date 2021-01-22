@@ -141,4 +141,11 @@ function crimson_register_widgets_init() {
 add_action( 'widgets_init', 'crimson_register_widgets_init' );
 
 
+// add_action( 'gform_after_submission', 'download_resource', 10, 2);
+// function download_resource( $confirmation, $form, $entry, $ajax ) {
 
+//   if( $form['id'] == '7' ) {
+//     $confirmation = array( 'redirect' => $url );
+//   } 
+//   return $confirmation;
+// }

@@ -9,7 +9,7 @@
     margin: 0 auto;
 
     @include media-breakpoint-up(md) {
-        padding: 0 0 20px;
+        padding: 0 0 5px;
     }
 
     .site-info {
@@ -19,11 +19,15 @@
         font-size:12px;
         background-color: $color-gray;
         color: $color-white;
-        padding-top:8px;
+        padding-top:5px;
         padding-bottom:5px;
 
         @include media-breakpoint-up(md) {
             justify-content: flex-end;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size:15px;
         }
 
         .site-phone {
@@ -45,6 +49,12 @@
                 background-color: $color-white;
                 color: $color-red;
                 transition: .5s;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding: 12px 24px;
+                font-size: 15px;
+                border-radius: 30px;
             }
         }
 
@@ -204,7 +214,7 @@
                         &:hover {
                             .sub-menu {
                                 display:block!important;
-                                top:119px;
+                                top:128px;
                                 transition: .3s;
                             }
                         }
@@ -341,7 +351,7 @@
             transition: .3s;
 
             .sub-menu {
-                top: 106px!important;
+                top: 120px!important;
                 background: rgba(white, .97);
             }
 		}

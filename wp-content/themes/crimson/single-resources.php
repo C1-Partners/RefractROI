@@ -62,8 +62,8 @@ get_header(); while ( have_posts() ) : the_post();
             $count = 0; 
             foreach( $freeResources as $freeResource ) : 
             
-              global $test;
-              $test = $freeResource['resource']['url']; 
+              
+              $url = $freeResource['resource']['url']; 
               
             ?>
 
@@ -121,6 +121,7 @@ get_header(); while ( have_posts() ) : the_post();
 <!--Footer-->
 
 <?php
+
 
 endwhile;
 get_footer();
