@@ -20,6 +20,10 @@
                 transition: .4s;
                 background-color: #eee;
             }
+
+            @include media-breakpoint-up(md) {
+                min-height: 330px;
+            }
         }
     }
 }

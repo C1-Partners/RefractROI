@@ -22,6 +22,11 @@ function crimson_setup_theme_supported_features()
         'slug' => 'red',
         'color' => '#b20f1a',
     ),
+    array(
+      'name' => __('Light Gray', 'crimson'),
+      'slug' => 'light-gray',
+      'color' => '#eee',
+    ),
   ) );
   add_theme_support('disable-custom-colors');
 //   add_theme_support('editor-gradient-presets',array());
