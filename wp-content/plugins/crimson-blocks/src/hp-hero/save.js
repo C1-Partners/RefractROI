@@ -12,7 +12,7 @@ class Save extends Component {
             <section className="block-hp-hero">
                 <picture>
                     <source media="(min-width: 768px)" srcSet={attributes.coverImage.url} />
-                    <img src={attributes.coverImage.url} />
+                    <img src={attributes.coverImage.url} width="500" height="950" />
                 </picture>
                 <div className="hp-hero-content">
                     <h1 className="hero-title">{attributes.titleText}</h1>
