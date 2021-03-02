@@ -15,6 +15,8 @@ $ctaLink = get_field('cta_link', 'options');
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="preload" as="font" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/archivo-bold-webfont.woff2" crossorigin="anonymous">
+	<link rel="preload" as="font" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/archivo-regular-webfont.woff2" crossorigin="anonymous">
 
 	<?php crimson_favicons() ?>
 
