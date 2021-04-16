@@ -42,7 +42,7 @@
               <?php the_excerpt(); ?>
                 
               <?php echo gravity_form( 
-                  7, 
+                  8, 
                   $display_title = false, 
                   $display_description = true, 
                   $display_inactive = false, 
