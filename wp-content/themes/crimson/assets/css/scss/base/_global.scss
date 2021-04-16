@@ -17,6 +17,11 @@ html,body {
 	//height: 100% !important;
 }
 
+//hide empty p tags
+p:empty {
+	display:none!important;
+}
+
 h1 { 
 	font-size: 3.5rem;
 	@include archivo-bold;
@@ -44,13 +49,13 @@ h3 {
 	}
 }
 h4 { 
-	font-size: 1.12em; 
+	font-size: 2.45rem; 
 }
 h5 { 
-	font-size: .83em; 
+	font-size: 2.15rem; 
 }
 h6 { 
-	font-size: .75em; 
+	font-size: 1.75rem; 
 }
 
 a {
