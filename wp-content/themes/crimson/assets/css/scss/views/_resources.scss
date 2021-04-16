@@ -1,11 +1,29 @@
-/* Styles for Resources page */
+/* 
+ * Styles for Resources page 
+ */
 
 .page-resources {
 
     .resource-container {
-        padding: 20px 50px;
         
         .resource {
+            text-align:center;
+
+            @include media-breakpoint-up(lg) {
+                text-align: left;
+            }
+
+             // hover arrow style
+             &:hover {
+
+                .resource-show-more {
+
+                    &:after {
+                        margin-left: 10px;
+                        @include transition();
+                    }
+                }
+            }
 
             .resource-image {
                 border: 2px solid $color-black;
@@ -13,55 +31,43 @@
                 padding: 15px;
             }
 
-            .download {
-                display: block;
-                margin: 0 auto;
+            .resource-title {
+                padding-top: 2rem;
+                color: $color-red;
+                font-weight: bold;
+                letter-spacing: 1.5px;
+                margin-bottom: 0;
+                font-size: 1.6rem;
+            }
+
+            .resource-show-more {
+                position: relative;
+                display:block;
+                padding-bottom: 2rem;
+                font-size: 1.5rem;
+
+                // arrow style
+                &:after {
+                    content: '';
+                    background: url(../images/arrow.svg) no-repeat 100%;
+                    position: absolute;
+                    width: 13px;
+                    height: 14px;
+                    top: 6px;
+                    margin-left: 5px;
+                    @include transition();
+                }
             }
         }
     }
+}
 
-    .modal {
+.single-resource {
 
-        .modal-dialog {
-            margin: 20vh auto;
-
-            @include media-breakpoint-up(md) {
-                max-width: 800px;
-                margin: 25vh auto;
-            }
-
-            .modal-content {
-                border-radius: 5px;
-
-                .modal-header {
-                    border:none;
-
-                }
-
-                .modal-body {
-
-                    @include media-breakpoint-up(md) {
-                        display:flex;
-                    }
-
-                    .image-desc {
-                        max-width: 350px;
-                        padding: 25px;
-
-                        img {
-                            margin-bottom: 15px;
-                        }
-                    }
-                    .gform {
-                        width: 100%;
-                        padding: 25px;
-                    }
-                }
-
-                .modal-footer {
-                    border:none;
-                }
-            }
+    .thumbnail-container {
+        
+        img {
+            max-width: 200px;
         }
     }
 }

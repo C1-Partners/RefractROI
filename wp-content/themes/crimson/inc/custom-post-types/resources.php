@@ -41,15 +41,15 @@ function crimson_resources_init() {
 			'publicly_queryable'  => true,
 			'capability_type'     => 'post',
 			'rewrite'             => array('with_front' => false,'slug' => ''),
-			'taxonomies'          => array('team_member_category'),
+			'taxonomies'          => array('resource-categories'),
 			'show_in_rest'        => true // Set to false to disable Gutenberg-style editor
 		)
 	);
 	
 	// register the taxonomies for the type
 	register_taxonomy(
-		'action-sheets',
-		'e-books',
+		'resource-categories',
+		'resource',
 		array(
 			'hierarchical' => true,
 			'label' => $singleLabel . ' Categories'
