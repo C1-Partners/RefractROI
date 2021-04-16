@@ -4,10 +4,10 @@
     "fields": [
         {
             "key": "field_5fe22f6bcdd38",
-            "label": "Resource Attachment",
-            "name": "attachment",
-            "type": "file",
-            "instructions": "Attach your resource file here.",
+            "label": "Resource Form ID",
+            "name": "r_form_id",
+            "type": "number",
+            "instructions": "Place your Gravity Form ID here",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,11 +15,13 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -39,5 +41,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1608658974
+    "modified": 1618602430
 }

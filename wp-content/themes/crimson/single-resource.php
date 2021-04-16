@@ -1,7 +1,13 @@
 
 <!--Header-->
 
-<?php get_header(); ?>
+<?php 
+
+get_header();
+
+$formID = get_field('r_form_id'); ?>
+
+?>
 
 <!--End Header-->
 
@@ -42,7 +48,7 @@
               <?php the_excerpt(); ?>
                 
               <?php echo gravity_form( 
-                  8, 
+                  $formID, 
                   $display_title = false, 
                   $display_description = true, 
                   $display_inactive = false, 
