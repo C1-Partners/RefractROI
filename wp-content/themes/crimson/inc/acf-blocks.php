@@ -4,10 +4,13 @@ function crimson_acf_init()
 {
   if (function_exists('acf_register_block')) {
 
-    $namespace = 'cr-';
-    $themeKeywords = array('cr', 'cm');
+    $namespace = 'c1-';
+    $themeKeywords = array('c1', 'ds');
     $customBlocks = array(
-      // array('loop', 'Loop Block', 'Block Loop', '', array('loop, content, loop-content')),
+    
+      array( 'card', 'Card block', 'Triptych card block', 'shield', array('card') ),
+      array( 'two-col-content', 'Two Column block', 'Block with Two columns', 'shield', array('two column') ),
+      array( 'services', 'Services block', 'Block services', 'shield', array('services') ),
     );
 
     foreach ($customBlocks as $block ) {
@@ -31,6 +34,7 @@ function crimson_acf_init()
   }
 }
 
+
 //load in the appropriate blocks
 function crimson_acf_block_render_callback($block)
 {
@@ -38,7 +42,7 @@ function crimson_acf_block_render_callback($block)
   $slug = str_replace('acf/', '', $block['name']);
 
   // include a template part from within the "template-parts/block" folder
-  if (file_exists(get_theme_file_path("/inc/block/{$slug}.php"))) {
-    include(get_theme_file_path("/inc/block/{$slug}.php"));
+  if (file_exists(get_theme_file_path("/template-parts/block/{$slug}.php"))) {
+    include(get_theme_file_path("/template-parts/block/{$slug}.php"));
   }
 }

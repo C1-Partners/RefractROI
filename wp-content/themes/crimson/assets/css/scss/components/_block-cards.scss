@@ -1,25 +1,21 @@
 .block-cards {
-    padding:50px 0;
+    // padding: 20px 0 50px;
 
     .cards-outer {
-        width: 100vw;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
         background-color: $color-light-gray;
-
-        @include fullwidthFix();
+        padding-bottom: 50px;
+        // @include fullwidthFix();
 
         @include media-breakpoint-up(lg) {
-            background-image: url(../images/int-hero.jpg);
+            background-image: url(../images/cards-min.jpg);
+            background-size: cover;
         }
 
         .section-title {
             padding: 40px 20px;
             text-align: center;
             color: $color-white;
+            margin-top: 0;
         }
 
         .cards-inner {
@@ -55,7 +51,7 @@
                                 width: 100%;
                                 height: auto;
                                 transition: transform .4s ease-in-out;
-                                filter: grayscale(30%);
+                                // filter: grayscale(30%);
                                 // transition: .3;
                             }
     
@@ -86,7 +82,7 @@
                     }
                     
                     .inner {
-                        background-color:rgba(49,49,49,.5);
+                        background-color:#ffffffba;
                         min-height: 283px;
                         padding: 10px 20px;
                         transition: .3s;
@@ -96,7 +92,7 @@
                         }
         
                         .card-description {
-                            color:$color-white;
+                            color:$color-black;
                             margin-bottom:0;
                             transition: .3s;
                         }
@@ -114,7 +110,7 @@
                         }
 
                         .inner {
-                            background-color:rgb(49,49,49);
+                            background-color: #fff;
                             transition: .3s;
                         }
 

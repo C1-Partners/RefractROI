@@ -1,0 +1,70 @@
+
+.block-services {
+    background: #a4bee0;
+ 
+
+   .bg {
+    padding: 140px 0;
+
+    @include media-breakpoint-up(lg) {
+        background-image: url(../images/mountains.png);
+        background-position: 100% 100%;
+        background-size: 100% 70%;
+        background-repeat: no-repeat;
+    }
+
+    .left {
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .right {
+        background-color: #ffffffeb;
+
+        .services {
+            display: grid;
+            padding: 80px 0;
+            grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+            row-gap: 30px;
+           
+
+            .service {
+                padding: 0 15px;
+
+                &:hover {
+
+                    .title {
+                        color: $color-red;
+                        @include transition();
+
+                        &:after {
+                            width: 60px;
+                        }
+                    }
+                }
+               
+                .title {
+                    min-height: 60px;
+                    color: $color-black;
+
+                    &:after {
+                        content: '';
+                        height: 2px;
+                        width: 30px;
+                        background-color: $color-red;
+                        display: block;
+                        @include transition();
+                    }
+
+                }
+
+                p {
+                    color: $color-black;
+                }
+            }
+        }
+    } 
+   } 
+}

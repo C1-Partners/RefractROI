@@ -46,3 +46,24 @@
 	column-count: $columns;
 	column-gap: $gap;
 }
+
+/* Absolute positioning over images/divs */
+@mixin floatOverImage() {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fullwidthFix() {
+	
+	@include media-breakpoint-up(xxl) {
+        max-width: 1680px;
+        margin: 0 auto;
+        left: -20%;
+    }
+}
