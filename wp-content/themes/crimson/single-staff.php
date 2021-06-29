@@ -1,37 +1,14 @@
-<?php 
 
-/*
-    Template Name: Staff
-*/
+<!--Header-->
 
-$staffQuery = new WP_Query([
-    'post_type' => 'staff',
-    'posts_per_page' => -1,
-    'post_status'   =>  'publish'
-]);
+<?php get_header(); ?>
 
-if($staffQuery->have_posts()) {
+<!--End Header-->
 
-    while($staffQuery->have_posts()) {
-        $staffQuery->the_post();
+<!--Content-->
 
-        $teamMembers[] = [
-            'id' => get_the_ID(),
-            'url' => get_the_permalink(),
-            'title' => get_the_title(),
-            'content' => get_the_content(),
-            'image' => get_the_post_thumbnail(),
-        ];
-    }
-
-}
-
-get_header();
-while ( have_posts() ) :
-  the_post();
-  ?>
   <article class="int-page">
-    <div class="container-fluid page-hero" <?php if (has_post_thumbnail()) { ?>style="background-image: url('<?php the_post_thumbnail_url() ?>')"<?php } ?>>
+    <div class="container-fluid page-hero" <?php if (has_post_thumbnail()) { ?>style="background-image: url('/wp-content/themes/crimson/assets/images/mountains.png')"<?php } ?>>
       <div class="row page-hero-overlay">
         <div class="col-12">
           <div class="row" id="title-bar">
@@ -49,58 +26,23 @@ while ( have_posts() ) :
 
     <!--End Breadcrumbs-->
 
-    <div class="container" id="main-wrapper">
+    <div class="container pt-4" id="main-wrapper">
       <div class="row" id="content-wrapper">
         <div class="col-12">
-            <div class="page-content page-staff container">
-
-                <?php the_content(); ?>
-
-                <div class="row ">
-
-                <?php 
-
-                $count = 0;   
-                foreach( $teamMembers as $teamMember ) : ?>
-
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 js-staff team-member">
-                        <div class="team-member-img">
-                            <?php echo $teamMember['image']; ?>
-                            
-                            <button class="action" data-toggle="modal" data-target="#teamModal-<?php echo $count ?>" role="button">Click for Bio</button>
-                        </div>
-                        <p class="team-member-name text-center"><?php echo $teamMember['title']; ?></p>
-                    </div> 
-                
-                    <div class="modal fade" id="teamModal-<?php echo $count ?>" aria-labelledby="teamModalLabel-<?php echo $count ?>" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <?php echo $teamMember['image']; ?>
-                                    <?php echo $teamMember['content']; ?>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="btn btn-primary" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <?php $count++ ?>
-                <?php endforeach; ?>
-
-                </div>
-            </div>
+          <?php get_template_part( 'template-parts/internal/content', 'loop' ); ?>
         </div>
       </div>
     </div>
   </article>
 
-  <?php
-endwhile;
-get_footer();
+
+<!--End Content-->
+
+<!--Footer-->
+
+<?php get_footer(); ?>
+
+<!--End Footer-->
+
+
+
