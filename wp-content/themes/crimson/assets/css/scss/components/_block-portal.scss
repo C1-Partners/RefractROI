@@ -1,10 +1,13 @@
 .block-portal {
 
     .member-img {
-        max-width: 150px;
+        max-width: 160px;
         img {
             width: 100%;
             height: auto;
         }
+    }
+    .member-info {
+        font-size: 1.4rem;
     }
 }

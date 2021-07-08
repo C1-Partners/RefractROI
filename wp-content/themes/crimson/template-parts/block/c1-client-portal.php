@@ -82,13 +82,16 @@ $clientLinks        = get_field('cl_links');
                     <img src="<?php echo $fallbackImg; ?>" height="100" width="100" alt="<?php echo $teamMember->post_title; ?>" />
                 <?php endif; ?>
                 </div>
-                <div class="d-flex flex-column pl-3">
+                <div class="d-flex flex-column pl-3 member-info">
                     <strong><p class="name"><?php echo $teamMember->post_title; ?></p></strong>
                     <?php if ($title): ?>
                     <p class="title"><?php echo $title; ?></p>
                     <?php endif; ?>
                     <?php if ($resp): ?>
-                    <p class="responsibilities"><?php echo $resp; ?></p>
+                    <strong><p class="responsibilities">What they do: </strong><?php echo $resp; ?></p>
+                    <?php endif; ?>
+                    <?php if ($wtc): ?>
+                    <strong><p class="wtc">When to Contact: </strong><?php echo $wtc; ?></p>
                     <?php endif; ?>
                     <?php if ($phone || $email): ?>
                     <span class="contact">
