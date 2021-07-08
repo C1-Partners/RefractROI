@@ -7,6 +7,7 @@
 /*
  * Contents
  * - compiledAsset
+ * - getCustomPostsByID
  * - assetUrl
  * - urlSegments
  * - urlFull
@@ -39,6 +40,43 @@ class c1Helpers {
 
         // Return either the original/base stylesheet/script file or the versioned file provided by the manifest if it exists
         return (@array_key_exists($filename, $manifest)) ? $this->assetUrl($manifest[$filename]) : $this->assetUrl($filename);
+    }
+
+   /**
+     * @param string $postType
+     * @param array $postIDs
+     * @return array
+     *
+     * Get Custom Posts by ID
+     * --------------
+     * Returns posts queried by post ID
+     */
+    public function getCustomPostsByID($postType, $postIDs) {
+
+        $posts = [];
+
+        $args = ([
+            'post_type' => $postType,
+            'posts_per_page' => -1,
+            'orderby' => 'title',
+            'order'   => 'ASC',
+            'post__in' => $postIDs,
+        ]);
+        
+        $postsQuery = new WP_Query( $args );
+
+        if($postsQuery->have_posts()) {
+            while($postsQuery->have_posts()) {
+                $postsQuery->the_post();
+            
+            $posts[] = $postsQuery->post;
+
+            }
+        }
+
+        wp_reset_postdata();
+
+        return $posts;
     }
 
 
