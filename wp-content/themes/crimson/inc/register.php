@@ -141,11 +141,31 @@ function crimson_register_widgets_init() {
 add_action( 'widgets_init', 'crimson_register_widgets_init' );
 
 
-// add_action( 'gform_after_submission', 'download_resource', 10, 2);
-// function download_resource( $confirmation, $form, $entry, $ajax ) {
+/**
+ * Describe this function bruh
+ */
+function create_checkboxes_for_acf_field( $field ) {
+    global $post;
+    $field['choices'] = array();
+    wp_reset_query();
+    $query = new WP_Query(array(
+      'post_type' => 'staff',
+    
+    ));
+    foreach($query->posts as $product_id=>$macthed_product){
+            $choices[$macthed_product->ID] = $macthed_product->post_title;
+    }
+    $field['choices'] = array();
 
-//   if( $form['id'] == '7' ) {
-//     $confirmation = array( 'redirect' => $url );
-//   } 
-//   return $confirmation;
-// }
+    if( is_array($choices) )
+    {
+        foreach( $choices as $key=>$choice )
+        {
+            $field['choices'][$key] = $choice;
+        }
+    }
+     wp_reset_query();
+    return $field;
+}
+add_filter('acf/load_field/name=clientteam', 'create_checkboxes_for_acf_field');
+add_filter('acf/load_field/name=clientteam2', 'create_checkboxes_for_acf_field');

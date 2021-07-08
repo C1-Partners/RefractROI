@@ -43,6 +43,32 @@
    }
 }
 
+//Wordpress default buttons
+.wp-block-button {
+
+    a {
+        color: $color-white!important;
+        background-color: $color-red;
+        border: 1px solid $color-white;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1.6rem;
+        margin: 1.5rem 0;
+        @include transition();
+
+        &:hover {
+            @include transition();
+            border: 1px solid $color-white;
+            background-color: $color-gray!important;
+        }
+    
+        &:active {
+            background-color: $color-red!important;
+            border-color: $color-white!important;
+        }
+    }
+}
+
 /* Nav Search Button */
 .search-btn {
     border-radius: 30px;

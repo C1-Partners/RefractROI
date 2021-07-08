@@ -11,6 +11,7 @@ function crimson_acf_init()
       array( 'card', 'Card block', 'Triptych card block', 'shield', array('card') ),
       array( 'two-col-content', 'Two Column block', 'Block with Two columns', 'shield', array('two column') ),
       array( 'services', 'Services block', 'Block services', 'shield', array('services') ),
+      array( 'client-portal', 'Client Portal', 'Portal block used for client pages', 'shield', array('portal') ),
     );
 
     foreach ($customBlocks as $block ) {

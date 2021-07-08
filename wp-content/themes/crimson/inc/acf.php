@@ -329,71 +329,7 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
-  register_field_group(array (
-		'id' => 'acf_staff',
-		'title' => 'Staff',
-		'fields' => array (
-      array(
-  			'key' => 'field_5c9cbd405861b',
-  			'label' => 'Position',
-  			'name' => 'staff_position',
-  			'type' => 'text',
-  			'instructions' => '',
-  			'required' => 0,
-  			'conditional_logic' => 0,
-  			'wrapper' => array(
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'default_value' => '',
-  			'placeholder' => '',
-  			'prepend' => '',
-  			'append' => '',
-  			'maxlength' => '',
-  		),
-			array (
-				'key' => 'field_5a99cbc902e95',
-				'label' => 'Phone Number',
-				'name' => 'phone_number',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_5a99cc0a02e96',
-				'label' => 'Email Address',
-				'name' => 'email_address',
-				'type' => 'email',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'staff',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'default',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
+
   acf_add_local_field_group(array(
   	'key' => 'group_5c87fc5b17270',
   	'title' => 'Testimonials',

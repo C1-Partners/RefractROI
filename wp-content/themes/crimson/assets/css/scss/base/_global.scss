@@ -22,7 +22,7 @@ p:empty {
 	display:none!important;
 }
 
-h1 { 
+h1, .as-h2 { 
 	font-size: 3.5rem;
 	@include archivo-bold;
 	
@@ -30,7 +30,7 @@ h1 {
 		font-size: 6.5rem;
 	}
 }
-h2 { 
+h2, .as-h2 { 
 	font-size: 3rem; 
 	margin: 3rem 0 2rem; 
 	@include archivo-bold;
@@ -39,7 +39,7 @@ h2 {
 		font-size: 4rem;
 	}
 }
-h3 { 
+h3, .as-h3 { 
 	font-size: 2.5rem; 
 	margin: 2rem 0 1.75rem; 
 	@include archivo-bold;
@@ -48,13 +48,13 @@ h3 {
 		font-size: 3rem;
 	}
 }
-h4 { 
+h4, .as-h4 { 
 	font-size: 2.45rem; 
 }
-h5 { 
+h5, .as-h5 { 
 	font-size: 2.15rem; 
 }
-h6 { 
+h6, .as-h6 { 
 	font-size: 1.75rem; 
 }
 
