@@ -6,7 +6,6 @@
  *
  */
 
-
 // Set Vars for this Block
 $managerTeamPostIDs = get_field('clientteam');
 $clientTeamPostIDs  = get_field('clientteam2');
@@ -19,11 +18,9 @@ $mgTeamHeading      = get_field('mg_heading');
 $clTeamHeading      = get_field('tm_heading');
 $clientLinks        = get_field('cl_links');
 
-
 ?>
 
-
-<section>
+<section class="block-portal">
     <div class="client-logo text-center mb-5">
         <?php if($clientLogo): ?>
         <img class="logo" src="<?php echo $clientLogo['url']; ?>" alt="<?php echo $clientLogo['title']; ?>" height="200" width="auto" />
@@ -62,48 +59,47 @@ $clientLinks        = get_field('cl_links');
     </div>
     <div class="client-mgmt-team">
 
-        
-            <?php if($clTeamHeading): ?>
-            <p class="as-h5"><?php echo $clTeamHeading; ?></p>
-            <?php endif; ?>
+        <?php if($clTeamHeading): ?>
+        <p class="as-h5"><?php echo $clTeamHeading; ?></p>
+        <?php endif; ?>
 
-            <div class="row">
-            <?php if($getTeamMembers): ?>
-                <?php foreach($getTeamMembers as $teamMember) : 
-                    $image        = wp_get_attachment_image_src( get_post_thumbnail_id( $teamMember->ID ), 'full' );
-                    $fallbackImg  = get_template_directory_uri() . '/assets/images/fallbacks/user.png';
-                    $title        = get_field('st_title', $teamMember->ID); 
-                    $resp         = get_field('cl_resp', $teamMember->ID);
-                    $wtc          = get_field('cl_ctc', $teamMember->ID);
-                    $phone        = get_field('cl_phone', $teamMember->ID);
-                    $email        = get_field('cl_email', $teamMember->ID);
-                ?>
-                <div class="team-member col-lg-6 d-flex justify-content-center py-5">
-                    <div class="member-img">
-                    <?php if (has_post_thumbnail( $teamMember->ID ) ): ?>
-                        <img src="<?php echo $image[0]; ?>" height="100" width="100" alt="<?php echo $teamMember->post_title; ?>" />
-                    <?php else: ?>
-                        <img src="<?php echo $fallbackImg; ?>" height="100" width="100" alt="<?php echo $teamMember->post_title; ?>" />
-                    <?php endif; ?>
-                    </div>
-                    <div class="d-flex flex-column pl-3">
-                        <strong><p class="name"><?php echo $teamMember->post_title; ?></p></strong>
-                        <?php if ($title): ?>
-                        <p class="title"><?php echo $title; ?></p>
-                        <?php endif; ?>
-                        <?php if ($resp): ?>
-                        <p class="responsibilities"><?php echo $resp; ?></p>
-                        <?php endif; ?>
-                        <?php if ($phone || $email): ?>
-                        <span class="contact">
-                            <?php echo $phone; ?> |
-                            <?php echo $email; ?>
-                        </span>
-                        <?php endif; ?>
-                    </div>
+        <div class="row">
+        <?php if($getTeamMembers): ?>
+            <?php foreach($getTeamMembers as $teamMember) : 
+                $image        = wp_get_attachment_image_src( get_post_thumbnail_id( $teamMember->ID ), 'full' );
+                $fallbackImg  = get_template_directory_uri() . '/assets/images/fallbacks/user.png';
+                $title        = get_field('st_title', $teamMember->ID); 
+                $resp         = get_field('cl_resp', $teamMember->ID);
+                $wtc          = get_field('cl_ctc', $teamMember->ID);
+                $phone        = get_field('cl_phone', $teamMember->ID);
+                $email        = get_field('cl_email', $teamMember->ID);
+            ?>
+            <div class="team-member col-lg-6 d-flex justify-content-center py-5">
+                <div class="member-img">
+                <?php if (has_post_thumbnail( $teamMember->ID ) ): ?>
+                    <img src="<?php echo $image[0]; ?>" height="100" width="100" alt="<?php echo $teamMember->post_title; ?>" />
+                <?php else: ?>
+                    <img src="<?php echo $fallbackImg; ?>" height="100" width="100" alt="<?php echo $teamMember->post_title; ?>" />
+                <?php endif; ?>
                 </div>
-                <?php endforeach; ?>
-            <?php endif; ?>
+                <div class="d-flex flex-column pl-3">
+                    <strong><p class="name"><?php echo $teamMember->post_title; ?></p></strong>
+                    <?php if ($title): ?>
+                    <p class="title"><?php echo $title; ?></p>
+                    <?php endif; ?>
+                    <?php if ($resp): ?>
+                    <p class="responsibilities"><?php echo $resp; ?></p>
+                    <?php endif; ?>
+                    <?php if ($phone || $email): ?>
+                    <span class="contact">
+                        <?php echo $phone; ?> |
+                        <?php echo $email; ?>
+                    </span>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
 
         </div>
     </div>
@@ -126,20 +122,5 @@ $clientLinks        = get_field('cl_links');
 
         <?php endforeach; ?>
     <?php endif; ?>   
-    </div>
-    <div class="client-form row">
-        <div class="col-md-6">
-            Wrike Form
-        </div>
-        <div class="col-md-6">
-            <div class="content-top">
-            </div>
-            <div class="content-bottom">
-            </div>
-        </div>
-    </div>
-
-    <div class="table">
-
     </div>
 </section>
