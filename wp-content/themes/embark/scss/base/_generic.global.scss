@@ -1,0 +1,139 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  overflow-x: hidden;
+}
+a,
+button,
+input,
+select,
+textarea,
+[role="tabpanel"],
+.a11y-modal,
+.btn {
+  &:focus,
+  &:active {
+    outline: var(--brdr-xs) solid var(--color-accent-primary);
+    // outline-offset: 2px;
+  }
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes gray background when button or link is tapped in iOS
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+figcaption {
+  font-size: var(--text-sm);
+}
+
+// Fieldset reset
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Prevents icons from getting cropped
+svg {
+  overflow: visible;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.d-none {
+  display:none;
+}
+.hide-mobile {
+  display:none;
+}
+.hide-desktop {
+  display:block;
+}
+@include brkpnt-md {
+  .hide-mobile {
+    display:block;
+  }
+  .hide-desktop {
+    display: none;
+  }
+}
+
+.site-main {
+  padding: 3rem 0 2rem!important;
+  border-left: 1px solid var(--color-base-lighter);
+  border-right: 1px solid var(--color-base-lighter);
+}
+
+.posts-navigation {
+  .nav-links  {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    margin:var(--space-md) 0;
+  }
+}
+
+
+.content-page {
+  padding: 0 var(--space-md);
+  @include brkpnt-md {
+    padding: 0 var(--space-xl);
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.wp-caption {
+  &.alignleft {
+    float: left;
+  }
+  &.alignright {
+    float: right;
+  }
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 900;
+
+  .header__logo-outer {
+    opacity: 1;
+    width: 100%;
+    transition: 2s;
+  }
+}

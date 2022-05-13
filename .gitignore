@@ -1,29 +1,35 @@
-##### Global ignores #####
-.DS_Store
-.svn
-.idea
-*.orig
-*.log
-.vscode/*
+# .gitignore file for WordPress that ignores everything except:
+#
+# - .gitignore
+# - favicon.ico
+# - wp-config.php
+# - everything in mu-plugins
+# - my-plugin
+# - my-theme (except for .sass-cache)
+#
+# based on https://gist.github.com/jdbartlett/444295
+/*
+!.github/
+!.gitignore
 
-##### Build tool files #####
-config.codekit
+
+!favicon.ico
+
+!wp-content
+
+wp-content/*
+# !wp-content/plugins
+!wp-content/themes
+
+wp-content/plugins/*
+wp-content/mu-plugins/*
+
+# Specify individuals themes NOT to be ignored
+# wp-content/themes/*
+# !wp-content/themes/crimson
+# !wp-content/themes/sensorsinc
+# Ignore Node Modules
+wp-content/themes/crimson/assets/node_modules/*
+wp-content/themes/embark/node_modules/*
+
 .sass-cache
-.sass-cache/*
-node_modules
-node_modules/*
-bower_components
-bower_components/*
-
-##### WordPress #####
-wp-config.php
-wp-config-sample-c1.php
-wp-content/debug.log
-wp-content/plugins/
-wp-content/upgrade/
-wp-content/uploads/
-wp-content/uploads-webpc/*
-
-# W3TC plugin contents
-wp-content/cache/*
-src/wp-content/w3tc-config/*
