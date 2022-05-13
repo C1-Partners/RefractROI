@@ -376,27 +376,30 @@ Use it to make something cool, have fun, and share what you've learned.
 # Color Base - Charcoal
 --------------------------------------------------------------*/
   --color-base-white: #fff;
-  --color-base-lightest: #f8f7f7;
-  --color-base-lighter: #d9d9d9;
-  --color-base-light: #9b9b9b;
+  --color-base-lightest: #f3f3f3;
+  --color-base-lighter: #f3f3f2;
+  --color-base-light: #f3f3f1;
   --color-base: #747474;
-  --color-base-dark: #555555;
-  --color-base-darker: #383737;
-  --color-base-darkest: #070606;
+  --color-base-dark: #2e3532;
+  --color-base-darker: #232826;
+  --color-base-darkest: #171a19;
   /*--------------------------------------------------------------
 # Orange
 --------------------------------------------------------------*/
-  --color-primary-lightest: #ee3b3b;
-  --color-primary-lighter: #df3838;
-  --color-primary-light: #d43535;
-  --color-primary: #c13131;
-  --color-primary-dark: #9C1818;
-  --color-primary-darker: #720000;
-  --color-primary-darkest: #491000;
+  --color-primary-lightest: #fdc035;
+  --color-primary-lighter: #ecb330;
+  --color-primary-light: #e9b12f;
+  --color-primary: #e6af2e;
+  --color-primary-dark: #d3a029;
+  --color-primary-darker: #c79727;
+  --color-primary-darkest: #c09124;
   /*--------------------------------------------------------------
 # Aqua
 --------------------------------------------------------------*/
   --color-accent-primary: #25a9ba;
+  --color-accent-rust: #d14e2a;
+  --color-accent-khaki: #beb7a4;
+  --color-accent-cooler-gray: #7b94c1;
   /*--------------------------------------------------------------
 # Helpers
 --------------------------------------------------------------*/ }
@@ -3164,3 +3167,5 @@ select::-ms-expand {
 /* Labels are inline-block and can look odd */
 .components-base-control .components-base-control__label {
   display: block; }
+
+/*# sourceMappingURL=editor-style.css.map */
