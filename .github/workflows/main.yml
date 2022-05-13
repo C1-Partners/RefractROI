@@ -15,7 +15,7 @@ jobs:
     - name: SSH Deploy to WP Engine
       uses: bowiedev/github-action-wpengine-ssh-deploy@master 
       env: 
-          WPE_ENV_NAME: jhfoster
+          WPE_ENV_NAME: embarkroi
           WPE_SSHG_KEY_PUBLIC: ${{ secrets.PUBLIC_KEY }} 
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.PRIVATE_KEY }} 
           TPO_SRC_PATH: ""
