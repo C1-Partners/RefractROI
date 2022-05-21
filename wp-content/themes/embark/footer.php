@@ -51,6 +51,9 @@ $ig_link = get_field('ig_link', 'option');
         </div>
         <div class="footer__copyright container">
             <?php get_template_part('template-parts/foot/copyright'); ?>
+            <a href="https://www.google.com/partners/agency?id=4626088094" target="_blank">
+                <img src="https://www.gstatic.com/partners/badge/images/2022/PartnerBadgeClickable.svg"/>
+            </a>
         </div>
     </footer>
 

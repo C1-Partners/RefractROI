@@ -40,8 +40,11 @@ const openSearch = (e) => {
   
     searchInput.focus();
 }
-searchOpen.addEventListener('click', openSearch);
-searchClose.addEventListener('click', closeSearch);
+if (searchOpen) {
+    searchOpen.addEventListener('click', openSearch);
+    searchClose.addEventListener('click', closeSearch);
+}
+
 
 /*
  * Mobile Navigation

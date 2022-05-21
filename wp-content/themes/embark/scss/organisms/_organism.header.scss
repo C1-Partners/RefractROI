@@ -3,7 +3,7 @@
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  background-color: var(--color-base-lightest);
+  background-color: var(--color-base-dark);
 
   // Header on tablet +
   @include brkpnt-md {
@@ -172,32 +172,10 @@
         align-items: center;
         padding: 9px 16px;
         text-decoration: none;
-        color: inherit;
+        color: var(--color-primary);
         text-transform: uppercase;
         font-family: var(--font-secondary);
         height: 100%;
-      }
-
-      &:nth-child(odd) {
-        background-color: var(--color-primary);
-        color: var(--color-base-lightest);
-        a {
-          &:hover {
-            background-color: var(--color-primary-darker);
-            color: var(--color-base-lightest);
-          }
-        }
-        
-      }
-      &:nth-child(even) {
-        background-color: var(--color-base-lightest);
-        color: var(--color-primary);
-        a {
-          &:hover {
-            background-color: var(--color-primary-darker);
-            color: var(--color-base-lightest);
-          }
-        }
       }
     }
 
@@ -244,8 +222,8 @@
     margin:0;
     background-color: var(--color-base);
     @include brkpnt-md {
-      display: block;
       display: flex;
+      justify-content: flex-end;
       background-color:unset;
       font-size: var(--text-sm);
     }
@@ -336,7 +314,7 @@
       display: block;
       height: 100%;
       text-decoration: none;
-      color: var(--color-base-darkest);
+      color: var(--color-base-light);
       font-family: var(--font-secondary);
       text-transform: uppercase;
       padding: 15px;

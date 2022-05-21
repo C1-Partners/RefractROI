@@ -8,13 +8,13 @@
  * @package SW
  */
 
- get_header();
-
- ?>
-
-    <?php get_template_part( 'template-parts/banner', 'hp'); ?>
-	<?php get_template_part( 'template-parts/internal/cat', 'filters'); ?>
+ get_header(); ?>
 
 
+
+<div id="banner"></div>
  <?php
+
+
+the_content();
  get_footer();

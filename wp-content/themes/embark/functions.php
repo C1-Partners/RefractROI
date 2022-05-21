@@ -466,6 +466,17 @@ function cat_posts_per_page( $query ) {
 add_filter( 'pre_get_posts', 'cat_posts_per_page' );
 
 /**
+ * Image Type Support
+ * http://www.iana.org/assignments/media-types/media-types.xhtml
+ */
+function crimson_mime_types($mimes) {
+    $mimes['webp'] = 'image/webp';
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'crimson_mime_types');
+
+/**
  * Include custom functions to modify comments
  */
 require get_template_directory() . '/inc/comment-mods.php';

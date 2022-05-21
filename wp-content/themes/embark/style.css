@@ -1032,9 +1032,28 @@ Breakpoint
     > Variables for line-heights
     > Breakpoints to adjust typesetting
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'objectsans-md';
+  src: url("fonts/PPObjectSans-Medium.woff2") format("woff2"), url("fonts/PPObjectSans-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'objectsans';
+  src: url("fonts/PPObjectSans-Regular.woff2") format("woff2"), url("fonts/PPObjectSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'machina';
+  src: url("fonts/PPNeueMachina-Medium.woff2") format("woff2"), url("fonts/PPNeueMachina-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
 :root {
-  --font-primary: garvis-pro, Tahoma, serif;
-  --font-secondary: oswald, "Times New Roman", sans-serif;
+  --font-primary: objectsans, sans-serif;
+  --font-secondary: objectsans-md, sans-serif;
+  --font-tertiary: machina, sans-serif;
   --text-base-size: 1.125rem;
   --text-scale-ratio: 1.25;
   --text-xs: calc((var(--text-base-size) / var(--text-scale-ratio)) / var(--text-scale-ratio));
@@ -1070,8 +1089,6 @@ h4,
 h5,
 h6 {
   word-break: break-word;
-  -webkit-hyphens: auto;
-          hyphens: auto;
   margin-top: 0; }
 body {
   font-family: var(--font-primary);
@@ -1124,13 +1141,11 @@ h6,
 h1,
 .h1 {
   font-size: var(--text-xxl);
-  text-transform: uppercase;
-  letter-spacing: -0.125rem;
+  text-transform: capitalize;
   margin-bottom: var(--space-xxs); }
 h2,
 .h2 {
   font-size: var(--text-xl);
-  text-transform: uppercase;
   margin-bottom: var(--space-xxs); }
 h3,
 .h3 {
@@ -2214,59 +2229,6 @@ select::-ms-expand {
       margin-bottom: 0; }
 .accordion__list .form__element::before {
       display: none; }
-.hero.int-header .hero__container {
-  padding: 0;
-  background-color: var(--color-base-darkest); }
-.hero__container {
-  position: relative;
-  padding: 3rem 0 0; }
-@media only screen and (min-width: 47.9375em) {
-    .hero__container {
-      padding: 5.75rem 0 0; } }
-.hero__txt {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  padding: 0 1rem; }
-@media print {
-    .hero__txt {
-      color: black;
-      padding: 0;
-      text-align: left; } }
-.hero__tagline {
-  text-transform: uppercase;
-  font-family: var(--font-secondary); }
-@media only screen and (min-width: 63.9375em) {
-    .hero__tagline {
-      font-size: 2rem; } }
-.hero__title {
-  margin-bottom: 0;
-  color: white;
-  line-height: 3rem;
-  font-size: 3rem; }
-@media only screen and (min-width: 63.9375em) {
-    .hero__title {
-      line-height: 6rem;
-      font-size: 7rem; } }
-.hero__img {
-  position: absolute;
-  top: 0;
-  background-image: url(images/temp/hero-img.jpg);
-  background-size: cover;
-  background-position: center;
-  min-width: 100%;
-  min-height: 100%;
-  overflow: hidden; }
-.hero__img::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-base-darkest);
-    opacity: 0.65; }
 /*--------------------------------------------------------------
 # Card--list
 --------------------------------------------------------------*/
@@ -3030,7 +2992,7 @@ select::-ms-expand {
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  background-color: var(--color-base-lightest); }
+  background-color: var(--color-base-dark); }
 @media only screen and (min-width: 63.9375em) {
     .header {
       padding: 0 20px; } }
@@ -3151,22 +3113,10 @@ select::-ms-expand {
         align-items: center;
         padding: 9px 16px;
         text-decoration: none;
-        color: inherit;
+        color: var(--color-primary);
         text-transform: uppercase;
         font-family: var(--font-secondary);
         height: 100%; }
-.header__nav-secondary .menu-item:nth-child(odd) {
-        background-color: var(--color-primary);
-        color: var(--color-base-lightest); }
-.header__nav-secondary .menu-item:nth-child(odd) a:hover {
-          background-color: var(--color-primary-darker);
-          color: var(--color-base-lightest); }
-.header__nav-secondary .menu-item:nth-child(even) {
-        background-color: var(--color-base-lightest);
-        color: var(--color-primary); }
-.header__nav-secondary .menu-item:nth-child(even) a:hover {
-          background-color: var(--color-primary-darker);
-          color: var(--color-base-lightest); }
 .header__nav-secondary .open-search-btn {
       display: none; }
 .header__nav-secondary .open-search-btn svg {
@@ -3195,8 +3145,8 @@ select::-ms-expand {
     background-color: var(--color-base); }
 @media only screen and (min-width: 63.9375em) {
       .header__nav-menu {
-        display: block;
         display: flex;
+        justify-content: flex-end;
         background-color: unset;
         font-size: var(--text-sm); } }
 @media only screen and (max-width: 63.9375em) {
@@ -3282,7 +3232,7 @@ select::-ms-expand {
       display: block;
       height: 100%;
       text-decoration: none;
-      color: var(--color-base-darkest);
+      color: var(--color-base-light);
       font-family: var(--font-secondary);
       text-transform: uppercase;
       padding: 15px; }
@@ -3740,6 +3690,58 @@ body.show-nav .header__nav {
             font-style: normal; }
 .block-callout .inner .right ul li span svg {
               transition: all .3s ease; }
+/*--------------------------------------------------------------
+# Hero Block
+--------------------------------------------------------------*/
+.hero {
+  background-color: var(--color-base-dark); }
+@media only screen and (min-width: 63.9375em) {
+    .hero {
+      padding-left: var(--space-xl);
+      padding-right: 0; } }
+.hero__headline {
+    padding: var(--space-xxl) var(--space-md) var(--space-lg); }
+@media only screen and (min-width: 63.9375em) {
+      .hero__headline {
+        max-width: 40%;
+        padding: var(--space-xxl) var(--space-lg) var(--space-lg) 0; } }
+.hero__headline span {
+      color: var(--color-primary);
+      font-family: 'machina'; }
+.hero__heading {
+    color: var(--color-base-light);
+    margin-bottom: 0;
+    font-size: var(--text-xxl); }
+.hero__lower {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--color-base-light); }
+@media only screen and (min-width: 63.9375em) {
+      .hero__lower {
+        flex-direction: row; } }
+.hero__cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-lg) var(--space-md) var(--space-lg);
+    border-top: 1px solid var(--color-base-light); }
+@media only screen and (min-width: 63.9375em) {
+      .hero__cta {
+        width: 55%;
+        padding: 0 var(--space-xxl) var(--space-lg) 0; } }
+.hero__img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 40vh;
+    border-top: 1px solid var(--color-base-light); }
+@media only screen and (min-width: 63.9375em) {
+      .hero__img {
+        min-height: 70vh;
+        border-left: 1px solid var(--color-base-light); } }
+.hero__cta-text {
+    color: var(--color-base-light);
+    font-size: var(--text-xl); }
 /*--------------------------------------------------------------
 # Cta Block
 --------------------------------------------------------------*/

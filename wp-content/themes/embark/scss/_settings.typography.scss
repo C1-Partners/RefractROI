@@ -16,10 +16,50 @@
     > Variables for line-heights
     > Breakpoints to adjust typesetting
 --------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'objectsans-md';
+  src: url('../fonts/PPObjectSans-Medium.woff2') format('woff2'),
+       url('../fonts/PPObjectSans-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'objectsans';
+  src: url('../fonts/PPObjectSans-Regular.woff2') format('woff2'),
+       url('../fonts/PPObjectSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'machina';
+  src: url('../fonts/PPNeueMachina-Medium.woff2') format('woff2'),
+       url('../fonts/PPNeueMachina-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+//font mixins 
+@mixin objectsans-md {
+  font-family: 'objectsans-md';
+}
+@mixin object-sans {
+  font-family: 'objectsans';
+}
+@mixin machina {
+  font-family: 'machina';
+}
+
+
 :root {
   // Fonts, embedded in head through Adobe Fonts
-  --font-primary: garvis-pro, Tahoma, serif;
-  --font-secondary: oswald, "Times New Roman", sans-serif;
+  --font-primary: objectsans, sans-serif;
+  --font-secondary: objectsans-md, sans-serif;
+  --font-tertiary: machina, sans-serif;
 
   // Base font-size for site, 18px
   --text-base-size: 1.125rem;
@@ -71,7 +111,7 @@ h4,
 h5,
 h6 {
   word-break: break-word; // Helps prevent overflow of long words/names/URLs
-  hyphens: auto; // Helps prevent overflow of long words/names/URLs, but not supported for all languages
+  // hyphens: auto; // Helps prevent overflow of long words/names/URLs, but not supported for all languages
   margin-top: 0;
 }
 
@@ -135,15 +175,13 @@ h6,
 h1,
 .h1 {
   font-size: var(--text-xxl);
-  text-transform: uppercase;
-  letter-spacing: rem(-2);
+  text-transform: capitalize;
   margin-bottom: var(--space-xxs);
 }
 
 h2,
 .h2 {
   font-size: var(--text-xl);
-  text-transform: uppercase;
   margin-bottom: var(--space-xxs);
 }
 

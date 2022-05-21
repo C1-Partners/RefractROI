@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Frontpage
+ * 
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *

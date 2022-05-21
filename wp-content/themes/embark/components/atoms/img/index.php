@@ -35,7 +35,7 @@ gsc_define("img", $defaults, function($data) {
 		$img_class = "thmbnl ".$class;
 	}
 
-	if ($type == "background-pattern" || $type == "graphic-overlay") {
+	if ($type == "background-pattern" || $type == "graphic-overlay" || "hero") {
 		$img_class = "figure__img";
 	}
 
@@ -75,6 +75,10 @@ gsc_define("img", $defaults, function($data) {
 
 		if ($type == "graphic-overlay") {
 			$content = "<figure $id_attr $misc_attrs class='{$class}'>" . $content . $svg . "</figure>";
+		}
+
+		if ($type == "hero") {
+			$content = "<picture $id_attr $misc_attrs class='{$class}'>" . $content . "</picture>";
 		}
 
 	}

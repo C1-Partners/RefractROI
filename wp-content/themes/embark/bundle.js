@@ -584,8 +584,10 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput.focus();
   };
 
-  searchOpen.addEventListener('click', openSearch);
-  searchClose.addEventListener('click', closeSearch);
+  if (searchOpen) {
+    searchOpen.addEventListener('click', openSearch);
+    searchClose.addEventListener('click', closeSearch);
+  }
 
   var toggleMobileNav = function toggleMobileNav() {
     if (!body.classList.contains('show-nav')) {
