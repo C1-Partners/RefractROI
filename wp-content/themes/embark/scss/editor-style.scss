@@ -188,6 +188,16 @@ BEWARE, THOSE WHO WOULD BREAK THE SACRED ORDER OF COMPONENTS - brenda */
 @import "blocks/block.callout-newsletter.scss";
 
 /*--------------------------------------------------------------
+# Hero Block
+--------------------------------------------------------------*/
+@import "blocks/block.hero.scss";
+
+/*--------------------------------------------------------------
+# Two Column List Block
+--------------------------------------------------------------*/
+@import "blocks/block.two-col-list.scss";
+
+/*--------------------------------------------------------------
 # Menu
 // --------------------------------------------------------------*/
 // @import "organisms/organism.menu.scss";
@@ -285,4 +295,9 @@ BEWARE, THOSE WHO WOULD BREAK THE SACRED ORDER OF COMPONENTS - brenda */
   /* Labels are inline-block and can look odd */
   .components-base-control .components-base-control__label{
 	display: block;
+  }
+
+
+  .acf-block-component {
+	  padding: 1rem;
   }

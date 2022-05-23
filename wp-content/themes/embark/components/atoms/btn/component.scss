@@ -24,7 +24,7 @@
   background-position: right bottom;
   background-repeat: no-repeat;
   text-transform: uppercase;
-  @include font-settings(var(--font-secondary), 400);
+  @include font-settings(var(--font-tertiary), 400);
   font-size: var(--text-sm);
   text-align: center;
   text-decoration: none;

@@ -61,7 +61,9 @@ gsc_define("img", $defaults, function($data) {
 
 	$image_path = $data['content']['src'];
 	
-	list($width, $height) = getimagesize($image_path);
+	if ($image_path) {
+		list($width, $height) = getimagesize($image_path);
+	}
 	
 	if (empty($type) || $type == "thumbnail") {
 		$content = "<img $id_attr $misc_attrs src='{$data['content']['src']}' alt='{$data['content']['alt']}' class='{$img_class}' width='{$width}' height='{$height}' />";

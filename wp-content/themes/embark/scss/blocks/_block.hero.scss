@@ -18,7 +18,7 @@
     &__heading { 
         color: var(--color-base-light);
         margin-bottom:0;
-        font-size: var(--text-xxl);
+        font-size: var(--text-xl);
     }
     &__lower {
         display: flex;
@@ -47,12 +47,13 @@
         min-height: 40vh;
         border-top: 1px solid var(--color-base-light);
         @include brkpnt-md {
-            min-height: 70vh;
+            min-height: 60vh;
             border-left: 1px solid var(--color-base-light);
         }
     }
     &__cta-text {
         color: var(--color-base-light);
-        font-size: var(--text-xl);
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-sm);
     }
 }

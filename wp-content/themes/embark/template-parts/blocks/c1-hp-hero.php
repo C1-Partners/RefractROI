@@ -1,5 +1,9 @@
 <?php 
 
+/** 
+ * Hero Block
+ */
+
 $headline = get_field('hero_hl');
 $cta_text = get_field('hero_cta_txt');
 $img = get_field('hero_img');
@@ -12,7 +16,7 @@ endif;
 
 ?>
 
-<section class="hero">
+<div class="hero">
     <div class="hero__headline">
     <?php if ($headline): ?>
         <h2 class="hero__heading"><?php echo $headline; ?></h2>
@@ -36,4 +40,4 @@ endif;
         <div class="hero__img" <?php echo ($img) ? 'style="background-image: url(' . $img['url'] . ');"' : ''; ?> >
         </div> 
     </div>
-</section>
+</div>

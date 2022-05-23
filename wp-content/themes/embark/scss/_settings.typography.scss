@@ -75,6 +75,7 @@
   --text-xl: calc(var(--text-lg) * var(--text-scale-ratio)); // 28px
   --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio)); // 35px
   --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio)); // 44px
+  --text-4xl: calc(var(--text-xxxl) * var(--text-scale-ratio)); // 104px
 
   // line-heights
   --heading-line-height-lg: calc(2px + 2ex + 2px);
@@ -167,7 +168,8 @@ h5,
 h6,
 .h6 {
   @include font-settings(var(--font-secondary), 700);
-  color: var(--color-base-darkest);
+  // color: var(--color-base-darkest);
+  color: inherit;
   line-height: var(--heading-line-height-sm);
   margin-bottom: var(--space-xs);
 }

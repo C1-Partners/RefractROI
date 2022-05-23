@@ -1,13 +1,16 @@
 .staggered-content {
-  @include row;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // @include row;
 
-  &__title {
-    @include columns(7, true);
-  }
+  // &__title {
+  //   @include columns(5, true);
+  // }
 
-  &__text {
-    @include columns(17);
-  }
+  // &__text {
+  //   @include columns(20);
+  // }
 
   &.staggered-content--divider {
     .staggered-content__text {
