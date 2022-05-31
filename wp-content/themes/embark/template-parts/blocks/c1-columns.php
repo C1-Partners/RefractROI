@@ -1,15 +1,22 @@
 <?php
-$col_style = get_field('col_stl');
+/** 
+ * Two Column List Block
+ */
 
 $block_prefix = 'cb';
+$block_style = get_field('cb_stl');
+$col_style = get_field('col_stl');
 $heading = get_field('cb_hd');
 $items = get_field('cb_cols');
+$link = get_field('cb_lnk');
+$link_style = get_field('cb_lnkstl');
+
 
 ?>
 
 
 
-<section class="cb">
+<section class="cb <?php echo $block_style; ?>">
     <?php if ($heading): ?>
     <h2 class="h1"><?php echo $heading; ?></h2>
     <?php endif; ?>
@@ -56,4 +63,17 @@ $items = get_field('cb_cols');
             } 
         } ?>
     </div>
+    <?php if ($link) : ?>
+    <div class="<?php echo $block_prefix; ?>__cta btn-row">
+        <a class="<?php echo ($link_style); ?>" 
+            role="link"  
+            href="<?php echo esc_url( $link['url'] ); ?>" 
+            target="<?php echo esc_attr( $link['target'] ); ?>">
+            <?php echo esc_html( $link['title'] ); ?>
+            <?php if ($link_style === 'arrow'): 
+                echo $utils->inline_icon('up-right-goldenrod.svg');
+            endif; ?> 
+        </a> 
+    </div>
+    <?php endif; ?>
 </section>

@@ -3,6 +3,30 @@
     "title": "Block: Columns",
     "fields": [
         {
+            "key": "field_62966e06b07a9",
+            "label": "Block Style",
+            "name": "cb_stl",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "dark": "Dark",
+                "light": "Light"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_6294d14076df1",
             "label": "Heading",
             "name": "cb_hd",
@@ -108,6 +132,45 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_629674de0f938",
+            "label": "Link",
+            "name": "cb_lnk",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_629676989a726",
+            "label": "Link Style",
+            "name": "cb_lnkstl",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "btn": "Button",
+                "arrow": "Arrow"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -127,5 +190,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1653934220
+    "modified": 1654028154
 }

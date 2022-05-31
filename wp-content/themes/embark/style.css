@@ -728,7 +728,7 @@ textarea:active,
 .btn:active {
   outline: var(--brdr-xs) solid var(--color-accent-primary); }
 section {
-  padding: var(--space-lg) var(--space-md); }
+  padding: var(--space-xxl) var(--space-md); }
 a,
 button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -3694,7 +3694,8 @@ body.show-nav .header__nav {
 .cb__col {
   flex-direction: column;
   padding-left: var(--space-xl);
-  border-left: 1px solid var(--color-accent-khaki); }
+  border-left: 1px solid var(--color-accent-khaki);
+  margin-bottom: var(--space-xxl); }
 .cb .staggered-content {
   justify-content: flex-start; }
 .cb .staggered-content img {
@@ -3706,6 +3707,9 @@ body.show-nav .header__nav {
 @media only screen and (min-width: 63.9375em) {
       .cb .staggered-content__text {
         max-width: 80%; } }
+.cb__cta {
+  margin-top: var(--space-md);
+  text-align: center; }
 /*--------------------------------------------------------------
 # Cta Block
 --------------------------------------------------------------*/

@@ -19,7 +19,7 @@
         flex-direction: column;
         padding-left: var(--space-xl);
         border-left: 1px solid var(--color-accent-khaki);
-       
+        margin-bottom: var(--space-xxl);
     }
     .staggered-content {
         justify-content: flex-start;
@@ -34,5 +34,9 @@
                 max-width: 80%;
             }
         }
+    }
+    &__cta {
+        margin-top: var(--space-md);
+        text-align: center;
     }
 }
