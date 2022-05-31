@@ -57,14 +57,14 @@ gsc_meta("link", [ATOM]);
 gsc_test("link", "", function() {
   echo gsc("link", [
     "content" => [
-      "url" => 'https://www.gravityswitch.com/#banner',
+      "url" => 'https://embark.com/#banner',
       "title" => 'test link',
       "target" => 'self'
     ]
   ]);
   echo gsc("link", [
     "content" => [
-      "url" => 'https://www.gravityswitch.com/#banner',
+      "url" => 'https://embark.com/#banner',
       "title" => 'class link test',
       "target" => 'self'
     ],

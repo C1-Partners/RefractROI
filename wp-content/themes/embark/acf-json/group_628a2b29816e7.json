@@ -99,6 +99,115 @@
             "mime_types": ""
         },
         {
+            "key": "field_628d2de7ed608",
+            "label": "Heading",
+            "name": "tcl_hd",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_628a30084b680",
+                        "operator": "==",
+                        "value": "cta"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Why do I need digital marketing?",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6291416ffd663",
+            "label": "CTA Text",
+            "name": "tcl_cta",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_628a30084b680",
+                        "operator": "==",
+                        "value": "cta"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "If they can't find you, they won't do business with you. We make sure they do.",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6291417bfd664",
+            "label": "CTA Link",
+            "name": "tcl_lnk",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_628a30084b680",
+                        "operator": "==",
+                        "value": "cta"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_6292738149b9a",
+            "label": "Link Style",
+            "name": "tcl_lnkst",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_628a30084b680",
+                        "operator": "==",
+                        "value": "cta"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "btn": "Button",
+                "arrow": "Arrow"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_628a2fff4b67f",
             "label": "Right side",
             "name": "",
@@ -240,7 +349,7 @@
         {
             "key": "field_628b81f7c1491",
             "label": "CTA Text",
-            "name": "tcl_cta",
+            "name": "tcl_cta2",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -259,7 +368,7 @@
         {
             "key": "field_628b8297c1493",
             "label": "CTA Link",
-            "name": "tcl_lnk",
+            "name": "tcl_lnk2",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -289,5 +398,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1653312161
+    "modified": 1653766375
 }

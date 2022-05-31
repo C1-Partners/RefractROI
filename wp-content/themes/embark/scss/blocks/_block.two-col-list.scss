@@ -30,7 +30,7 @@
         }
  
         .staggered-content {
-            border-bottom: 1px solid var(--color-base-light);
+            border-bottom: 1px solid var(--color-accent-khaki);
             padding: var(--space-lg) 0;
             @include brkpnt-md {
                 align-items: center; 
@@ -49,6 +49,9 @@
                 font-size: var(--text-md);
                 max-width: 45%;
                 padding: 0 var(--space-sm);
+            }
+            img {
+                max-width: 160px;
             }
         }
 

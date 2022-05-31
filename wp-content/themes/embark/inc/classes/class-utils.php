@@ -41,8 +41,17 @@ class Utils {
         return (@array_key_exists($filename, $manifest)) ? $this->assetUrl($manifest[$filename]) : $this->assetUrl($filename);
     }
 
-
-
+    /**
+     * @param string $filename
+     * @return 
+     *
+     * return asset file
+     * --------------
+     * 
+     */
+    public function inline_icon($filename){
+        return file_get_contents(get_template_directory() . '/images/' . $filename);
+    }
     /**
      * @param string $path
      * @param bool $withDomain

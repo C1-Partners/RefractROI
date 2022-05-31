@@ -23,7 +23,7 @@
     &__lower {
         display: flex;
         flex-direction: column;
-        border-bottom: 1px solid var(--color-base-light);
+        border-bottom: 1px solid var(--color-accent-khaki);
         @include brkpnt-md {
             flex-direction: row;
         }
@@ -33,10 +33,9 @@
         flex-direction: column;
         justify-content: flex-end;
         padding: var(--space-lg) var(--space-md) var(--space-lg);
-        border-top: 1px solid var(--color-base-light);
+        border-top: 1px solid var(--color-accent-khaki);
         @include brkpnt-md {
             width: 55%;
-        
             padding: 0 var(--space-xxl) var(--space-lg) 0;
         }
     }
@@ -45,10 +44,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 40vh;
-        border-top: 1px solid var(--color-base-light);
+        border-top: 1px solid var(--color-accent-khaki);
         @include brkpnt-md {
             min-height: 60vh;
-            border-left: 1px solid var(--color-base-light);
+            border-left: 1px solid var(--color-accent-khaki);
         }
     }
     &__cta-text {

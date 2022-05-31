@@ -1,8 +1,8 @@
 /*!
 Theme Name: Sensors INC
-Author: C1 Partners
-Author URI: c1-partners.com
-Description: C1 Canonical Theme & Components
+Author: Embark
+Author URI: embarkroi.com
+Description: Embark Canonical Theme & Components
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -216,6 +216,11 @@ BEWARE, THOSE WHO WOULD BREAK THE SACRED ORDER OF COMPONENTS - zac */
 # Two Column List Block
 --------------------------------------------------------------*/
 @import "blocks/block.two-col-list.scss";
+
+/*--------------------------------------------------------------
+# Multiple Columns Block
+--------------------------------------------------------------*/
+@import "blocks/block.columns.scss";
 
 /*--------------------------------------------------------------
 # Cta Block

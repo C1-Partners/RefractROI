@@ -9,6 +9,7 @@ function sw_acf_init() {
     $customBlocks = array(
       array( 'hp-hero', 'Hero Block ', 'Front-page hero block', 'shield', array('hero', 'front-page') ),
       array( 'two-col-list', 'Two Column List Block', 'Use for listed content on right side', 'shield', array('two column', 'content') ),
+      array( 'columns', 'Columns Block', 'Use to create two or more columns for content', 'shield', array('column', 'content') ),
       array( 'products', 'Products Block', 'Display products', 'shield', array('products', 'product') ),
       array( 'callout', 'Callout Block', 'Showcase posts or use as a Subscribe block', 'shield', array('callout', 'content', 'articles', 'subscribe', 'donate') ),
       array( 'pullquote', 'Pull Quote Block ', 'Highlight quotes in articles and pages', 'shield', array('quote', 'pullquote', 'content') ),
