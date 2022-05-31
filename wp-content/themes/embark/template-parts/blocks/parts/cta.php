@@ -4,18 +4,9 @@
  * CTA block part
  */
 
-// Set defaults for args passed from get_template_part
-$args = wp_parse_args(
-    $args,
-    [
-        'block_prefix'  => '',
-        'link'          => '',
-        'link_style'    => 'btn',
-        'cta_text'      => '',
-    ]
-);
-
 $utils = new Utils();
+//parse args passed from get_template_part
+$utils->parse_cta_args($args);
 ?>
 
 <div class="<?php echo ($args['block_prefix']) ? esc_html($args['block_prefix']) : 'block'; ?>__cta">

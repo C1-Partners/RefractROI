@@ -14,6 +14,7 @@ $cta_text = get_field('tcl_cta');
 $cta_text2 = get_field('tcl_cta2');
 $link = get_field('tcl_lnk');
 $link_style = get_field('tcl_lnkst');
+$link_style2 = get_field('tcl_lnkst2');
 $link2 = get_field('tcl_lnk2');
 $cta_heading = get_field('tcl_hd');
 
@@ -98,8 +99,9 @@ $cta_heading = get_field('tcl_hd');
                 null, 
                 [
                     'block_prefix'  => $block_prefix,
-                    'link'          => $link,
-                    'cta_text'      => $cta_text,
+                    'link'          => $link2,
+                    'link_style'    => $link_style2,
+                    'cta_text'      => $cta_text2,
                 ]
             );
         } ?>

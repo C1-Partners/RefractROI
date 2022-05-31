@@ -23,6 +23,21 @@
 class Utils {
 
     /**
+     *  TODO add info here
+     */
+    public function parse_cta_args($args) {
+        $defaults = array (
+            'block_prefix'  => 'block',
+            'link'          => '#',
+            'link_style'    => 'btn',
+            'cta_text'      => 'View',
+        );
+        // Parse incoming $args into an array and merge it with $defaults
+        $args = wp_parse_args( $args, $defaults );
+        return $args;
+    }
+
+    /**
      * @param string $filename
      * @return string
      *
