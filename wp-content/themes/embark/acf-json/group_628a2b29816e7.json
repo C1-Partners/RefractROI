@@ -390,9 +390,8 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_628a30084b680",
-                        "operator": "==",
-                        "value": "cta"
+                        "field": "field_628b8297c1493",
+                        "operator": "!=empty"
                     }
                 ]
             ],
@@ -430,5 +429,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1654019190
+    "modified": 1654021031
 }
