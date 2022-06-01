@@ -8,6 +8,7 @@ function sw_acf_init() {
     $themeKeywords = array('c1', 'ln');
     $customBlocks = array(
       array( 'hp-hero', 'Hero Block ', 'Front-page hero block', 'shield', array('hero', 'front-page') ),
+      array( 'cta', 'Call to Action Block', 'Prompt user action', 'shield', array('cta', 'action') ),
       array( 'two-col-list', 'Two Column List Block', 'Use for listed content on right side', 'shield', array('two column', 'content') ),
       array( 'columns', 'Columns Block', 'Use to create two or more columns for content', 'shield', array('column', 'content') ),
       array( 'products', 'Products Block', 'Display products', 'shield', array('products', 'product') ),

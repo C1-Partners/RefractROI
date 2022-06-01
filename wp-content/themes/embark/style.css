@@ -1115,7 +1115,8 @@ body {
     body li {
       padding-left: 1rem !important; } }
 p {
-  margin-bottom: var(--space-md); }
+  margin-bottom: var(--space-md);
+  line-height: var(--heading-line-height-sm); }
 strong {
   font-weight: 600; }
 /*--------------------------------------------------------------
@@ -3674,7 +3675,8 @@ body.show-nav .header__nav {
     padding: var(--space-lg) 0; }
 .tcl__cta-text {
     margin-bottom: 0;
-    padding-bottom: var(--space-md); }
+    padding-bottom: var(--space-md);
+    font-size: var(--text-xl); }
 /*--------------------------------------------------------------
 # Multiple Columns Block
 --------------------------------------------------------------*/
@@ -3713,10 +3715,34 @@ body.show-nav .header__nav {
 /*--------------------------------------------------------------
 # Cta Block
 --------------------------------------------------------------*/
-.int-cta {
-  border: 2px solid var(--color-primary);
-  margin: 3rem 0 1rem;
-  padding: 3rem; }
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+@media only screen and (min-width: 63.9375em) {
+    .cta {
+      flex-direction: row; } }
+.cta__img {
+    margin-bottom: var(--space-xl); }
+@media only screen and (min-width: 63.9375em) {
+      .cta__img {
+        width: 40%;
+        margin-bottom: 0; }
+        .cta__img img {
+          margin-left: -50%; } }
+.cta__heading {
+    font-size: var(--text-xxl); }
+@media only screen and (min-width: 63.9375em) {
+    .cta__content {
+      max-width: 45%; } }
+.cta__cta-text {
+    font-size: var(--text-lg); }
+.cta.dark {
+    background-color: var(--color-base-dark);
+    color: var(--color-base-light); }
+.cta.light {
+    background-color: var(--color-base-light);
+    color: var(--color-base-darkest); }
 /*--------------------------------------------------------------
 # Post Filter
 --------------------------------------------------------------*/
@@ -3846,6 +3872,13 @@ body.show-nav .header__nav {
   padding-top: var(--space-lg);
   border-left: 1px solid var(--color-base-lighter);
   border-right: 1px solid var(--color-base-lighter); }
+/*--------------------------------------------------------------
+# Interior CTA
+--------------------------------------------------------------*/
+.int-cta {
+  border: 2px solid var(--color-primary);
+  margin: 3rem 0 1rem;
+  padding: 3rem; }
 /*--------------------------------------------------------------
 # Modal
 --------------------------------------------------------------*/

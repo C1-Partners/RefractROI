@@ -11,7 +11,7 @@ $utils->parse_cta_args($args);
 
 <div class="<?php echo ($args['block_prefix']) ? esc_html($args['block_prefix']) : 'block'; ?>__cta">
 <?php if($args['cta_text']): ?>
-    <p class="h2 <?php echo ($args['block_prefix']) ? esc_html($args['block_prefix']) : 'block'; ?>__cta-text">
+    <p class="<?php echo ($args['block_prefix']) ? esc_html($args['block_prefix']) : 'block'; ?>__cta-text">
         <?php echo esc_html($args['cta_text']); ?>
     </p>
 <?php endif; ?>

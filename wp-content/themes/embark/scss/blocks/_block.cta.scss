@@ -1,6 +1,38 @@
-.int-cta {
-    border: 2px solid var(--color-primary);
-    margin: 3rem 0 1rem;
-    padding: 3rem;
-    
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include brkpnt-md {
+        flex-direction: row;
+    }
+    &__img {
+        margin-bottom: var(--space-xl);
+        @include brkpnt-md {
+            width: 40%;
+            margin-bottom: 0;
+            img{
+                margin-left: -50%;
+            }
+        }
+    }
+    &__heading {
+        font-size: var(--text-xxl);
+    }
+    &__content {
+        @include brkpnt-md {
+            max-width: 45%;
+        }
+    }
+    &__cta-text {
+        font-size: var(--text-lg);
+    }
+    &.dark {
+        background-color: var(--color-base-dark);
+        color: var(--color-base-light);
+    }
+    &.light {
+        background-color: var(--color-base-light);
+        color: var(--color-base-darkest);
+    } 
+
 }
