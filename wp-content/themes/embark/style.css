@@ -3715,32 +3715,32 @@ body.show-nav .header__nav {
 /*--------------------------------------------------------------
 # Cta Block
 --------------------------------------------------------------*/
-.cta {
+.callout {
   display: flex;
   flex-direction: column;
   align-items: center; }
 @media only screen and (min-width: 63.9375em) {
-    .cta {
+    .callout {
       flex-direction: row; } }
-.cta__img {
+.callout__img {
     margin-bottom: var(--space-xl); }
 @media only screen and (min-width: 63.9375em) {
-      .cta__img {
+      .callout__img {
         width: 40%;
         margin-bottom: 0; }
-        .cta__img img {
+        .callout__img img {
           margin-left: -50%; } }
-.cta__heading {
+.callout__heading {
     font-size: var(--text-xxl); }
 @media only screen and (min-width: 63.9375em) {
-    .cta__content {
+    .callout__content {
       max-width: 45%; } }
-.cta__cta-text {
+.callout__cta-text {
     font-size: var(--text-lg); }
-.cta.dark {
+.callout.dark {
     background-color: var(--color-base-dark);
     color: var(--color-base-light); }
-.cta.light {
+.callout.light {
     background-color: var(--color-base-light);
     color: var(--color-base-darkest); }
 /*--------------------------------------------------------------

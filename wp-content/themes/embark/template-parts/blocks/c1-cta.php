@@ -1,6 +1,6 @@
 <?php
 
-$block_prefix = 'cta';
+$block_prefix = 'callout';
 $block_style = get_field('cta_stl');
 $heading = get_field('cta_hd');
 $img = get_field('cta_img');
@@ -25,7 +25,7 @@ $link_style = get_field('cta_lnkstl');
             ]);
         } ?>
     </div>
-    <div class="cta__content">
+    <div class="<?php echo $block_prefix; ?>__content">
     <?php if ($heading): ?>
         <h2 class="<?php echo $block_prefix; ?>__heading"><?php echo $heading; ?></h2>
     <?php endif; ?>
