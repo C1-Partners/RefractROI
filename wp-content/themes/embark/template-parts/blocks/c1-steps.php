@@ -43,7 +43,7 @@ $link_style = get_field('stp_lnkstl');
             foreach ($items as $item) {
                 $i++;
                 if ($item['col_img']) {
-                    
+           
                     echo gsc("staggered-content", [
                         "content" => [
                             "title" => [
@@ -51,8 +51,8 @@ $link_style = get_field('stp_lnkstl');
                                     "main" => $item['col_title'],
                                 ],
                                 "style" => [
-                                "container" => 'h2',
-                                "border" => 'left',
+                                    "container" => 'h3',
+                                    "border" => 'left',
                                 ]
                             ],
                             "text" => $item['col_txt'],

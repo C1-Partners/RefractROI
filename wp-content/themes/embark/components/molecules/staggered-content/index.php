@@ -65,30 +65,28 @@ gsc_define("staggered-content", $defaults, function($data) {
       $misc_attrs .= "$attr_name='$attr_value' ";
     }
   }
-
-  if (!$icon) {
-    $title_html =  gsc("title", [
-      "content" => [
-        "main" => $data["content"]["title"]["content"]["main"],
-        "url" => $data["content"]["title"]["content"]["url"],
-        "target" => $data["content"]["title"]["content"]["target"]
-      ],
-      "style" => [
-        "container" => $data["content"]["title"]["style"]["container"],
-        "color_words" => $data["content"]["title"]["style"]["color_words"],
-        "color" => $data["content"]["title"]["style"]["color"],
-        "color_position" => $data["content"]["title"]["style"]["color_position"],
-        "border" => $data["content"]["title"]["style"]["border"],
-        "class" => $data["content"]["title"]["style"]["class"] . " staggered-content__title",
-        "id" => $data["content"]["title"]["style"]["id"],
-        "attrs" => $data["content"]["title"]["style"]["attrs"]
-      ]
-    ]);
-  }
   
-
+  $title_html =  gsc("title", [
+    "content" => [
+      "main" => $data["content"]["title"]["content"]["main"],
+      "url" => $data["content"]["title"]["content"]["url"],
+      "target" => $data["content"]["title"]["content"]["target"]
+    ],
+    "style" => [
+      "container" => $data["content"]["title"]["style"]["container"],
+      "color_words" => $data["content"]["title"]["style"]["color_words"],
+      "color" => $data["content"]["title"]["style"]["color"],
+      "color_position" => $data["content"]["title"]["style"]["color_position"],
+      "border" => $data["content"]["title"]["style"]["border"],
+      "class" => $data["content"]["title"]["style"]["class"] . " staggered-content__title",
+      "id" => $data["content"]["title"]["style"]["id"],
+      "attrs" => $data["content"]["title"]["style"]["attrs"]
+    ]
+  ]);
+ 
+  $icon_html = "";
   if ($icon) {
-    $title_html = gsc("img", [
+    $icon_html = gsc("img", [
       "content" => [
         "src" => $data["image-content"]['src'],
         "alt" => $data["image-content"]['alt']
@@ -99,6 +97,8 @@ gsc_define("staggered-content", $defaults, function($data) {
     ]);
   }
 
+  
+
   $num_html  = "";
   if (!empty($data["counter"]["number"])) {
     $num_html = '<div class="staggered-content__num">--0' . $counter .'</div>';
@@ -108,8 +108,11 @@ gsc_define("staggered-content", $defaults, function($data) {
 
   return "<div $id $class $misc_attrs>
             $num_html
+            $icon_html
+            <div class='staggered-content__wrap'>
             $title_html
             $text_html
+            </div>
           </div>";
 });
 gsc_meta("staggered-content", [MOLECULE]);
