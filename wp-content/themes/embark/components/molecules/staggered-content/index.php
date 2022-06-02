@@ -25,6 +25,9 @@ $defaults = [
 		"src" => "",
 		"alt" => ""
 	],
+  "counter" => [
+    "number" => 0,
+  ],
   "style" => [
     "divider" => FALSE,
     "icon" => '',
@@ -39,6 +42,7 @@ gsc_define("staggered-content", $defaults, function($data) {
   $image = $data["image-content"];
   $text = $data["content"]["text"];
   $icon = $data["style"]["icon"];
+  $counter = $data["counter"]["number"];
 
   $class = "";
   if (!empty($data["style"]["class"])) {
@@ -94,11 +98,16 @@ gsc_define("staggered-content", $defaults, function($data) {
       ]
     ]);
   }
+
+  $num_html  = "";
+  if (!empty($data["counter"]["number"])) {
+    $num_html = '<div class="staggered-content__num">--0' . $counter .'</div>';
+  }
   
-  $text_html = "<div class='staggered-content__text'>$text</div>";
+  $text_html = "<div class='staggered-content__text'>$text</div>";  
 
   return "<div $id $class $misc_attrs>
-            
+            $num_html
             $title_html
             $text_html
           </div>";

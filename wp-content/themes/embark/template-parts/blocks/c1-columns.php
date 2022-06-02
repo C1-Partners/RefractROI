@@ -16,15 +16,15 @@ $link_style = get_field('cb_lnkstl');
 
 
 
-<section class="cb <?php echo $block_style; ?>">
+<section class="<?php echo $block_prefix; ?> <?php echo $block_style; ?>">
     <?php if ($heading): ?>
     <h2 class="h1"><?php echo $heading; ?></h2>
     <?php endif; ?>
-    <div class="cb__cols">
+    <div class="<?php echo $block_prefix; ?>__cols">
     <?php 
         if (is_array($items)) {
             foreach ($items as $item) {
-                if ($col_style === 'title') {
+                if ($col_style === 'text') {
                     echo gsc("staggered-content", [
                         "content" => [
                             "title" => [
@@ -39,7 +39,7 @@ $link_style = get_field('cb_lnkstl');
                             "text" => $item['col_txt'],
                         ],
                         "style" => [
-                            "divider" => FALSE,
+                            "divider" => TRUE,
                             "icon" => FALSE,
                         ]
                     ]);

@@ -82,7 +82,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "We help business leaders of companies currently generating $10-250 Million in revenue with an urgent need for predictable, scalable revenue streams.",
             "placeholder": "",
             "maxlength": "",
             "rows": "",
@@ -145,5 +145,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1654094808
+    "modified": 1654111842
 }

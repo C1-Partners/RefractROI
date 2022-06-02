@@ -142,3 +142,18 @@ svg {
     transition: 2s;
   }
 }
+// Section labels with Machina font
+.c_lb {
+  position: relative;
+  font-family: var(--font-tertiary);
+  color: var(--color-accent-khaki);
+  font-size: var(--text-md);
+  text-transform: uppercase;
+  padding-left: 3.8rem;
+  letter-spacing: .2rem;
+  &:before {
+    content: '///';
+    position: absolute;
+    left: 0;
+  }
+}

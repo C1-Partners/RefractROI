@@ -39,7 +39,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Partnering with <br> Embark, we will:",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -59,7 +59,7 @@
                 "id": ""
             },
             "choices": {
-                "title": "Text",
+                "text": "Text",
                 "icon": "Icon"
             },
             "allow_null": 0,
@@ -83,9 +83,9 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 0,
+            "min": 2,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "",
             "sub_fields": [
                 {
@@ -95,7 +95,15 @@
                     "type": "image",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6294fc60984e4",
+                                "operator": "==",
+                                "value": "icon"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -113,10 +121,37 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_629500a8984e5",
+                    "key": "field_629911a65ac71",
                     "label": "Column Title",
-                    "name": "col_txt",
+                    "name": "col_title",
                     "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6294fc60984e4",
+                                "operator": "==",
+                                "value": "text"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Title",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_629500a8984e5",
+                    "label": "Column Text",
+                    "name": "col_txt",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -125,11 +160,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": "Text here",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
                 }
             ]
         },
@@ -190,5 +225,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1654028154
+    "modified": 1654198800
 }

@@ -2,7 +2,7 @@
 add_filter( 'gform_field_content', 'remove_gform_labels', 10, 5 );
 function remove_gform_labels( $content, $field, $value, $lead_id, $form_id ) {
 	$doc = new DOMDocument();
-	$doc->loadHTML($content);
+	// $doc->loadHTML($content);
 	//$labels = $doc->getElementsByTagName("label");
 	$finder = new DomXPath($doc);
 	$classname = "gfield_label";
