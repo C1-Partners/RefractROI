@@ -41,6 +41,7 @@ $link_style = get_field('cb_lnkstl');
                         "style" => [
                             "divider" => TRUE,
                             "icon" => FALSE,
+                            "class" => "cb__col"
                         ]
                     ]);
                 }

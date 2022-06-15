@@ -65,24 +65,26 @@ gsc_define("staggered-content", $defaults, function($data) {
       $misc_attrs .= "$attr_name='$attr_value' ";
     }
   }
-  
-  $title_html =  gsc("title", [
-    "content" => [
-      "main" => $data["content"]["title"]["content"]["main"],
-      "url" => $data["content"]["title"]["content"]["url"],
-      "target" => $data["content"]["title"]["content"]["target"]
-    ],
-    "style" => [
-      "container" => $data["content"]["title"]["style"]["container"],
-      "color_words" => $data["content"]["title"]["style"]["color_words"],
-      "color" => $data["content"]["title"]["style"]["color"],
-      "color_position" => $data["content"]["title"]["style"]["color_position"],
-      "border" => $data["content"]["title"]["style"]["border"],
-      "class" => $data["content"]["title"]["style"]["class"] . " staggered-content__title",
-      "id" => $data["content"]["title"]["style"]["id"],
-      "attrs" => $data["content"]["title"]["style"]["attrs"]
-    ]
-  ]);
+  $title_html = "";
+  if (!empty($data["content"]["title"]["content"]["main"])) {
+    $title_html =  gsc("title", [
+      "content" => [
+        "main" => $data["content"]["title"]["content"]["main"],
+        "url" => $data["content"]["title"]["content"]["url"],
+        "target" => $data["content"]["title"]["content"]["target"]
+      ],
+      "style" => [
+        "container" => $data["content"]["title"]["style"]["container"],
+        "color_words" => $data["content"]["title"]["style"]["color_words"],
+        "color" => $data["content"]["title"]["style"]["color"],
+        "color_position" => $data["content"]["title"]["style"]["color_position"],
+        "border" => $data["content"]["title"]["style"]["border"],
+        "class" => $data["content"]["title"]["style"]["class"] . " staggered-content__title",
+        "id" => $data["content"]["title"]["style"]["id"],
+        "attrs" => $data["content"]["title"]["style"]["attrs"]
+      ]
+    ]);
+  }
  
   $icon_html = "";
   if ($icon) {
