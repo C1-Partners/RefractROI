@@ -16,13 +16,16 @@
         }
     }
     &__col {
+        justify-content: flex-start;
         flex-direction: column;
         padding-left: var(--space-xl);
         border-left: 1px solid var(--color-accent-khaki);
         margin-bottom: var(--space-xxl);
+        width: 100%;
+          
     }
     .staggered-content {
-        justify-content: flex-start;
+       
         img {
             max-width: 160px;
         }

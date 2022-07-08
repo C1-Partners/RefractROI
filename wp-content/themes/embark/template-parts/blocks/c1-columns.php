@@ -2,6 +2,7 @@
 /** 
  * Two Column List Block
  */
+$utils = new Utils();
 
 $block_prefix = 'cb';
 $block_style = get_field('cb_stl');
@@ -11,10 +12,7 @@ $items = get_field('cb_cols');
 $link = get_field('cb_lnk');
 $link_style = get_field('cb_lnkstl');
 
-
 ?>
-
-
 
 <section class="<?php echo $block_prefix; ?> <?php echo $block_style; ?>">
     <?php if ($heading): ?>
@@ -24,6 +22,7 @@ $link_style = get_field('cb_lnkstl');
     <?php 
         if (is_array($items)) {
             foreach ($items as $item) {
+                $col_link = $item['col_lnk'];
                 if ($col_style === 'text') {
                     echo gsc("staggered-content", [
                         "content" => [
@@ -37,6 +36,9 @@ $link_style = get_field('cb_lnkstl');
                                 ]
                             ],
                             "text" => $item['col_txt'],
+                        ],
+                        "link" => [
+                            "acf_link" => $col_link,
                         ],
                         "style" => [
                             "divider" => TRUE,

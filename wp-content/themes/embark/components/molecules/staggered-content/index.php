@@ -28,12 +28,15 @@ $defaults = [
   "counter" => [
     "number" => 0,
   ],
+  "link" => [
+    "acf_link" => "",
+  ],
   "style" => [
     "divider" => FALSE,
-    "icon" => '',
-    "class" => '',
-    "id" => '',
-    "attrs" => []
+    "icon"    => '',
+    "class"   => '',
+    "id"      => '',
+    "attrs"   => []
   ]
 ];
 
@@ -43,6 +46,9 @@ gsc_define("staggered-content", $defaults, function($data) {
   $text = $data["content"]["text"];
   $icon = $data["style"]["icon"];
   $counter = $data["counter"]["number"];
+  $acf_link = $data["link"]["acf_link"];
+  // $link_target = $data["link"]["target"];
+  // $link_title = $data["link"]["title"];
 
   $class = "";
   if (!empty($data["style"]["class"])) {
@@ -99,6 +105,17 @@ gsc_define("staggered-content", $defaults, function($data) {
     ]);
   }
 
+  $link_html = "";
+  if ($acf_link) {
+    $link_html = gsc("link", [
+      "content" => [
+        "acf_link" => $acf_link,
+      ],
+      "style" => [
+        "class" => "arrow",
+      ]
+    ]);
+  }
   
 
   $num_html  = "";
@@ -114,6 +131,7 @@ gsc_define("staggered-content", $defaults, function($data) {
             <div class='staggered-content__wrap'>
             $title_html
             $text_html
+            $link_html
             </div>
           </div>";
 });

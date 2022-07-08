@@ -107,7 +107,9 @@ svg {
   }
 }
 
-
+.btn-row {
+  margin-top: var(--space-md);
+}
 .content-page {
   padding: 0 var(--space-md);
   @include brkpnt-md {

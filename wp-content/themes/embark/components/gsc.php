@@ -74,3 +74,4 @@ function gsc_mock(/*$property,*/ $mocker = null) {
 function lorem_mocker($options = '1/short/plaintext') {
   return file_get_contents('http://loripsum.net/api/'.$options);
 }
+
