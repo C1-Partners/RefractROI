@@ -14,9 +14,9 @@ $defaults = [
   "style" => [
 		"type" => "standard", // can be "standard", "orange", "teal", "img_overlap", "callout", "resources_primary", or "resources_secondary"
 		"cta_type" => "button", // can be "button" or "link_text", though really if you give it anything besides "button" it'll behave like "link_text" was entered
-    "class" => '',
-    "id" => '',
-    "attrs" => [],
+		"class" => '',
+		"id" => '',
+		"attrs" => [],
 	],
 ];
 gsc_define("ui-card", $defaults, function($data) {
@@ -60,16 +60,16 @@ gsc_define("ui-card", $defaults, function($data) {
 	if ($img_src) {
 		$aside_html = gsc("img", [
 						"content" => [
-							"src" => $img_src[0],
+							"src" => $img_src,
 							"alt" => $img_alt,
 						],
 						"style" => [
 							"class" => "card__img",
 						],
 					]);
-		if ($type == "standard") {
-			$aside_html .= $svg_blocks;
-		}
+		// if ($type == "standard") {
+		// 	$aside_html .= $svg_blocks;
+		// }
 		$aside_html = "
 			<aside class='card__aside'>
 				<figure class='card__figure figure--graphic-ovrly'>
@@ -126,24 +126,6 @@ gsc_define("ui-card", $defaults, function($data) {
 				$body_html .= "<p class='card__copy'>$text</p>";
 			}
 
-			if (!empty($list_items)) {
-				$list_html = "";
-				foreach ($list_items as $item) {
-					$item_html = $item["content"];
-					if ($item["url"]) {
-						$item_url = $item["url"];
-						$item_title = $item["title"] ? $item["title"] : "";
-						$item_html = "<a class='card__link' href='$item_url' title='$item_title'>$item_html</a>";
-					}
-
-					$list_html .= "<li class='card__item'>$item_html</li>";
-				}
-				$body_html .= "
-					<ul class='card__list'>
-						$list_html
-					</ul>";
-			}
-
 			$body_html = "
 				<div class='card__body'>
 					$body_html
@@ -153,7 +135,14 @@ gsc_define("ui-card", $defaults, function($data) {
 		// Build <footer class="card__footer" /> with CTA link
 		$footer_html = "";
 		if ($cta_url) {
-			$footer_html .= "<a class='$cta_link_class' href='$cta_url'>$cta</a>";
+			$footer_html .=  gsc("link", [
+				"content" => [
+					"acf_link" => $cta_url,
+				],
+				"style" => [
+					"class" => "arrow",
+				  ]
+			  ]);
 			if ($cta_link_class == "link__content") {
 				$footer_html = "<div class='link'>$footer_html</div>";
 			}
@@ -167,8 +156,8 @@ gsc_define("ui-card", $defaults, function($data) {
 
 	// Build the <div class="card__main">, which will include a <div class="card__wrap"> if it's an overlap card
 	$main_html = "$header_html
-								$body_html
-								$footer_html";
+					$body_html
+					$footer_html";
 
 	if ($type == "img-overlap") {
 		$main_html = "

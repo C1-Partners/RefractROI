@@ -1363,7 +1363,8 @@ a:hover, a:active, a:focus {
   margin: 0; }
 .figure__img {
     vertical-align: middle;
-    width: 100%; }
+    width: 100%;
+    height: auto; }
 .figure--pttrn-bkg .figure__img {
     width: calc(100% - 2.125rem);
     height: auto; }
@@ -3729,6 +3730,64 @@ body.show-nav .header__nav {
 .cb__cta {
   margin-top: var(--space-md);
   text-align: center; }
+/*--------------------------------------------------------------
+# Cards Block
+--------------------------------------------------------------*/
+.crd.dark {
+  background-color: var(--color-base-dark);
+  color: var(--color-base-light); }
+.crd.dark .card {
+    background-color: var(--color-base-light);
+    color: var(--color-base-darkest); }
+.crd.light {
+  background-color: var(--color-base-light);
+  color: var(--color-base-darkest); }
+.crd.light .card {
+    background-color: var(--color-base-dark);
+    color: var(--color-base-light); }
+.crd__cols {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+@media only screen and (min-width: 63.9375em) {
+    .crd__cols {
+      flex-direction: row; } }
+@media only screen and (min-width: 63.9375em) {
+  .crd__col.l {
+    max-width: 30%; } }
+.crd__col.r {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.625rem, 1fr));
+  gap: 3rem; }
+@media only screen and (min-width: 63.9375em) {
+    .crd__col.r {
+      width: 65%; } }
+@media only screen and (min-width: 87.5em) {
+    .crd__col.r {
+      grid-template-columns: repeat(auto-fit, minmax(32.625rem, 1fr)); } }
+.crd__col .card {
+  position: relative;
+  border-radius: 11px;
+  padding: var(--space-xl) var(--space-md) var(--space-md);
+  min-height: 440px;
+  overflow: hidden; }
+.crd__col .card__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0; }
+.crd__col .card__figure {
+    max-width: 230px;
+    position: absolute;
+    top: -10%;
+    right: -8%; }
+.crd__col .card__title {
+    font-size: var(--text-xxl); }
+.crd__col .card__copy {
+    font-size: var(--text-md);
+    padding-right: var(--space-xl);
+    line-height: 2.3rem; }
 /*--------------------------------------------------------------
 # Steps Block
 --------------------------------------------------------------*/

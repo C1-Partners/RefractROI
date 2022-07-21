@@ -1,0 +1,81 @@
+.crd {
+    &.dark {
+        background-color: var(--color-base-dark);
+        color: var(--color-base-light);
+
+        .card {
+            background-color: var(--color-base-light);
+            color: var(--color-base-darkest);
+        }
+    }
+    &.light {
+        background-color: var(--color-base-light);
+        color: var(--color-base-darkest);
+
+        .card {
+            background-color: var(--color-base-dark);
+            color: var(--color-base-light);
+        }
+    }
+
+    &__cols {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include brkpnt-md {
+            flex-direction: row;
+        }
+    }
+   
+    &__col {
+        &.l {
+            @include brkpnt-md {
+                max-width: 30%;
+            }
+        }
+        &.r {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(16.625rem, 1fr));
+            gap:3rem;
+            @include brkpnt-md {
+                width: 65%;
+            }
+            @include brkpnt-xl {
+                grid-template-columns: repeat(auto-fit, minmax(32.625rem, 1fr));
+            }
+        }
+
+        .card {
+            position: relative;
+            border-radius: 11px;
+            padding: var(--space-xl) var(--space-md) var(--space-md);
+            min-height: 440px;
+            overflow: hidden;
+
+            &__main {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height:100%;
+                padding:0;
+            }
+            &__figure {
+                max-width: 230px;
+                position: absolute;
+                top: -10%;
+                right: -8%;
+            }
+
+            &__title {
+                font-size: var(--text-xxl);
+            }
+            &__copy {
+                font-size: var(--text-md);
+                padding-right: var(--space-xl);
+                line-height: 2.3rem;
+            }
+        }
+    }
+
+   
+}
