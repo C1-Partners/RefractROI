@@ -1,7 +1,7 @@
 <?php 
 
-$title = get_field('men_b_tl', 'option');
-$items = get_field('men_b', 'option');
+$title = get_field('men_c_tl', 'option');
+$items = get_field('men_c', 'option');
 
 ?>
 

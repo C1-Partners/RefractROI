@@ -7,7 +7,7 @@ $items = get_field('men_a', 'option');
 
 <div class="footer-menu">
     <?php if ($title): ?>
-        <h3 class="footer-menu__title"><?php echo $title; ?></h3>
+        <p class="footer-menu__title"><?php echo $title; ?></p>
     <?php endif; ?>
 
     <?php if ($items): ?>

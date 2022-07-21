@@ -51,8 +51,7 @@
                 "id": ""
             },
             "post_type": [
-                "page",
-                "post"
+                "page"
             ],
             "taxonomy": "",
             "filters": "",
@@ -110,7 +109,64 @@
                 "id": ""
             },
             "post_type": [
-                "post",
+                "page"
+            ],
+            "taxonomy": "",
+            "filters": "",
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_62d96be3500d8",
+            "label": "Menu 3",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_62d96bf1500d9",
+            "label": "Title",
+            "name": "men_c_tl",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62d96c06500da",
+            "label": "Menu 3",
+            "name": "men_c",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
                 "page"
             ],
             "taxonomy": "",
@@ -138,5 +194,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1651696585
+    "modified": 1658417607
 }
