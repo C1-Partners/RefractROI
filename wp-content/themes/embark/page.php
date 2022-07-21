@@ -1,6 +1,7 @@
 <?php
+
 /**
- * The template for displaying default page
+ * Template Name: default 
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -8,17 +9,12 @@
  */
 
  get_header(); ?>
-<div class="page">
-	<?php get_template_part( 'template-parts/internal/banner', 'int'); ?>
-	
- 	<main id="primary" class="site-main container">
-	<?php get_template_part( 'template-parts/internal/article-parts/article', 'header'); ?>
-		<div class="content-page">
-		<?php
-			the_content();
-			get_template_part( 'template-parts/internal/page-parts/page', 'footer');
-		?>
-		</div>
- 	</main><!-- #main -->
-</div>
- <?php get_footer();
+
+
+
+<div id="banner"></div>
+ <?php
+
+
+the_content();
+ get_footer();

@@ -67,12 +67,22 @@
             }
 
             &__title {
-                font-size: var(--text-xxl);
+                margin-top: var(--space-sm);
+                font-size: var(--text-xl);
             }
             &__copy {
                 font-size: var(--text-md);
                 padding-right: var(--space-xl);
                 line-height: 2.3rem;
+            }
+            &__actions {
+                margin-top: var(--space-xl);
+
+                .btn-row {
+                    a {
+                        color: var(--color-base-light);
+                    }
+                }
             }
         }
     }

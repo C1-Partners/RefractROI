@@ -10,11 +10,10 @@
 
  get_header(); ?>
 
-
-
 <div id="banner"></div>
- <?php
 
+<div class="main">
+    <?php the_content(); ?>
+</div>
 
-the_content();
- get_footer();
+ <?php get_footer();

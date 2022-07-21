@@ -3783,11 +3783,16 @@ body.show-nav .header__nav {
     top: -10%;
     right: -8%; }
 .crd__col .card__title {
-    font-size: var(--text-xxl); }
+    margin-top: var(--space-sm);
+    font-size: var(--text-xl); }
 .crd__col .card__copy {
     font-size: var(--text-md);
     padding-right: var(--space-xl);
     line-height: 2.3rem; }
+.crd__col .card__actions {
+    margin-top: var(--space-xl); }
+.crd__col .card__actions .btn-row a {
+      color: var(--color-base-light); }
 /*--------------------------------------------------------------
 # Steps Block
 --------------------------------------------------------------*/
@@ -3998,13 +4003,6 @@ body.show-nav .header__nav {
 .post-filters .filters .filter-btn:hover {
         background-color: var(--color-primary-dark);
         transition: all .3s ease; }
-/*--------------------------------------------------------------
-# Main
---------------------------------------------------------------*/
-.main {
-  padding-top: var(--space-lg);
-  border-left: 1px solid var(--color-base-lighter);
-  border-right: 1px solid var(--color-base-lighter); }
 /*--------------------------------------------------------------
 # Interior CTA
 --------------------------------------------------------------*/
@@ -5002,49 +5000,9 @@ body.modal-open {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-.page-template-template-frontpage .block-callout {
-  grid-row-start: 3;
-  grid-row-end: 3;
-  grid-column: 1 / -1;
-  margin-left: 1.35rem !important;
-  margin-right: 1.35rem !important; }
-section.homepage-title {
-  flex-direction: column; }
-section.homepage-title img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 2em; }
-section.jump-off-grid .container {
-  flex-direction: column; }
-section.jump-off-grid .container .jump-off {
-    margin-top: 2em;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto; }
-@media only screen and (min-width: 56.25em) {
-  section.homepage-title {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-around; }
-  section.jump-off-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5em;
-    margin-bottom: 5em; }
-    section.jump-off-grid .container {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      justify-content: space-between; }
-      section.jump-off-grid .container .jump-off {
-        margin-right: auto;
-        width: 30%; } }
+.page-template-template-frontpage .main {
+  padding-bottom: var(--space-xxl);
+  background-color: var(--color-base-light); }
 .page .subtitle {
   text-align: left;
   color: var(--color-primary);
