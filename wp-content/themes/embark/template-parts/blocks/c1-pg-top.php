@@ -1,31 +1,22 @@
 <?php
 
-$block_prefix = 'callout';
-$block_style = get_field('cta_stl');
-$heading = get_field('cta_hd');
-$img = get_field('cta_img');
-$cta_text = get_field('cta_txt');
-$link = get_field('cta_lnk');
-$link_style = get_field('cta_lnkstl');
+$block_prefix = 'pgt';
+$block_style = get_field('pgt_stl');
+$cont_label = get_field('pgt_lbl');
+$heading = get_field('pgt_hd');
+$img = get_field('pgt_img');
+$cta_text = get_field('pgt_txt');
+$link = get_field('pgt_lnk');
+$link_style = get_field('pgt_lnkstl');
 
 ?>
 
 <section class="<?php echo $block_prefix; ?> <?php echo $block_style; ?>">
-    <div class="<?php echo $block_prefix; ?>__img">
-        <?php if($img) { 
-            echo gsc("img", [
-                "content" => [
-                    "src" => $img['url'],
-                    "alt" => $img['title']
-                ],
-                "style" => [
-                    "type" => "standard",
-                    "attrs" => []
-                ]
-            ]);
-        } ?>
-    </div>
+    
     <div class="<?php echo $block_prefix; ?>__content">
+    <?php if ($cont_label): ?>
+        <span class="c_lb"><?php echo $cont_label; ?></span>
+    <?php endif; ?>
     <?php if ($heading): ?>
         <h2 class="<?php echo $block_prefix; ?>__heading"><?php echo $heading; ?></h2>
     <?php endif; ?>
@@ -41,5 +32,19 @@ $link_style = get_field('cta_lnkstl');
                 ]
             );
     } ?>
+    </div>
+    <div class="<?php echo $block_prefix; ?>__img">
+        <?php if($img) { 
+            echo gsc("img", [
+                "content" => [
+                    "src" => $img['url'],
+                    "alt" => $img['title']
+                ],
+                "style" => [
+                    "type" => "standard",
+                    "attrs" => []
+                ]
+            ]);
+        } ?>
     </div>
 </section>

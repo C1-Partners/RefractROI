@@ -3095,6 +3095,52 @@ select::-ms-expand {
     background-color: var(--color-base-light);
     color: var(--color-base-darkest); }
 /*--------------------------------------------------------------
+# Page Top Block
+--------------------------------------------------------------*/
+.pgt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+@media only screen and (min-width: 63.9375em) {
+    .pgt {
+      flex-direction: row; } }
+.pgt__content {
+    z-index: 5; }
+@media only screen and (min-width: 63.9375em) {
+      .pgt__content {
+        padding-left: var(--space-xl);
+        max-width: 55%;
+        border-left: 1px solid var(--color-accent-khaki); } }
+.pgt__img {
+    margin-top: var(--space-xl);
+    z-index: 1; }
+@media only screen and (min-width: 63.9375em) {
+      .pgt__img {
+        position: relative;
+        right: 0;
+        width: 40%;
+        margin-top: 0; }
+        .pgt__img img {
+          position: absolute;
+          top: 0;
+          right: -22vw;
+          height: 112%;
+          width: auto; } }
+.pgt__heading {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    font-size: var(--text-xxl); }
+.pgt__cta-text {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-xl); }
+.pgt.dark {
+    background-color: var(--color-base-dark);
+    color: var(--color-base-light); }
+.pgt.light {
+    background-color: var(--color-base-light);
+    color: var(--color-base-darkest); }
+/*--------------------------------------------------------------
 # Cards Block
 --------------------------------------------------------------*/
 .crd.dark {
