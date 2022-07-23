@@ -6,6 +6,8 @@ $defaults = [
 				"link" => "",
 				"content" => ""
 			],
+		"tabs_alt" => [],
+		"title" => "",
 		],
     "group_name" => '', // prepended to ID of UI card object
 		"aria_title" => ""
@@ -35,30 +37,79 @@ gsc_define("tabs", $defaults, function($data) {
     $groupname = $randomString;
   }
 
-	$tabs = $data["content"]["tabs"];
+  $tabs = $data["content"]["tabs"];
+  $title = $data["content"]["title"];
+
+  $tabs_alt = $data["content"]["tabs_alt"];
+  $lists_html = "";
+
+  if ($tabs_alt) {
+	$tabs = $data["content"]["tabs_alt"];
+  }
 
 	$links_str = "";
 	$panels_str = "";
-
+	
 	if (!empty($tabs)) {
 		$tab_i = 0;
     foreach ($tabs as $tab) {
-			$tab_i++;
-			$is_active_class = ($tab_i == 1) ? "is_active" : "";
+		$steps = $tab['row_stps'];
+		$link = $tab['row_lnk'];
+		$link_obj = gsc("link", [
+			"content" => [
+			  "acf_link" => $tab['row_lnk'],
+			],
+			"style" => [
+				"wrapper" => TRUE,
+				"class" => 'btn',
+			  ]
+		  ]);
+
+		$tab_i++;
+		$is_active_class = ($tab_i == 1) ? "is_active" : "";
+		if ($tabs_alt) {
+			
 			$links_str .= "
+			<li class='tabs__item' role='presentation'>
+				<button type='button' class='tabs__link {$is_active_class}' id='tabs-{$groupname}__tab-link-{$tab_i}' role='tab' aria-selected='true' aria-controls='tabs-{$groupname}__panel-{$tab_i}'>{$tab["row_title"]}</button>
+			</li>";
+
+			$list = "";
+			$num = 0;
+
+			foreach ($steps as $step) {
+				$num++;
+				$list .= "<div class='tabs__step'>
+							<span class='tabs__num'>0{$num}</span><li>{$step['row_stp']}</li>
+						</div>";
+			}
+	
+			$panels_str .= "
+			<div class='tabs__section' id='tabs-{$groupname}__panel-{$tab_i}' role='tabpanel' aria-labelledby='tabs-{$groupname}__tab-link-{$tab_i}' tabindex='0'>
+				<h2 class='tabs__title'>{$tab["row_title"]}</h2>	
+				<div class='tabs__body'>{$tab["row_txt"]}</div>
+				<ul class='tabs__steps'>{$list}</ul>
+				$link_obj
+			</div>";
+
+			} else {
+
+				$links_str .= "
 				<li class='tabs__item' role='presentation'>
 					<button type='button' class='tabs__link {$is_active_class}' id='tabs-{$groupname}__tab-link-{$tab_i}' role='tab' aria-selected='true' aria-controls='tabs-{$groupname}__panel-{$tab_i}'>{$tab["link"]}</button>
 				</li>";
-			$panels_str .= "
+
+				$panels_str .= "
 				<div class='tabs__section' id='tabs-{$groupname}__panel-{$tab_i}' role='tabpanel' aria-labelledby='tabs-{$groupname}__tab-link-{$tab_i}' tabindex='0'>
 					<div class='tabs__body'>{$tab["content"]}</div>
 				</div>";
+			}
 		}
 	}
 
 	$links_str = "<ul class='tabs__list' role='tablist' aria-label='{$data["content"]["aria_title"]}'>
-									$links_str
-								</ul>";
+					$links_str
+				  </ul>";
 
 	$class_attr = "class='tabs'";
   if (!empty($data["style"]["class"])) {

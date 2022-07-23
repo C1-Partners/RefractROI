@@ -129,9 +129,9 @@ gsc_define("staggered-content", $defaults, function($data) {
             $num_html
             $icon_html
             <div class='staggered-content__wrap'>
-            $title_html
-            $text_html
-            $link_html
+              $title_html
+              $text_html
+              $link_html
             </div>
           </div>";
 });

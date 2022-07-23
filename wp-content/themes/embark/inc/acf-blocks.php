@@ -10,6 +10,7 @@ function sw_acf_init() {
       array( 'hp-hero', 'Hero Block ', 'Front-page hero block', 'shield', array('hero', 'front-page') ),
       array( 'pg-top', 'Interior page top block', 'Use for inteior page hero', 'shield', array('page', 'interior') ),
       array( 'cta', 'Call to Action Block', 'Prompt user action', 'shield', array('cta', 'action') ),
+      array( 'tab-accordion', 'Accordion Tabs', '', 'shield', array('tab', 'accordion') ),
       array( 'steps', 'Numbered Steps Block', 'Showcase content in numerical columns', 'shield', array('steps', 'column') ),
       array( 'cards', 'Cards Block', 'Showcase services or simple content', 'shield', array('cards', 'grid') ),
       array( 'two-col-list', 'Two Column List Block', 'Use for listed content on right side', 'shield', array('two column', 'content') ),

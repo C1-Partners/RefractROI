@@ -466,7 +466,7 @@ Use only what you need:
  * 3. 
  */
 html {
-  line-height: 1.15;
+  line-height: 1;
   -webkit-text-size-adjust: 100%; }
 /* Sections
 	 ========================================================================== */
@@ -728,7 +728,8 @@ textarea:active,
 .btn:active {
   outline: var(--brdr-xs) solid var(--color-accent-primary); }
 section {
-  padding: var(--space-xl) var(--space-xl); }
+  padding: var(--space-xl) var(--space-xl);
+  overflow: hidden; }
 a,
 button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -3094,6 +3095,51 @@ select::-ms-expand {
 .callout.light {
     background-color: var(--color-base-light);
     color: var(--color-base-darkest); }
+/*--------------------------------------------------------------
+# Accordion Tab Block
+--------------------------------------------------------------*/
+.tac {
+  font-size: var(--text-lg); }
+.tac.dark {
+    background-color: var(--color-base-dark);
+    color: var(--color-base-light); }
+.tac.light {
+    background-color: var(--color-base-light);
+    color: var(--color-base-darkest); }
+.tac .tabs {
+    display: flex;
+    flex-direction: column; }
+@media only screen and (min-width: 63.9375em) {
+      .tac .tabs {
+        flex-direction: row; } }
+.tac .tabs__section {
+      margin-top: 0;
+      padding-top: 0;
+      width: 100%; }
+@media only screen and (min-width: 63.9375em) {
+        .tac .tabs__section {
+          width: 60%; } }
+.tac .tabs__list {
+      flex-direction: column;
+      align-items: flex-start;
+      list-style: none;
+      width: 100%; }
+@media only screen and (min-width: 63.9375em) {
+        .tac .tabs__list {
+          width: 40%; } }
+.tac .tabs__item {
+      flex-grow: 0; }
+.tac .tabs__steps {
+      margin-left: 0; }
+.tac .tabs__step {
+      display: flex;
+      justify-content: flex-start;
+      border-bottom: 1px solid var(--color-accent-khaki);
+      padding: var(--space-md) 0; }
+.tac .tabs__num {
+      font-family: 'machina';
+      font-size: var(--text-xxxl);
+      color: var(--color-primary); }
 /*--------------------------------------------------------------
 # Page Top Block
 --------------------------------------------------------------*/
