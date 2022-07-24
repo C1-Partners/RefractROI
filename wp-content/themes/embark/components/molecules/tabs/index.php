@@ -55,15 +55,19 @@ gsc_define("tabs", $defaults, function($data) {
     foreach ($tabs as $tab) {
 		$steps = $tab['row_stps'];
 		$link = $tab['row_lnk'];
-		$link_obj = gsc("link", [
-			"content" => [
-			  "acf_link" => $tab['row_lnk'],
-			],
-			"style" => [
-				"wrapper" => TRUE,
-				"class" => 'btn',
-			  ]
-		  ]);
+		$link_obj = "";
+		if($link) {
+			$link_obj = gsc("link", [
+				"content" => [
+				  "acf_link" => $tab['row_lnk'],
+				],
+				"style" => [
+					"wrapper" => TRUE,
+					"class" => 'btn',
+				  ]
+			  ]);
+		}
+		
 
 		$tab_i++;
 		$is_active_class = ($tab_i == 1) ? "is_active" : "";
@@ -107,9 +111,13 @@ gsc_define("tabs", $defaults, function($data) {
 		}
 	}
 
-	$links_str = "<ul class='tabs__list' role='tablist' aria-label='{$data["content"]["aria_title"]}'>
-					$links_str
-				  </ul>";
+	$links_str = "<div class='tabs__ctrls'>
+					<h2 class='tabs__section-title'>{$title}</h2>
+					<ul class='tabs__list' role='tablist' aria-label='{$data["content"]["aria_title"]}'>
+						$links_str
+					</ul>
+				</div>";
+	
 
 	$class_attr = "class='tabs'";
   if (!empty($data["style"]["class"])) {
@@ -131,6 +139,7 @@ gsc_define("tabs", $defaults, function($data) {
 	$content = $links_str;
 
 	return "<div $id_attr $class_attr $misc_attrs>
+
 						$links_str
 						$panels_str
 					</div>";

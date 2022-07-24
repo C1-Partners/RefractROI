@@ -14,16 +14,14 @@ $tabs = get_field('tac_rows');
 ?>
 
 <section class="<?php echo $block_prefix; ?> <?php echo $block_style; ?>">
-    <div class="<?php echo $block_prefix; ?>__ctrl">
-        <h2 class="<?php echo $block_prefix; ?>__heading"><?php echo $heading; ?></h2>
-    </div>
     <div class="<?php echo $block_prefix; ?>__acc">
 
     <?php
     echo gsc("tabs", [
         "content" => [
-                "tabs_alt" => $tabs,
-                "aria_title" => "Tab title",
+                "tabs_alt"      => $tabs,
+                "aria_title"    => "Tab title",
+                "title"         => $heading,
             ]
         ]);
     ?>
