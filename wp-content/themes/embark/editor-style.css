@@ -2904,6 +2904,9 @@ select::-ms-expand {
     background-color: var(--color-base-darkest);
     opacity: 0.85;
     z-index: 2; }
+.block-callout.center {
+    justify-content: center;
+    text-align: center; }
 .block-callout .inner {
     position: relative;
     border: 2px solid var(--color-primary);
@@ -3093,6 +3096,10 @@ select::-ms-expand {
       max-width: 45%; } }
 .callout__cta-text {
     font-size: var(--text-lg); }
+.callout.center {
+    justify-content: center;
+    text-align: center;
+    padding-top: var(--space-xxl); }
 .callout.dark {
     background-color: var(--color-base-dark);
     color: var(--color-base-light); }

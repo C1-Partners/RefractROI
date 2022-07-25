@@ -10,9 +10,10 @@ $link_style = get_field('cta_lnkstl');
 
 ?>
 
-<section class="<?php echo $block_prefix; ?> <?php echo $block_style; ?>">
+<section class="<?php echo $block_prefix; ?> <?php echo $block_style; ?> <?php echo (!$img) ? 'center' : ''; ?>">
+    <?php if($img) { ?>
     <div class="<?php echo $block_prefix; ?>__img">
-        <?php if($img) { 
+    <?php 
             echo gsc("img", [
                 "content" => [
                     "src" => $img['url'],
@@ -23,8 +24,9 @@ $link_style = get_field('cta_lnkstl');
                     "attrs" => []
                 ]
             ]);
-        } ?>
+    ?>
     </div>
+    <?php } ?>
     <div class="<?php echo $block_prefix; ?>__content">
     <?php if ($heading): ?>
         <h2 class="<?php echo $block_prefix; ?>__heading"><?php echo $heading; ?></h2>

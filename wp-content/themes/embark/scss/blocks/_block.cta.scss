@@ -26,6 +26,11 @@
     &__cta-text {
         font-size: var(--text-lg);
     }
+    &.center {
+        justify-content: center;
+        text-align: center;
+        padding-top: var(--space-xxl);
+    } 
     &.dark {
         background-color: var(--color-base-dark);
         color: var(--color-base-light);

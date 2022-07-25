@@ -23,6 +23,11 @@
         z-index: 2;
       }
 
+    &.center {
+        justify-content: center;
+        text-align: center;
+    } 
+
     .inner {
         position:relative;
         border: 2px solid var(--color-primary);
