@@ -7,6 +7,7 @@
 $block_prefix = 'tcl';
 $block_style = get_field('tcl_stl');
 $left_style = get_field('tcl_lct');
+$cont_label = get_field('tcl_lbl');
 $image = get_field('tcl_img');
 $list_style = get_field('list_style');
 $items = get_field('tcl_list');
@@ -22,6 +23,9 @@ $cta_heading = get_field('tcl_hd');
 
 <section class="tcl <?php echo $block_style; ?>">
     <div class="tcl__left <?php echo ($left_style === 'cta') ? 'cta' : '' ?>">
+    <?php if ($cont_label): ?>
+    <span class="c_lb"><?php echo $cont_label; ?></span>
+    <?php endif; ?>
         <?php if ($left_style === 'img' && $image) { 
             echo gsc("img", [
                 "content" => [

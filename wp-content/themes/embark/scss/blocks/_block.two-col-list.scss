@@ -19,6 +19,9 @@
 
     &__left {
         padding: var(--space-lg);
+        .tcl__cta-text {
+            font-size: var(--text-lg);
+        }
 
     }
     &__right {

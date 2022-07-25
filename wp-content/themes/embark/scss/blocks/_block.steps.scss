@@ -48,7 +48,6 @@
         }
     }
     &__cta {
-        margin-top: var(--space-md);
         @include brkpnt-md {
             display: flex;
             justify-content: space-between;

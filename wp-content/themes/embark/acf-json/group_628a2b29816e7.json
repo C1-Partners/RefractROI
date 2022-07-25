@@ -43,6 +43,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_62deb072e6821",
+            "label": "Content Label",
+            "name": "tcl_lbl",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_628a30084b680",
             "label": "Content Type",
             "name": "tcl_lct",
@@ -129,7 +148,7 @@
             "key": "field_6291416ffd663",
             "label": "CTA Text",
             "name": "tcl_cta",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -146,11 +165,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "If they can't find you, they won't do business with you. We make sure they do.",
+            "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
             "key": "field_6291417bfd664",
@@ -429,5 +448,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1654021031
+    "modified": 1658761640
 }
