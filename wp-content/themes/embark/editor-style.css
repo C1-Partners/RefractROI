@@ -3099,7 +3099,7 @@ select::-ms-expand {
 # Accordion Tab Block
 --------------------------------------------------------------*/
 .tac {
-  font-size: var(--text-lg); }
+  font-size: var(--text-md); }
 .tac.dark {
     background-color: var(--color-base-dark);
     color: var(--color-base-light); }
@@ -3115,10 +3115,12 @@ select::-ms-expand {
 .tac .tabs__section {
       margin-top: 0;
       padding-top: 0;
-      width: 100%; }
+      width: 100%;
+      margin-top: var(--space-lg); }
 @media only screen and (min-width: 63.9375em) {
         .tac .tabs__section {
-          width: 60%; } }
+          width: 60%;
+          margin-top: 0; } }
 .tac .tabs__ctrls {
       flex-direction: column;
       align-items: flex-start;
@@ -3128,7 +3130,11 @@ select::-ms-expand {
         .tac .tabs__ctrls {
           width: 40%; } }
 .tac .tabs__section-title {
-      font-size: var(--text-xxl); }
+      font-size: var(--text-xxl);
+      margin-bottom: var(--space-md); }
+@media only screen and (min-width: 63.9375em) {
+        .tac .tabs__section-title {
+          padding-right: var(--space-lg); } }
 .tac .tabs__list {
       flex-direction: column;
       align-items: flex-start;
