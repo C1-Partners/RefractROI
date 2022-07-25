@@ -18,6 +18,8 @@ $link_style = get_field('tcl_lnkst');
 $link_style2 = get_field('tcl_lnkst2');
 $link2 = get_field('tcl_lnk2');
 $cta_heading = get_field('tcl_hd');
+$list_heading = get_field('tcl_rshd');
+$text_clr = get_field('tcl_cltxt');
 
 ?>
 
@@ -56,7 +58,10 @@ $cta_heading = get_field('tcl_hd');
             <?php } ?>
       
     </div> <!---END tcl_left -----> 
-    <div class="tcl__right">
+    <div class="tcl__right <?php echo ($text_clr) ? $text_clr : '';?>">
+        <?php if ($list_heading): ?>
+            <h3 class="tcl__list-hd"><?php echo $list_heading; ?></h3>
+            <?php endif; ?>
         <?php 
         if (is_array($items)) {
             foreach ($items as $item) {

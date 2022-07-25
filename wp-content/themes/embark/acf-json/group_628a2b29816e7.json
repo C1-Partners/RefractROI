@@ -243,6 +243,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_62defd8725b5e",
+            "label": "Heading",
+            "name": "tcl_rshd",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_628a3f70c33dd",
             "label": "List Style",
             "name": "list_style",
@@ -265,6 +284,42 @@
             "layout": "horizontal",
             "return_format": "value",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_62defe0325b5f",
+            "label": "Colorize Text",
+            "name": "tcl_cltxt",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_628a3f70c33dd",
+                        "operator": "==",
+                        "value": "title"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "all": "Alternating",
+                "red": "Red",
+                "blue": "Blue",
+                "gold": "Gold"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_628a3edcc33dc",
@@ -448,5 +503,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1658761640
+    "modified": 1658782804
 }

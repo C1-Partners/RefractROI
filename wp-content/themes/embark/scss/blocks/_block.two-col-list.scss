@@ -1,6 +1,6 @@
 .tcl {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     @include brkpnt-md {
         flex-direction: row;
     }
@@ -64,8 +64,35 @@
                 margin-right: var(--space-md);
             }
         }
+        &.red {
+            h2 {
+                color: var(--color-accent-rust);
+                font-size: var(--text-xxxl);
+            }
+        }
+        &.all {
+            h2{
+                font-size: var(--text-xxxl);
+            }
+            .staggered-content:nth-child(2) h2{
+                color: var(--color-accent-cooler-gray);
+            }
+            .staggered-content:nth-child(3) h2{
+                color: var(--color-primary);
+            }
+            .staggered-content:nth-child(4) h2{
+                color: var(--color-accent-rust);
+            }
+            .staggered-content:nth-child(5) h2{
+                color: var(--color-accent-cooler-gray);
+            }
+            
+        }
 
         
+    }
+    &__list-hd {
+        padding-top: var(--space-md);
     }
     &__cta {
         padding: var(--space-lg) 0;
