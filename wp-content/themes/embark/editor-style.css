@@ -3414,6 +3414,10 @@ select::-ms-expand {
   z-index: 9; }
 .acf-block-preview .block-quote blockquote {
     padding-top: 2rem; }
+.acf-block-preview .tac .tabs__section:not(#tabs-D4c__panel-1) {
+  display: none; }
+.acf-block-preview .tac .tabs__list {
+  list-style: none; }
 /* Widen up the sidebar on larger screens */
 @media (min-width: 782px) {
   .edit-post-layout.is-sidebar-opened .edit-post-layout__content {
@@ -3428,3 +3432,5 @@ select::-ms-expand {
   display: block; }
 .acf-block-component {
   padding: 1rem; }
+
+/*# sourceMappingURL=editor-style.css.map */
