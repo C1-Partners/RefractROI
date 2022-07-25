@@ -17,13 +17,13 @@ endif;
 ?>
 
 <div class="hero">
-    <div class="hero__headline">
     <?php if ($headline): ?>
+    <div class="hero__headline">
         <h2 class="hero__heading"><?php echo $headline; ?></h2>
-    <?php endif; ?>
     </div>
+    <?php endif; ?>
     <div class="hero__lower">
-        <div class="hero__cta">
+        <div class="hero__cta <?php echo (!$headline) ? 'hero__alt' : '';?>">
         <?php if ($cta_text): ?>
             <p class="h3 hero__cta-text"><?php echo $cta_text; ?></p>
         <?php endif; ?>
@@ -37,7 +37,18 @@ endif;
             </div>
         <?php endif; ?>
         </div>
-        <div class="hero__img" <?php echo ($img) ? 'style="background-image: url(' . $img['url'] . ');"' : ''; ?> >
+        <div class="hero__img <?php echo (!$headline) ? 'hero__img-alt' : '';?>" <?php echo ($img && $headline) ? 'style="background-image: url(' . $img['url'] . ');"' : ''; ?> >
+            <?php if(!$headline) {
+                echo gsc("img", [
+                    "content" => [
+                        "src" => $img['url'],
+                        "alt" => $img['title']
+                    ],
+                    "style" => [
+                        "type"  => "standard",
+                    ]
+                ]);
+            } ?>
         </div> 
     </div>
 </div>
