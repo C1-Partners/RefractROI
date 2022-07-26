@@ -24,6 +24,9 @@
         width: 100%;
           
     }
+    &__text {
+        font-size: var(--text-lg);
+    }
     .staggered-content {
        
         img {
@@ -41,5 +44,11 @@
     &__cta {
         margin-top: var(--space-md);
         text-align: center;
+    }
+    .emp {
+        .staggered-content h2{
+            color: var(--color-primary);
+            font-size: var(--text-xxxl);
+        }
     }
 }

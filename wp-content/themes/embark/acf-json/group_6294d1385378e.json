@@ -46,6 +46,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_62dfff6c0e8f1",
+            "label": "Top text",
+            "name": "cb_txt1",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_6294fc60984e4",
             "label": "Content Type",
             "name": "col_stl",
@@ -68,6 +87,33 @@
             "layout": "vertical",
             "return_format": "value",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_62e0045baf0f2",
+            "label": "Emphasize Column Titles",
+            "name": "cb_emp",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6294fc60984e4",
+                        "operator": "==",
+                        "value": "text"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_6294fa33c5585",
@@ -184,6 +230,25 @@
             ]
         },
         {
+            "key": "field_62dfff8d0e8f2",
+            "label": "Bottom Text",
+            "name": "cb_txt2",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_629674de0f938",
             "label": "Link",
             "name": "cb_lnk",
@@ -240,5 +305,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1657228741
+    "modified": 1658848722
 }

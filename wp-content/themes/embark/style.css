@@ -3713,6 +3713,12 @@ body.show-nav .header__nav {
       color: var(--color-accent-rust); }
 .tcl__right.all .staggered-content:nth-child(5) h2 {
       color: var(--color-accent-cooler-gray); }
+.tcl__right.blue h2 {
+      color: var(---color-accent-cooler-gray);
+      font-size: var(--text-xxxl); }
+.tcl__right.gold h2 {
+      color: var(---color-primary);
+      font-size: var(--text-xxxl); }
 .tcl__list-hd {
     padding-top: var(--space-md); }
 .tcl__cta {
@@ -3744,6 +3750,8 @@ body.show-nav .header__nav {
   border-left: 1px solid var(--color-accent-khaki);
   margin-bottom: var(--space-xxl);
   width: 100%; }
+.cb__text {
+  font-size: var(--text-lg); }
 .cb .staggered-content img {
   max-width: 160px; }
 .cb .staggered-content__text {
@@ -3756,6 +3764,9 @@ body.show-nav .header__nav {
 .cb__cta {
   margin-top: var(--space-md);
   text-align: center; }
+.cb .emp .staggered-content h2 {
+  color: var(--color-primary);
+  font-size: var(--text-xxxl); }
 /*--------------------------------------------------------------
 # Cards Block
 --------------------------------------------------------------*/
