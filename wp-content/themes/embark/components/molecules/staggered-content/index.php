@@ -21,6 +21,7 @@ $defaults = [
     ],
     "text" => ''
   ],
+  "acf_obj" => [],
   "image-content" => [
 		"src" => "",
 		"alt" => ""
@@ -47,8 +48,7 @@ gsc_define("staggered-content", $defaults, function($data) {
   $icon = $data["style"]["icon"];
   $counter = $data["counter"]["number"];
   $acf_link = $data["link"]["acf_link"];
-  // $link_target = $data["link"]["target"];
-  // $link_title = $data["link"]["title"];
+  $acf_obj = $data["acf_obj"];
 
   $class = "";
   if (!empty($data["style"]["class"])) {
@@ -75,22 +75,43 @@ gsc_define("staggered-content", $defaults, function($data) {
   if (!empty($data["content"]["title"]["content"]["main"])) {
     $title_html =  gsc("title", [
       "content" => [
-        "main" => $data["content"]["title"]["content"]["main"],
-        "url" => $data["content"]["title"]["content"]["url"],
-        "target" => $data["content"]["title"]["content"]["target"]
+        "main"    => $data["content"]["title"]["content"]["main"],
+        "url"     => $data["content"]["title"]["content"]["url"],
+        "target"  => $data["content"]["title"]["content"]["target"]
       ],
       "style" => [
-        "container" => $data["content"]["title"]["style"]["container"],
-        "color_words" => $data["content"]["title"]["style"]["color_words"],
-        "color" => $data["content"]["title"]["style"]["color"],
-        "color_position" => $data["content"]["title"]["style"]["color_position"],
-        "border" => $data["content"]["title"]["style"]["border"],
-        "class" => $data["content"]["title"]["style"]["class"] . " staggered-content__title",
-        "id" => $data["content"]["title"]["style"]["id"],
-        "attrs" => $data["content"]["title"]["style"]["attrs"]
+        "container"       => $data["content"]["title"]["style"]["container"],
+        "color_words"     => $data["content"]["title"]["style"]["color_words"],
+        "color"           => $data["content"]["title"]["style"]["color"],
+        "color_position"  => $data["content"]["title"]["style"]["color_position"],
+        "border"          => $data["content"]["title"]["style"]["border"],
+        "class"           => $data["content"]["title"]["style"]["class"] . " staggered-content__title",
+        "id"              => $data["content"]["title"]["style"]["id"],
+        "attrs"           => $data["content"]["title"]["style"]["attrs"]
       ]
     ]);
   }
+
+  $svg = "<svg class='staggered-content__arrow-red' width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <path d='M2.9952 4.7808L18.4896 4.7232L0 23.2128L3.2832 26.5536L21.8304 8.0064V23.5584L26.496 23.2704V0L3.2832 0.1152L2.9952 4.7808Z' fill='#D14E2A'/>
+  </svg>";
+
+  $list_html = "";
+  if ($acf_obj) {
+    $items = $acf_obj;
+    
+    foreach ($items as $item)  {
+      // var_dump($item);
+      $list_html .= "
+      <li class='staggered-content__item'>$svg{$item['col_item']}</li>
+    ";
+    }
+  }
+  $list_html = "
+    <ul class='staggered-content__items'>
+    $list_html
+    </ul>
+  ";
  
   $icon_html = "";
   if ($icon) {
@@ -131,6 +152,7 @@ gsc_define("staggered-content", $defaults, function($data) {
             <div class='staggered-content__wrap'>
               $title_html
               $text_html
+              $list_html
               $link_html
             </div>
           </div>";

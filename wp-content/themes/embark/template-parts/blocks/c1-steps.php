@@ -57,6 +57,7 @@ $link_style = get_field('stp_lnkstl');
                             ],
                             "text" => $item['col_txt'],
                         ],
+                        "acf_obj" => $item['col_lst'],
                         "image-content" => [
                             "src" => $item['col_img']['url'],
                             "alt" => $item['col_img']['title']
