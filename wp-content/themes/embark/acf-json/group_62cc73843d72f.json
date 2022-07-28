@@ -46,6 +46,52 @@
             "maxlength": ""
         },
         {
+            "key": "field_62e2b1af0706c",
+            "label": "Link",
+            "name": "crd_lnk",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_62e2b2550706d",
+            "label": "Link Style",
+            "name": "crd_styl",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62e2b1af0706c",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "arrow": "Arrow",
+                "btn": "Button"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_62cc98b66dc46",
             "label": "Cards",
             "name": "crds",
@@ -161,5 +207,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1657660851
+    "modified": 1659024542
 }
