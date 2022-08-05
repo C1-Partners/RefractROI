@@ -3768,6 +3768,46 @@ body.show-nav .header__nav {
   color: var(--color-primary);
   font-size: var(--text-xxxl); }
 /*--------------------------------------------------------------
+# Two Column Grid Block
+--------------------------------------------------------------*/
+.tcg {
+  background-color: var(--color-base-dark);
+  color: var(--color-base-light);
+  display: grid;
+  grid-auto-columns: 1fr;
+  padding: 0;
+  font-size: var(--text-lg); }
+@media only screen and (min-width: 63.9375em) {
+    .tcg {
+      grid-auto-flow: column;
+      min-height: 65vh;
+      border-top: 1px solid var(--color-accent-khaki);
+      border-bottom: 1px solid var(--color-accent-khaki); } }
+.tcg__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 1px solid var(--color-accent-khaki);
+    padding: var(--space-md); }
+@media only screen and (min-width: 63.9375em) {
+      .tcg__left {
+        border-left: unset;
+        padding: var(--space-xl) var(--space-md); } }
+.tcg__left.gold {
+      color: var(--color-primary); }
+.tcg__left.blue {
+      color: var(--color-accent-cooler-gray); }
+.tcg__left.red {
+      color: var(--color-accent-rust); }
+.tcg__icon img {
+    max-width: 160px; }
+.tcg__right {
+    border-left: 1px solid var(--color-accent-khaki);
+    padding: var(--space-md); }
+@media only screen and (min-width: 63.9375em) {
+      .tcg__right {
+        padding: var(--space-xl) var(--space-md); } }
+/*--------------------------------------------------------------
 # Cards Block
 --------------------------------------------------------------*/
 .crd.dark {
