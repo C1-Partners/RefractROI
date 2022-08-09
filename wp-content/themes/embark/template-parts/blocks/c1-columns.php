@@ -19,7 +19,7 @@ $emp_hd = get_field('cb_emp');
 
 <section class="<?php echo $block_prefix; ?> <?php echo $block_style; ?>">
     <?php if ($heading): ?>
-    <h2 class="h1"><?php echo $heading; ?></h2>
+    <h2 class="h1 <?php echo $block_prefix; ?>__title"><?php echo $heading; ?></h2>
     <?php endif; ?>
     <?php if ($text_top): ?>
     <p class="<?php echo $block_prefix; ?>__text"><?php echo $text_top; ?></p>

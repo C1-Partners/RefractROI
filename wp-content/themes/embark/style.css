@@ -3746,6 +3746,8 @@ body.show-nav .header__nav {
 @media only screen and (min-width: 63.9375em) {
     .cb__cols {
       flex-direction: row; } }
+.cb__title {
+  margin-bottom: var(--space-xxl); }
 .cb__col {
   justify-content: flex-start;
   flex-direction: column;
@@ -3901,19 +3903,17 @@ body.show-nav .header__nav {
         border-left: 1px solid var(--color-accent-khaki); } }
 .pgt__img {
     margin-top: var(--space-xl);
-    z-index: 1; }
+    z-index: 1;
+    display: flex;
+    align-items: center; }
 @media only screen and (min-width: 63.9375em) {
       .pgt__img {
-        position: relative;
-        right: 0;
         width: 40%;
         margin-top: 0; }
         .pgt__img img {
-          position: absolute;
-          top: 0;
-          right: -22vw;
-          height: 112%;
-          width: auto; } }
+          margin-left: 46%;
+          height: auto;
+          width: 100%; } }
 .pgt__heading {
     margin-top: var(--space-sm);
     margin-bottom: var(--space-sm);

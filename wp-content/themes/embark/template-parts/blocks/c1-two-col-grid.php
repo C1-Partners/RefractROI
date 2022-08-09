@@ -32,22 +32,22 @@ $link = get_field('tcg_lnk');
        <?php } ?>
     </div>
     <div class="<?php echo $block_prefix; ?>__col-2 <?php echo $img_ord; ?>"> 
-    <div class="<?php echo $block_prefix; ?>__inner">
-        <?php if ($cont_rght) {
-            echo $cont_rght;
-        } ?>
-    </div>
-    <?php if ($link): ?>
-        <?php 
-            echo gsc("link", [
-                "content" => [
-                    "acf_link" => $link,
-                ],
-                "style" => [
-                    "class" => 'arrow',
-                    ]
-            ]);
-        ?>
-    <?php endif; ?>  
+        <div class="<?php echo $block_prefix; ?>__inner">
+            <?php if ($cont_rght) {
+                echo $cont_rght;
+            } ?>
+        </div>
+        <?php if ($link): ?>
+            <?php 
+                echo gsc("link", [
+                    "content" => [
+                        "acf_link" => $link,
+                    ],
+                    "style" => [
+                        "class" => 'arrow',
+                        ]
+                ]);
+            ?>
+        <?php endif; ?>  
     </div>
 </section>

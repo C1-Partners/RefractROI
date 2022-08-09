@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     @include brkpnt-md {
         flex-direction: row;
     }
@@ -18,17 +17,15 @@
     &__img {
         margin-top: var(--space-xl);
         z-index: 1;
+        display: flex;
+        align-items: center;
         @include brkpnt-md {
-            position: relative;
-            right: 0;
             width: 40%;
             margin-top: 0;
-            img{
-                position: absolute;
-                top: 0;
-                right: -22vw;
-                height: 112%;
-                width: auto;
+            img {
+                margin-left: 46%;
+                height: auto;
+                width: 100%;
             }
         }
     }
@@ -37,7 +34,6 @@
         margin-bottom: var(--space-sm);
         font-size: var(--text-xxl);
     }
- 
     &__cta-text {
         font-size: var(--text-lg);
         margin-bottom: var(--space-xl);
@@ -50,5 +46,4 @@
         background-color: var(--color-base-light);
         color: var(--color-base-darkest);
     } 
-
 }
