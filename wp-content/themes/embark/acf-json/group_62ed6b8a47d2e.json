@@ -3,8 +3,27 @@
     "title": "Block: Two Column Grid",
     "fields": [
         {
+            "key": "field_62f17873da113",
+            "label": "Content Order",
+            "name": "tcg_ord",
+            "type": "true_false",
+            "instructions": "Reverse Image and Content",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_62ed6bcfc21a7",
-            "label": "Left",
+            "label": "Col 1",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -19,13 +38,45 @@
             "endpoint": 0
         },
         {
+            "key": "field_62f177a4da110",
+            "label": "Content Type",
+            "name": "cont_tyr",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "txt": "Text",
+                "img": "Background Image"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_62ed6becc21a9",
             "label": "Text",
             "name": "cont_l",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62f177a4da110",
+                        "operator": "==",
+                        "value": "txt"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -38,13 +89,53 @@
             "delay": 0
         },
         {
+            "key": "field_62f177c2da111",
+            "label": "Background Image",
+            "name": "tcg_img",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62f177a4da110",
+                        "operator": "==",
+                        "value": "img"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_62ed95ed1c77f",
             "label": "Text Color",
             "name": "tcg_txclr",
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62f177a4da110",
+                        "operator": "==",
+                        "value": "txt"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -70,7 +161,15 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62f177a4da110",
+                        "operator": "==",
+                        "value": "txt"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -89,7 +188,7 @@
         },
         {
             "key": "field_62ed6be3c21a8",
-            "label": "Right",
+            "label": "Col 2",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -121,6 +220,21 @@
             "toolbar": "full",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_62f266e0e8fa5",
+            "label": "Link",
+            "name": "tcg_lnk",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -140,5 +254,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1659737632
+    "modified": 1660054070
 }

@@ -26,8 +26,11 @@ textarea,
 }
 
 section {
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-md);
   overflow: hidden;
+  @include brkpnt-md {
+    padding: var(--space-xl) var(--space-md);
+  }
 }
 
 a,
