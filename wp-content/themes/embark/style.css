@@ -3741,13 +3741,12 @@ body.show-nav .header__nav {
   color: var(--color-base-darkest); }
 .cb__cols {
   display: flex;
-  flex-direction: column;
-  margin-top: var(--space-xxl); }
+  flex-direction: column; }
 @media only screen and (min-width: 63.9375em) {
     .cb__cols {
       flex-direction: row; } }
 .cb__title {
-  margin-bottom: var(--space-xxl); }
+  margin-bottom: var(--space-xl); }
 .cb__col {
   justify-content: flex-start;
   flex-direction: column;

@@ -10,13 +10,12 @@
     &__cols {
         display:flex;
         flex-direction: column;
-        margin-top: var(--space-xxl);
         @include brkpnt-md {
             flex-direction: row;
         }
     }
     &__title {
-        margin-bottom: var(--space-xxl);
+        margin-bottom: var(--space-xl);
     }
     &__col {
         justify-content: flex-start;
