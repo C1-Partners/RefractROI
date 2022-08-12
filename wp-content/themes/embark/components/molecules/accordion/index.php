@@ -5,7 +5,7 @@ $defaults = [
     "titles" => [],
     "content" => [],
     "data-allow-toggle" => false,
-    "data-allow-multiple" => true
+    "data-allow-multiple" => true,
   ],
   "style" => [
     "fieldset" => [], // works paralell to titles and content... might want to refactor all three to be tighter at some point
