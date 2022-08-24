@@ -35,13 +35,11 @@
         }
         &.r {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(16.625rem, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(18.625rem, 1fr));
             gap:3rem;
             @include brkpnt-md {
+                grid-template-columns: 1fr 1fr;
                 width: 65%;
-            }
-            @include brkpnt-xl {
-                grid-template-columns: repeat(auto-fit, minmax(32.625rem, 1fr));
             }
         }
 
@@ -49,7 +47,6 @@
             position: relative;
             border-radius: 11px;
             padding: var(--space-xl) var(--space-md) var(--space-md);
-            min-height: 440px;
             overflow: hidden;
 
             &__main {
