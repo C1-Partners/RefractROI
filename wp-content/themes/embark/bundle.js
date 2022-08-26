@@ -238,6 +238,325 @@ Array.prototype.slice.call(document.querySelectorAll(".js-accordion")).forEach(f
 
 /***/ }),
 
+/***/ "./components/molecules/lifecycle/component.js":
+/*!*****************************************************!*\
+  !*** ./components/molecules/lifecycle/component.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+window.gscTabInit = function (tabContainer) {
+  var one = document.getElementById('tabs-lc__tab-link-1');
+  var two = document.getElementById('tabs-lc__tab-link-2');
+  var three = document.getElementById('tabs-lc__tab-link-3');
+  var svg = document.getElementById('lcgrid');
+  var circles = document.querySelectorAll('.js-cir');
+  var circlesToColor = Array.from(circles);
+
+  var resetGrid = function resetGrid() {
+    circlesToColor.forEach(function (circle) {
+      circle.classList.remove('yellow');
+    });
+    removeLines();
+  };
+
+  var colorDots = function colorDots() {
+    circlesToColor.forEach(function (circle) {
+      circle.classList.add('yellow');
+    });
+  };
+
+  var removeLines = function removeLines() {
+    var lines = document.querySelectorAll('.js-line');
+    var linesToRemove = Array.from(lines);
+    linesToRemove.forEach(function (line) {
+      line.remove();
+    });
+  };
+
+  var drawLines = function drawLines() {
+    var coords = [[122, 448, 242, 348], [242, 348, 356, 288], [356, 288, 482, 328], [482, 328, 602, 228], [602, 228, 722, 128]];
+
+    var _loop = function _loop(i) {
+      setTimeout(function timer() {
+        var html = "<line class=\"path js-line\" x1=\"".concat(coords[i][0], "\" y1=\"").concat(coords[i][1], "\" x2=\"").concat(coords[i][2], "\" y2=\"").concat(coords[i][3], "\" stroke-width=\"2\" stroke=\"#e6af2e\"></line>");
+        svg.insertAdjacentHTML('beforeend', html);
+      }, i * 700);
+    };
+
+    for (var i = 0; i < coords.length; i++) {
+      _loop(i);
+    }
+  };
+
+  one.addEventListener('click', resetGrid);
+  two.addEventListener('click', function () {
+    colorDots();
+    removeLines();
+  });
+  three.addEventListener('click', function () {
+    drawLines();
+    colorDots();
+  });
+  var tablist = tabContainer.querySelector('[role="tablist"]');
+  var tabs;
+  var panels;
+
+  var generateArrays = function generateArrays() {
+    tabs = tabContainer.querySelectorAll('[role="tab"]');
+    panels = tabContainer.querySelectorAll('[role="tabpanel"]');
+  };
+
+  generateArrays();
+
+  if (tabs.length > 0 && panels.length > 0) {
+    var keys = {
+      end: 35,
+      home: 36,
+      left: 37,
+      up: 38,
+      right: 39,
+      down: 40,
+      delete: 46,
+      enter: 13,
+      space: 32
+    };
+    var direction = {
+      37: -1,
+      38: -1,
+      39: 1,
+      40: 1
+    };
+
+    var clickEventListener = function clickEventListener(event) {
+      var tab = event.target;
+      activateTab(tab, true);
+    };
+
+    var keydownEventListener = function keydownEventListener(event) {
+      var key = event.keyCode;
+
+      switch (key) {
+        case keys.end:
+          event.preventDefault();
+          focusLastTab();
+          break;
+
+        case keys.home:
+          event.preventDefault();
+          focusFirstTab();
+          break;
+
+        case keys.up:
+        case keys.down:
+          determineOrientation(event);
+          break;
+      }
+    };
+
+    var keyupEventListener = function keyupEventListener(event) {
+      var key = event.keyCode;
+
+      switch (key) {
+        case keys.left:
+        case keys.right:
+          determineOrientation(event);
+          break;
+
+        case keys.delete:
+          break;
+
+        case keys.enter:
+        case keys.space:
+          activateTab(event.target);
+          break;
+      }
+    };
+
+    var determineOrientation = function determineOrientation(event) {
+      var key = event.keyCode;
+      var vertical = tablist.getAttribute("aria-orientation") == "vertical";
+      var proceed = false;
+
+      if (vertical) {
+        if (key === keys.up || key === keys.down) {
+          event.preventDefault();
+          proceed = true;
+        }
+      } else {
+        if (key === keys.left || key === keys.right) {
+          proceed = true;
+        }
+      }
+
+      if (proceed) {
+        switchTabOnArrowPress(event);
+      }
+    };
+
+    var switchTabOnArrowPress = function switchTabOnArrowPress(event) {
+      var pressed = event.keyCode;
+
+      if (direction[pressed]) {
+        var target = event.target;
+
+        if (target.index !== undefined) {
+          if (tabs[target.index + direction[pressed]]) {
+            tabs[target.index + direction[pressed]].focus();
+          } else if (pressed === keys.left || pressed === keys.up) {
+            focusLastTab();
+          } else if (pressed === keys.right || pressed == keys.down) {
+            focusFirstTab();
+          }
+        }
+      }
+    };
+
+    var activateTab = function activateTab(tab, setFocus) {
+      setFocus = setFocus === 'undefined' ? true : setFocus;
+      deactivateTabs();
+      tab.removeAttribute("tabindex");
+      tab.setAttribute("aria-selected", "true");
+      tab.classList.add("is-active");
+      var controls = tab.getAttribute("aria-controls");
+
+      if (document.getElementById(controls)) {
+        document.getElementById(controls).removeAttribute("aria-hidden");
+      }
+
+      if (setFocus) {
+        tab.focus();
+      }
+    };
+
+    var deactivateTabs = function deactivateTabs() {
+      for (t = 0; t < tabs.length; t++) {
+        tabs[t].setAttribute("tabindex", "-1");
+        tabs[t].setAttribute("aria-selected", "false");
+        tabs[t].classList.remove("is-active");
+      }
+
+      for (p = 0; p < panels.length; p++) {
+        panels[p].setAttribute("aria-hidden", "true");
+      }
+    };
+
+    var focusFirstTab = function focusFirstTab() {
+      tabs[0].focus();
+    };
+
+    var focusLastTab = function focusLastTab() {
+      tabs[tabs.length - 1].focus();
+    };
+
+    var determineDelay = function determineDelay() {
+      var hasDelay = tablist.hasAttribute("data-delay");
+      var delay = 0;
+
+      if (hasDelay) {
+        var delayValue = tablist.getAttribute("data-delay");
+
+        if (delayValue) {
+          delay = delayValue;
+        } else {
+          delay = 300;
+        }
+      }
+
+      return delay;
+    };
+
+    var addListeners = function addListeners(index) {
+      tabs[index].addEventListener("click", clickEventListener);
+      tabs[index].addEventListener("keydown", keydownEventListener);
+      tabs[index].addEventListener("keyup", keyupEventListener);
+      tabs[index].index = index;
+    };
+
+    for (var x = 0; x < tabs.length; ++x) {
+      addListeners(x);
+    }
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+      activateTab(tabs[0], false);
+    });
+  }
+
+  var firstTime = true;
+
+  function updateWindowState() {
+    var loadParams = new URLSearchParams(window.location.search);
+
+    var _iterator = _createForOfIteratorHelper(loadParams),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var entry = _step.value;
+        var object = entry[0];
+        var setting = entry[1];
+
+        if (object.substr(0, 2) == "t_") {
+          var selection = '#tabs-' + object.replace("t_", "") + '__tab-link-' + setting;
+          $(selection).click();
+        }
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+
+    ;
+  }
+
+  $(document).ready(function () {
+    $('body').on("click", '.tabs__list button', function (event) {
+      $target = $(event.target);
+      var searchParams = new URLSearchParams(window.location.search);
+      var term = $target.attr('id');
+      var cut = term.search('__tab');
+      term = "t_" + term.slice(5, cut);
+
+      if ($target.closest('li').prevAll('li').length == 0) {
+        if (!firstTime) {
+          searchParams.delete(term);
+        }
+      } else {
+        var buttonLocation = $target.closest('li').prevAll('li').length + 1;
+
+        if (searchParams.has(term)) {
+          searchParams.set(term, buttonLocation);
+        } else {
+          searchParams.append(term, buttonLocation);
+        }
+      }
+
+      searchString = '?' + searchParams;
+      window.history.replaceState({}, null, searchString + window.location.hash);
+    });
+    setTimeout(function () {
+      new updateWindowState();
+      firstTime = false;
+    }, 200);
+  });
+};
+
+var tabContainers = document.querySelectorAll('.tabs');
+
+for (var i = 0; i < tabContainers.length; ++i) {
+  gscTabInit(tabContainers[i]);
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
+
+/***/ }),
+
 /***/ "./components/molecules/tabs/component.js":
 /*!************************************************!*\
   !*** ./components/molecules/tabs/component.js ***!
@@ -23418,6 +23737,7 @@ module.exports = {
 	"./../components/atoms/filters-grid-and-list/component.js": __webpack_require__(/*! ./../components/atoms/filters-grid-and-list/component.js */ "./components/atoms/filters-grid-and-list/component.js"),
 	"./../components/molecules/accordion/component.js": __webpack_require__(/*! ./../components/molecules/accordion/component.js */ "./components/molecules/accordion/component.js"),
 	"./../components/molecules/inputs/checkboxes/component.js": __webpack_require__(/*! ./../components/molecules/inputs/checkboxes/component.js */ "./components/molecules/inputs/checkboxes/component.js"),
+	"./../components/molecules/lifecycle/component.js": __webpack_require__(/*! ./../components/molecules/lifecycle/component.js */ "./components/molecules/lifecycle/component.js"),
 	"./../components/molecules/tabs/component.js": __webpack_require__(/*! ./../components/molecules/tabs/component.js */ "./components/molecules/tabs/component.js")
 };
 

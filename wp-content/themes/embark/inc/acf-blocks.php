@@ -11,6 +11,7 @@ function sw_acf_init() {
       array( 'pg-top', 'Interior page top block', 'Use for inteior page hero', 'shield', array('page', 'interior') ),
       array( 'cta', 'Call to Action Block', 'Prompt user action', 'shield', array('cta', 'action') ),
       array( 'tab-accordion', 'Accordion Tabs', '', 'shield', array('tab', 'accordion') ),
+      array( 'lifecycle', 'Client Lifecycle', '', 'shield', array('lifecycle', 'accordion') ),
       array( 'team', 'Team Accordion', '', 'shield', array('team', 'accordion') ),
       array( 'two-col-grid', 'Two Column Grid', '', 'shield', array('grid', 'two column') ),
       array( 'steps', 'Numbered Steps Block', 'Showcase content in numerical columns', 'shield', array('steps', 'column') ),

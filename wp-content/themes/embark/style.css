@@ -2702,6 +2702,65 @@ select::-ms-expand {
       border-radius: 100%; }
 .input--radio:checked + .label--radio .form__ico {
       opacity: 1; }
+.tabs__link {
+  color: var(--charcoal);
+  border-bottom: var(--brdr-sm) solid var(--color-accent-primary-light);
+  text-decoration: none;
+  padding: 0.875rem 1.125rem 0.625rem;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  text-align: left; }
+.tabs__link:focus {
+    outline-offset: -0.125rem;
+    outline: 0.125rem solid var(--color-primary-light); }
+@media only screen and (min-width: 47.9375em) {
+    .tabs__link {
+      text-align: center; } }
+@media print {
+    .tabs__link[aria-selected="false"] {
+      display: none; } }
+.tabs__link.is-active {
+    color: var(--color-primary-darker);
+    background-color: var(--color-primary-lightest);
+    border-bottom-color: var(--color-secondary); }
+@media only screen and (min-width: 47.9375em) {
+      .tabs__link.is-active {
+        background-color: transparent; } }
+.tabs__link.is-active:visited, .tabs__link.is-active:hover, .tabs__link.is-active:active {
+      color: var(--color-primary-darker); }
+.tabs__link:visited {
+    color: var(--charcoal); }
+.tabs__link:hover, .tabs__link:active {
+    background-color: transparent;
+    color: var(--charcoal); }
+.tabs__list {
+  display: block;
+  margin: 0; }
+@media only screen and (min-width: 47.9375em) {
+    .tabs__list {
+      display: flex; } }
+@media print {
+    .tabs__list {
+      display: none; } }
+.tabs__item {
+  margin: 0;
+  padding: 0;
+  flex-grow: 1; }
+.tabs__item::before {
+    display: none; }
+.tabs__section {
+  padding: 1.125rem;
+  background-color: var(--color-accent-primary-lightest);
+  margin-top: 1.5rem; }
+@media only screen and (min-width: 47.9375em) {
+    .tabs__section {
+      background-color: transparent; } }
+.tabs__section[aria-hidden="true"] {
+    display: none; }
+@media print {
+      .tabs__section[aria-hidden="true"] {
+        display: block; } }
 .product-grid {
   display: grid;
   grid-template-columns: 100%;
@@ -3979,6 +4038,69 @@ body.show-nav .header__nav {
       border-bottom: 1px solid var(--color-accent-khaki);
       padding: var(--space-sm) 0; }
 .tac .tabs__num {
+      font-family: 'machina';
+      font-size: var(--text-xxxl);
+      color: var(--color-primary); }
+/*--------------------------------------------------------------
+# Lifecycle Block
+--------------------------------------------------------------*/
+.lc {
+  font-size: var(--text-md);
+  background-color: var(--color-base-dark);
+  color: var(--color-base-light); }
+.lc .yellow {
+    stroke: #e6af2e;
+    transition: .3s; }
+.lc .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear forwards; }
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
+.lc .tabs {
+    display: flex;
+    flex-direction: column; }
+@media only screen and (min-width: 63.9375em) {
+      .lc .tabs {
+        flex-direction: row; } }
+.lc .tabs__section {
+      margin-top: 0;
+      padding-top: 0;
+      width: 100%;
+      margin-top: var(--space-lg); }
+@media only screen and (min-width: 63.9375em) {
+        .lc .tabs__section {
+          margin-top: 0; } }
+.lc .tabs__ctrls {
+      flex-direction: column;
+      align-items: flex-start;
+      list-style: none;
+      width: 100%; }
+@media only screen and (min-width: 63.9375em) {
+        .lc .tabs__ctrls {
+          width: 40%; } }
+.lc .tabs__section-title {
+      font-size: var(--text-xxl);
+      margin-bottom: var(--space-md); }
+@media only screen and (min-width: 63.9375em) {
+        .lc .tabs__section-title {
+          padding-right: var(--space-lg); } }
+.lc .tabs__list {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: var(--space-md);
+      border-left: 1px solid var(--color-accent-khaki); }
+.lc .tabs__item {
+      flex-grow: 0; }
+.lc .tabs__steps {
+      margin-left: 0;
+      margin-right: 0; }
+.lc .tabs__step {
+      display: flex;
+      justify-content: flex-start;
+      padding: var(--space-sm) 0; }
+.lc .tabs__num {
       font-family: 'machina';
       font-size: var(--text-xxxl);
       color: var(--color-primary); }
