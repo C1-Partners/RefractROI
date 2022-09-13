@@ -30,6 +30,6 @@ wp-content/mu-plugins/*
 # !wp-content/themes/sensorsinc
 # Ignore Node Modules
 wp-content/themes/crimson/assets/node_modules/*
-wp-content/themes/embark/node_modules/*
+wp-content/themes/refract/node_modules/*
 
 .sass-cache
