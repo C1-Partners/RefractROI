@@ -29,7 +29,7 @@ $contentRight = get_field('r_col', 'options');
                         <?php get_template_part('template-parts/foot/info'); ?>
                     </div>
                 </div>
-                <div class="footer__copyright container">
+                <div class="footer__copyright">
                     <div class="footer__bl">
                         <?php 
                             if ( function_exists( 'the_custom_logo' ) ) {

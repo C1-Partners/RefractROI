@@ -1,8 +1,8 @@
 /*!
-Theme Name: Refract
-Author: RefractROI
-Author URI: refractroi.com
-Description: Refract Canonical Theme & Components
+Theme Name: Sensors INC
+Author: Embark
+Author URI: embarkroi.com
+Description: Embark Canonical Theme & Components
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -2956,13 +2956,13 @@ select::-ms-expand {
   background-color: var(--color-base-dark); }
 @media only screen and (min-width: 63.9375em) {
     .header {
-      padding: 0 20px; } }
+      padding: var(--space-sm) var(--space-lg); } }
 .header__mobile-btn {
     display: flex;
     flex: 1 1;
     align-items: center;
     font-family: var(--font-secondary);
-    color: var(--color-base-darkest);
+    color: var(--color-base-lightest);
     font-size: var(--text-md); }
 .header__mobile-btn button {
       background-color: transparent;
@@ -3060,11 +3060,17 @@ select::-ms-expand {
     display: flex;
     height: 100%; }
 .header__nav-secondary {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-base-dark);
     display: flex;
     margin: 0;
     order: 3; }
 @media only screen and (min-width: 63.9375em) {
       .header__nav-secondary {
+        position: static;
+        width: auto;
         font-size: var(--text-sm); } }
 .header__nav-secondary .menu-item {
       margin-bottom: 0;
@@ -3193,13 +3199,14 @@ select::-ms-expand {
       display: block;
       height: 100%;
       text-decoration: none;
-      color: var(--color-base-light);
       font-family: var(--font-secondary);
       text-transform: uppercase;
       padding: 15px; }
 @media only screen and (min-width: 63.9375em) {
-        .header__nav-menu a:hover {
-          background-color: unset; } }
+        .header__nav-menu a {
+          color: var(--color-base-light); }
+          .header__nav-menu a:hover {
+            background-color: unset; } }
 .header__nav-menu .sub-menu {
       left: 0;
       margin: 0;
@@ -3373,6 +3380,7 @@ body.show-nav .header__nav {
         background-color: var(--color-primary); }
 .footer__copyright {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding-right: 0.5rem;
@@ -3381,15 +3389,22 @@ body.show-nav .header__nav {
     text-align: center;
     padding-top: 1rem;
     color: var(--color-base-light); }
+@media only screen and (min-width: 63.9375em) {
+      .footer__copyright {
+        flex-direction: row; } }
+.footer__copyright .custom-logo {
+      max-width: 230px; }
 .footer__bl, .footer__br {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 70%;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: var(--space-md); }
 @media only screen and (min-width: 63.9375em) {
       .footer__bl, .footer__br {
-        flex-direction: row; } }
+        flex-direction: row;
+        width: 50%; } }
 /*--------------------------------------------------------------
 # Carousel
 --------------------------------------------------------------*/

@@ -10,9 +10,9 @@
         aria-label="Toggle navigation"
     >
     <svg viewBox="0 0 100 80" width="30" height="30">
-        <rect y="16" width="95" height="8" fill="#000"></rect>
-        <rect y="45" width="80" height="8" fill="#000"></rect>
-        <rect y="72" width="95" height="8" fill="#000"></rect>
+        <rect y="16" width="95" height="8" fill="#F3F3F3"></rect>
+        <rect y="45" width="80" height="8" fill="#F3F3F3"></rect>
+        <rect y="72" width="95" height="8" fill="#F3F3F3"></rect>
     </svg>
     </button>
     <span>MENU</span>

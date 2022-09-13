@@ -8,7 +8,7 @@
   // Header on tablet +
   @include brkpnt-md {
     // background-color: var(--color-base-darkest);
-    padding: 0 20px;
+    padding: var(--space-sm) var(--space-lg);
   }
 
   &__mobile-btn {
@@ -16,7 +16,7 @@
     flex: 1 1;
     align-items: center;
     font-family: var(--font-secondary);
-    color: var(--color-base-darkest);
+    color: var(--color-base-lightest);
     font-size: var(--text-md);
 
     button {
@@ -155,11 +155,17 @@
   }
   
   &__nav-secondary {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-base-dark);
     display: flex;
     margin:0;
     order: 3;
 
     @include brkpnt-md {
+      position: static;
+      width: auto;
       font-size: var(--text-sm);
     }
 
@@ -314,12 +320,13 @@
       display: block;
       height: 100%;
       text-decoration: none;
-      color: var(--color-base-light);
+      
       font-family: var(--font-secondary);
       text-transform: uppercase;
       padding: 15px;
 
       @include brkpnt-md {
+        color: var(--color-base-light);
         // Let li element bg color take over on hover instead
         &:hover {
           background-color: unset;
