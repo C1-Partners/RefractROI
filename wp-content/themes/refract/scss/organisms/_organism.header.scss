@@ -7,8 +7,7 @@
 
   // Header on tablet +
   @include brkpnt-md {
-    // background-color: var(--color-base-darkest);
-    padding: var(--space-sm) var(--space-lg);
+    padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-xl);
   }
 
   &__mobile-btn {

@@ -2956,7 +2956,7 @@ select::-ms-expand {
   background-color: var(--color-base-dark); }
 @media only screen and (min-width: 63.9375em) {
     .header {
-      padding: var(--space-sm) var(--space-lg); } }
+      padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-xl); } }
 .header__mobile-btn {
     display: flex;
     flex: 1 1;
