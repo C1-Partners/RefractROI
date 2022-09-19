@@ -1986,29 +1986,49 @@ BEWARE, THOSE WHO WOULD BREAK THE SACRED ORDER OF COMPONENTS - brenda */
     background-color: var(--color-base-lightest); }
 select::-ms-expand {
   display: none; }
-.accordion__item {
-  border-bottom: solid var(--brdr-xxs) var(--color-base-darker); }
 .accordion__heading {
+  border-top: solid var(--brdr-xxs) var(--color-base-darker);
   position: relative;
   margin-bottom: 0; }
+.accordion__info {
+  z-index: -1;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  width: 100%; }
+@media only screen and (min-width: 63.9375em) {
+    .accordion__info {
+      flex-direction: row; } }
+.accordion__titles {
+  width: 100%;
+  color: var(--color-base-dark); }
+@media only screen and (min-width: 63.9375em) {
+    .accordion__titles {
+      padding-left: var(--space-xl); } }
+.accordion__title {
+  font-size: var(--text-xl);
+  margin-bottom: 0; }
+.accordion__subtitle {
+  font-size: var(--text-md); }
 .accordion__btn {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
   text-transform: none;
   color: var(--color-primary-darkest);
   background-color: transparent;
   color: var(--color-primary-darkest);
-  padding: 1.5rem 1.5rem 1.5rem 3.125rem;
-  display: inline-flex;
-  text-align: left; }
-@media only screen and (min-width: 47.9375em) {
-    .accordion__btn {
-      padding-left: 4rem; } }
+  width: 100%;
+  text-align: left;
+  cursor: pointer; }
 .accordion__btn:hover, .accordion__btn:active, .accordion__btn:focus {
     background-color: transparent;
     color: var(--color-primary-darkest); }
-.accordion__btn::before, .accordion__btn::after {
+.accordion__btn::after {
     position: absolute;
-    left: 0;
-    top: 16%;
+    right: 0;
+    top: 19%;
+    right: -21px;
     content: "";
     border: var(--brdr-xs) solid var(--color-secondary);
     width: 2rem;
@@ -2017,28 +2037,24 @@ select::-ms-expand {
     flex-shrink: 0;
     background-repeat: no-repeat;
     background-position: 50%;
-    opacity: 0;
-    background-image: url("images/ico-expand-orange.svg");
-    background-color: white;
-    transition: opacity var(--timing) var(--easing), background-color var(--timing) var(--easing), background-image var(--timing) var(--easing); }
-@media only screen and (min-width: 47.9375em) {
-      .accordion__btn::before, .accordion__btn::after {
+    background-image: url("images/arrow-dark.svg"); }
+@media only screen and (min-width: 63.9375em) {
+      .accordion__btn::after {
         top: 22%;
         width: 2.5rem;
         height: 2.375rem;
         margin-right: 1.5rem; } }
 @media print {
-      .accordion__btn::before, .accordion__btn::after {
+      .accordion__btn::after {
         display: none; } }
-.accordion__btn::before {
-    opacity: 1; }
-.accordion__btn[aria-expanded="true"]::before {
-    opacity: 0; }
 .accordion__btn[aria-expanded="true"]::after {
-    background-image: url("images/ico-collapse-orange.svg");
-    opacity: 1; }
+    background-image: url("images/arrow-dark.svg");
+    opacity: 1;
+    transition: .4s; }
 .accordion__btn[aria-expanded="false"]::after {
-    opacity: 0; }
+    opacity: 1;
+    transform: rotate(90deg);
+    transition: .5s; }
 .accordion__btn:hover {
     background: transparent;
     color: var(--color-primary-darkest); }
@@ -2065,12 +2081,11 @@ select::-ms-expand {
       height: auto; } }
 .accordion__body {
   display: block;
-  margin-left: 3.125rem;
   margin-bottom: 2.5rem;
   padding-top: 8px; }
-@media only screen and (min-width: 47.9375em) {
+@media only screen and (min-width: 63.9375em) {
     .accordion__body {
-      margin-left: 4rem; } }
+      margin-left: 11.5rem; } }
 @media print {
     .accordion__body {
       margin-left: 0; } }

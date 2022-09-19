@@ -1,11 +1,11 @@
 {
     "key": "group_6262ba375af20",
-    "title": "CPT: Brands",
+    "title": "CPT: Team",
     "fields": [
         {
             "key": "field_6262ba488c848",
-            "label": "Logo",
-            "name": "logo",
+            "label": "Position",
+            "name": "tm_pos",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -27,17 +27,17 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "team"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1650637401
+    "modified": 1663268348
 }

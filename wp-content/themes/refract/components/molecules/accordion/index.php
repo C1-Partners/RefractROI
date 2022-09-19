@@ -3,7 +3,9 @@
 $defaults = [
   "content" => [
     "titles" => [],
+    "subtitles" => [],
     "content" => [],
+    "image_urls"  => [],
     "data-allow-toggle" => false,
     "data-allow-multiple" => true,
   ],
@@ -51,7 +53,13 @@ gsc_define("accordion", $defaults, function($data) {
   if (!empty($data["content"]["titles"])) {
     // save titles and contents arrays to variable
     $titles = $data["content"]["titles"];
+    $subtitles = $data["content"]["subtitles"];
     $contents = $data["content"]["content"];
+    $images = $data["content"]["image_urls"];
+
+    $svg = "<svg class='accordion__svg' width='27' height='28' viewBox='0 0 27 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path d='M2.9952 5.3632L18.4896 5.3056L0 23.7952L3.2832 27.136L21.8304 8.5888V24.1408L26.496 23.8528V0.582397L3.2832 0.697598L2.9952 5.3632Z' fill='#2e3532'/>
+                </svg>";
 
     // indexing variable
     $accordion_index = 1;
@@ -69,7 +77,7 @@ gsc_define("accordion", $defaults, function($data) {
         $fieldset_status = $data["style"]["fieldset"][$accordion_index-1];
       }
       $item_wrapper = "section";
-      $heading_wrapper = "h2";
+      $heading_wrapper = "div";
       $fieldset_label = "";
       if ($fieldset_status == true) {
         $item_wrapper = "fieldset";
@@ -77,15 +85,21 @@ gsc_define("accordion", $defaults, function($data) {
         $fieldset_label = " id='legend__filters-".($accordion_index)."' ";
       }
 
-
-
       // accordion header
       $section_html = "";
       $section_html .= "<{$item_wrapper} class='accordion__item'>";
+     
       $section_html .= "<{$heading_wrapper} class='accordion__heading' $fieldset_label >";
-      $section_html .= "<button type='button' class='accordion__btn js-accordion__btn' id='accordion-1__accordion-btn-{$accordion_index}' aria-expanded='{$aria_expanded}' aria-controls='accordion-1__panel-{$accordion_index}'>";
-      $section_html .= "{$title}";
-      $section_html .= "</button>";
+      
+      $section_html .= "<div class='accordion__btn js-accordion__btn' id='accordion-1__accordion-btn-{$accordion_index}' aria-expanded='{$aria_expanded}' aria-controls='accordion-1__panel-{$accordion_index}'>";
+      
+     
+      $section_html .= "<div class='accordion__info'><img class='accordion__img' src='{$images[$accordion_index - 1]}' alt='{$title}' width=300 height=340 />";
+      $section_html .= "<div class='accordion__titles'><p class='accordion__title'>{$title}</p>";
+      $section_html .= "<p class='accordion__subtitle'>{$subtitles[$accordion_index - 1]}</p></div>";
+     
+      $section_html .= "</div>";
+      // $section_html .= "{$svg}";
       $section_html .= "</{$heading_wrapper}>";
 
       // accordion content

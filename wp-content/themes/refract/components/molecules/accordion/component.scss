@@ -1,25 +1,51 @@
 .accordion {
   &__item {
-    border-bottom: solid var(--brdr-xxs) var(--color-base-darker);
+    
   }
 
   &__heading {
+    border-top: solid var(--brdr-xxs) var(--color-base-darker);
     position: relative;
     margin-bottom: 0;
   }
 
+  &__info {
+    z-index: -1;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    width: 100%;
+    @include brkpnt-md {
+      flex-direction: row;
+    }
+  }
+  &__titles {
+    width:100%;
+    color: var(--color-base-dark);
+    @include brkpnt-md {
+      padding-left: var(--space-xl);
+    }
+    
+  }
+  &__title {
+    font-size: var(--text-xl);
+    margin-bottom: 0;
+  }
+  &__subtitle {
+    font-size: var(--text-md);
+  }
+
   &__btn {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     text-transform: none;
     color: var(--color-primary-darkest);
     background-color: transparent;
     color: var(--color-primary-darkest);
-    padding: rem(24) rem(24) rem(24) rem(50);
-    display: inline-flex;
+    width:  100%;
     text-align: left;
-
-    @include brkpnt-xs {
-      padding-left: rem(64);
-    }
+    cursor: pointer;
 
     &:hover,
     &:active,
@@ -28,12 +54,11 @@
       color: var(--color-primary-darkest);
     }
 
-    // expand, collapse icons
-    &::before,
     &::after {
       position: absolute;
-      left: 0;
-      top: 16%;
+      right: 0;
+      top: 19%;
+      right: -21px;
       content: "";
       border: var(--brdr-xs) solid var(--color-secondary);
       width: rem(32);
@@ -42,12 +67,9 @@
       flex-shrink: 0;
       background-repeat: no-repeat;
       background-position: 50%;
-      opacity: 0;
-      background-image: url("../images/ico-expand-orange.svg"); // Detault img is
-      background-color: white;
-      transition: opacity var(--timing) var(--easing), background-color var(--timing) var(--easing), background-image var(--timing) var(--easing);
+      background-image: url("../images/arrow-dark.svg"); // Detault img is
 
-      @include brkpnt-xs {
+      @include brkpnt-md {
         top: 22%;
         width: rem(40);
         height: rem(38);
@@ -58,27 +80,19 @@
       }
     }
 
-    // expand icon
-    &::before {
-      // position: relative;
-      opacity: 1;
-    }
-
-    // collapse icon
     &[aria-expanded="true"] {
-      &::before {
-        opacity: 0;
-      }
-
       &::after {
-        background-image: url("../images/ico-collapse-orange.svg");
+        background-image: url("../images/arrow-dark.svg");
         opacity: 1;
+        transition: .4s;
       }
     }
 
     &[aria-expanded="false"] {
       &::after {
-        opacity: 0;
+        opacity: 1;
+        transform: rotate(90deg);
+        transition: .5s;
       }
     }
 
@@ -116,12 +130,10 @@
 
   &__body {
     display: block;
-    margin-left: rem(50);
     margin-bottom: rem(40);
     padding-top: 8px;
-
-    @include brkpnt-xs {
-      margin-left: rem(64);
+    @include brkpnt-md {
+      margin-left: rem(184);
     }
     @media print {
       margin-left: 0;
