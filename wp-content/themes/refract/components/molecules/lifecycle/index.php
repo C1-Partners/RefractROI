@@ -145,15 +145,13 @@ gsc_define("lifecycle", $defaults, function($data) {
 
 	return "<div $id_attr $class_attr $misc_attrs>
   				<div>
-						$links_str
-						
-						</div>
-						<div>
-						$grid_svg
-						$panels_str
-						
-						</div>
-					</div>";
+					$links_str
+					</div>
+					<div class='tabs__panel'>
+					$grid_svg
+					$panels_str
+					</div>
+				</div>";
 });
 gsc_meta("tabs", [MOLECULE]);
 gsc_test("tabs", "", function() {

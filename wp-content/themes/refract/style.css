@@ -4080,14 +4080,24 @@ body.show-nav .header__nav {
   color: var(--color-base-light); }
 .lc .yellow {
     stroke: #e6af2e;
+    stroke-width: 4;
     transition: .3s; }
 .lc .path {
-    stroke-dasharray: 1000;
+    stroke-dasharray: 900;
     stroke-dashoffset: 1000;
     animation: dash 5s linear forwards; }
 @keyframes dash {
   to {
     stroke-dashoffset: 0; } }
+.lc .linex {
+    animation: swell 2s infinite; }
+@keyframes swell {
+  0% {
+    stroke-width: 2; }
+  50% {
+    stroke-width: 5; }
+  100% {
+    stroke-width: 1; } }
 .lc .tabs {
     display: flex;
     flex-direction: column; }
@@ -4107,9 +4117,9 @@ body.show-nav .header__nav {
       align-items: flex-start;
       list-style: none;
       width: 100%; }
-@media only screen and (min-width: 63.9375em) {
-        .lc .tabs__ctrls {
-          width: 40%; } }
+.lc .tabs__svg {
+      width: 100%;
+      margin-bottom: var(--space-md); }
 .lc .tabs__section-title {
       font-size: var(--text-xxl);
       margin-bottom: var(--space-md); }
@@ -5371,6 +5381,11 @@ body.modal-open {
 .page-template-template-frontpage .main {
   padding-bottom: var(--space-xxl);
   background-color: var(--color-base-light); }
+.archive .main, .blog .main {
+  padding: var(--space-xl) var(--space-md); }
+.archive .facetwp-facet-blogs, .blog .facetwp-facet-blogs {
+  max-width: 50%;
+  margin: var(--space-md) auto var(--space-lg); }
 .page .subtitle {
   text-align: left;
   color: var(--color-primary);

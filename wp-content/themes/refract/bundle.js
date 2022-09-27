@@ -252,42 +252,29 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 window.gscTabInit = function (tabContainer) {
-  var one = document.getElementById('tabs-lc__tab-link-1');
-  var two = document.getElementById('tabs-lc__tab-link-2');
-  var three = document.getElementById('tabs-lc__tab-link-3');
-  var svg = document.getElementById('lcgrid');
-  var circles = document.querySelectorAll('.js-cir');
-  var circlesToColor = Array.from(circles);
+  var one = document.getElementById('tabs-lc__tab-link-1'),
+      two = document.getElementById('tabs-lc__tab-link-2'),
+      three = document.getElementById('tabs-lc__tab-link-3'),
+      four = document.getElementById('tabs-lc__tab-link-4'),
+      svg = document.getElementById('lcgrid');
 
   var resetGrid = function resetGrid() {
-    circlesToColor.forEach(function (circle) {
-      circle.classList.remove('yellow');
-    });
-    removeLines();
-  };
-
-  var colorDots = function colorDots() {
-    circlesToColor.forEach(function (circle) {
-      circle.classList.add('yellow');
-    });
-  };
-
-  var removeLines = function removeLines() {
-    var lines = document.querySelectorAll('.js-line');
-    var linesToRemove = Array.from(lines);
-    linesToRemove.forEach(function (line) {
-      line.remove();
-    });
+    removeElement('js-line');
+    removeElement('js-line2');
+    removeClassnames('js-cir');
+    removeClassnames('js-cir2');
   };
 
   var drawLines = function drawLines() {
-    var coords = [[122, 448, 242, 348], [242, 348, 356, 288], [356, 288, 482, 328], [482, 328, 602, 228], [602, 228, 722, 128]];
+    var coords = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    var latency = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var classname = arguments.length > 2 ? arguments[2] : undefined;
 
     var _loop = function _loop(i) {
       setTimeout(function timer() {
-        var html = "<line class=\"path js-line\" x1=\"".concat(coords[i][0], "\" y1=\"").concat(coords[i][1], "\" x2=\"").concat(coords[i][2], "\" y2=\"").concat(coords[i][3], "\" stroke-width=\"2\" stroke=\"#e6af2e\"></line>");
+        var html = "<line class=\"path ".concat(classname, "\" \n                        x1=\"").concat(coords[i][0], "\" \n                        y1=\"").concat(coords[i][1], "\" \n                        x2=\"").concat(coords[i][2], "\" \n                        y2=\"").concat(coords[i][3], "\" \n                        stroke-width=\"2\" \n                        stroke=\"#e6af2e\">\n                      </line>");
         svg.insertAdjacentHTML('beforeend', html);
-      }, i * 700);
+      }, i * latency);
     };
 
     for (var i = 0; i < coords.length; i++) {
@@ -295,14 +282,60 @@ window.gscTabInit = function (tabContainer) {
     }
   };
 
+  var colorDots = function colorDots(classname) {
+    var circles = document.querySelectorAll('.' + classname);
+    var circlesToColor = Array.from(circles);
+    circlesToColor.forEach(function (circle) {
+      circle.classList.add('yellow');
+    });
+  };
+
+  var removeElement = function removeElement(classname) {
+    var elements = document.querySelectorAll('.' + classname);
+    var elementsToRemove = Array.from(elements);
+    elementsToRemove.forEach(function (element) {
+      element.remove();
+    });
+  };
+
+  var removeClassnames = function removeClassnames(classname) {
+    var elements = document.querySelectorAll('.' + classname);
+    var classnamesToRemove = Array.from(elements);
+    classnamesToRemove.forEach(function (classname) {
+      classname.classList.remove('yellow');
+    });
+  };
+
+  var addAnimationClass = function addAnimationClass() {
+    var lineElements = document.querySelectorAll('.js-line,.js-line2');
+    var lines = Array.from(lineElements);
+    lines.forEach(function (line) {
+      line.classList.add('linex');
+    });
+  };
+
   one.addEventListener('click', resetGrid);
   two.addEventListener('click', function () {
-    colorDots();
-    removeLines();
+    colorDots('js-cir');
+    removeElement('js-line');
+    removeElement('js-line2');
+    removeClassnames('js-cir2');
   });
   three.addEventListener('click', function () {
-    drawLines();
-    colorDots();
+    var coords = [[122, 448, 242, 348], [242, 348, 356, 288], [356, 288, 482, 328], [482, 328, 602, 228], [602, 228, 722, 128]];
+    drawLines(coords, 50, 'js-line');
+    colorDots('js-cir');
+    removeElement('js-line2');
+    removeClassnames('js-cir2');
+  });
+  four.addEventListener('click', function () {
+    var coords = [[122, 448, 242, 348], [242, 348, 356, 288], [356, 288, 482, 328], [482, 328, 602, 228], [602, 228, 722, 128]];
+    var coords2 = [[722, 128, 842, 8], [842, 8, 842, 128], [842, 8, 722, 8]];
+    drawLines(coords, 50, 'js-line');
+    colorDots('js-cir');
+    drawLines(coords2, 10, 'js-line2');
+    colorDots('js-cir2');
+    addAnimationClass();
   });
   var tablist = tabContainer.querySelector('[role="tablist"]');
   var tabs;

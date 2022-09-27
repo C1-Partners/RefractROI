@@ -5,11 +5,12 @@
 
     .yellow {
         stroke:#e6af2e;
+        stroke-width: 4;
         transition:.3s;
     }
 
     .path {
-        stroke-dasharray: 1000;
+        stroke-dasharray: 900;
         stroke-dashoffset: 1000;
         animation: dash 5s linear forwards;
       }
@@ -17,6 +18,27 @@
       @keyframes dash {
         to {
           stroke-dashoffset: 0;
+        }
+      }
+
+      .linex {
+        animation: swell 2s infinite;
+      }
+
+      @keyframes swell {
+        0% {
+            stroke-width: 2;
+          
+        }
+      
+        50% {
+            stroke-width: 5;
+      
+        }
+      
+        100% {
+            stroke-width: 1;
+         
         }
       }
 
@@ -40,9 +62,13 @@
             align-items: flex-start;
             list-style: none;
             width: 100%;
-            @include brkpnt-md {
-                width: 40%;
-            }
+            // @include brkpnt-md {
+            //     width: 40%;
+            // }
+        }
+        &__svg {
+            width:100%;
+            margin-bottom: var(--space-md);
         }
         &__section-title {
             font-size: var(--text-xxl);

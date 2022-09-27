@@ -1,41 +1,73 @@
 window.gscTabInit = function (tabContainer) {
-  const one = document.getElementById('tabs-lc__tab-link-1');
-  const two = document.getElementById('tabs-lc__tab-link-2');
-  const three = document.getElementById('tabs-lc__tab-link-3');
-  const svg = document.getElementById('lcgrid');
+  const 
+    one = document.getElementById('tabs-lc__tab-link-1'),
+    two = document.getElementById('tabs-lc__tab-link-2'),
+    three = document.getElementById('tabs-lc__tab-link-3'),
+    four = document.getElementById('tabs-lc__tab-link-4'),
+    svg = document.getElementById('lcgrid');
 
-  let circles = document.querySelectorAll('.js-cir');
-  let circlesToColor = Array.from(circles);
- 
-  
-
+  // Reset SVG back to default
   const resetGrid = () => {
-     
-    circlesToColor.forEach((circle) => {
-        circle.classList.remove('yellow');
-    });
-    removeLines();
-   
+    removeElement('js-line');
+    removeElement('js-line2');
+    removeClassnames('js-cir');
+    removeClassnames('js-cir2');
   }
-
-  
-
-  const colorDots = () => {
+  // Add line elements to SVG 
+  const drawLines = (coords = [], latency = 0, classname) => {
+    for (let i=0; i < coords.length; i++) {
+      setTimeout(function timer() {
+        const html = `<line class="path ${classname}" 
+                        x1="${coords[i][0]}" 
+                        y1="${coords[i][1]}" 
+                        x2="${coords[i][2]}" 
+                        y2="${coords[i][3]}" 
+                        stroke-width="2" 
+                        stroke="#e6af2e">
+                      </line>`
+        svg.insertAdjacentHTML('beforeend', html);
+      }, i * latency);
+    }
+  }
+  // Color waypoints on grid
+  const colorDots = (classname) => {
+    let circles = document.querySelectorAll('.'+classname);
+    let circlesToColor = Array.from(circles);
     circlesToColor.forEach((circle) => {
         circle.classList.add('yellow');
     });
   }
   // Remove drawn lines from step three
-  const removeLines = () => {
-    let lines = document.querySelectorAll('.js-line');
-    let linesToRemove = Array.from(lines);
-
-    linesToRemove.forEach((line) => {
-      line.remove();
+  const removeElement = (classname) => {
+    let elements = document.querySelectorAll('.'+classname);
+    let elementsToRemove = Array.from(elements);
+    elementsToRemove.forEach((element) => {
+      element.remove();
     });
   }
-  // Add line elements to SVG from coordinates for step three
-  const drawLines = () => {
+  const removeClassnames = (classname) => {
+    let elements = document.querySelectorAll('.'+classname);
+    let classnamesToRemove = Array.from(elements);
+    classnamesToRemove.forEach((classname) => {
+      classname.classList.remove('yellow');
+  });
+  }
+  const addAnimationClass = () => {
+    let lineElements = document.querySelectorAll('.js-line,.js-line2');
+    let lines = Array.from(lineElements);
+        lines.forEach((line) => {
+          line.classList.add('linex');
+        });
+  }
+  // SVG event listeners for steps
+  one.addEventListener('click', resetGrid);
+  two.addEventListener('click', () => {
+    colorDots('js-cir');
+    removeElement('js-line');
+    removeElement('js-line2');
+    removeClassnames('js-cir2');
+  });
+  three.addEventListener('click', () => {
     const coords = [
       [122,448,242,348],
       [242,348,356,288],
@@ -43,22 +75,29 @@ window.gscTabInit = function (tabContainer) {
       [482,328,602,228],
       [602,228,722,128]
     ];
-    for (let i=0; i < coords.length; i++) {
-      setTimeout(function timer() {
-        const html = `<line class="path js-line" x1="${coords[i][0]}" y1="${coords[i][1]}" x2="${coords[i][2]}" y2="${coords[i][3]}" stroke-width="2" stroke="#e6af2e"></line>`
-        svg.insertAdjacentHTML('beforeend', html);
-      }, i * 700);
-    }
-  }
-  // SVG event listeners 
-  one.addEventListener('click', resetGrid);
-  two.addEventListener('click', () => {
-    colorDots();
-    removeLines();
+    drawLines(coords, 50, 'js-line');
+    colorDots('js-cir');
+    removeElement('js-line2');
+    removeClassnames('js-cir2');
   });
-  three.addEventListener('click', () => {
-    drawLines();
-    colorDots();
+  four.addEventListener('click', () => {
+    const coords = [
+      [122,448,242,348],
+      [242,348,356,288],
+      [356,288,482,328],
+      [482,328,602,228],
+      [602,228,722,128]
+    ];
+    const coords2 = [
+      [722,128,842,8],
+      [842,8,842,128],
+      [842,8,722,8]
+    ];
+    drawLines(coords, 50, 'js-line');
+    colorDots('js-cir');
+    drawLines(coords2, 10, 'js-line2');
+    colorDots('js-cir2');
+    addAnimationClass();
   });
 
 

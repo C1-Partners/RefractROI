@@ -1,0 +1,10 @@
+.archive, .blog {
+  .main {
+      padding: var(--space-xl) var(--space-md);
+  }  
+
+  .facetwp-facet-blogs {
+      max-width: 50%;
+      margin: var(--space-md) auto var(--space-lg);
+  }
+}

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 
+ * Template Name: Posts Page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -12,9 +12,10 @@
 
  ?>
 
- 	<main id="primary" class="main container">
+ 	<main id="primary" class="main container" id="banner">
+         <?php echo do_shortcode( '[facetwp facet="blogs"]' );; ?>
+         
 		<div class="grid">
-
 		<?php if ( have_posts() ) : 
 			// Start the Loop.
 			while ( have_posts() ) :
@@ -26,7 +27,7 @@
 				* (where ___ is the post format) and that will be used instead.
 				*/
 				?>
-
+                
 			<article class="grid__item" id="post-<?php the_ID(); ?>">
 				<a class="outer" href="<?php echo get_the_permalink(); ?>">
 					<div class="img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)"></div>
@@ -44,7 +45,6 @@
 								<path d="M26.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" fill="#747474"/>
 							</svg>
 						</span>
-						<p class="auth">by <?php echo get_the_author(); ?></p>
 					</div>
 				</a>
 			</article>			

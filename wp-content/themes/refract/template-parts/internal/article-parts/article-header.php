@@ -10,7 +10,7 @@ $image = get_the_post_thumbnail_url();
 
 ?>
 
-<header class="internal-header">
+<header class="internal-header" id="banner">
     <div class="content-page">
         <div class="categories">
         <?php if($categories): ?>
@@ -32,7 +32,7 @@ $image = get_the_post_thumbnail_url();
         
         <?php if($singlePost): ?>
         <div class="meta">
-            <p>by <span><?php echo $authLink; ?></span> | <?php echo $postDate; ?></p>
+            <?php echo $postDate; ?></p>
         </div>
         <?php endif; ?>
     </div>
