@@ -9,12 +9,12 @@
     align-items: center;
     order: 2;
     margin-right: var(--space-sm);
-    // opacity: 0;
-    // width: 0;
+    padding: var(--space-sm);
     transition: .8s;
 
     @include brkpnt-md {
       order: 1;
+      padding:unset;
     }
 
     .custom-logo-link {

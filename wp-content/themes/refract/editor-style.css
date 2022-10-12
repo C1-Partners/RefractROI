@@ -1559,10 +1559,12 @@ textarea {
   align-items: center;
   order: 2;
   margin-right: var(--space-sm);
+  padding: var(--space-sm);
   transition: .8s; }
 @media only screen and (min-width: 63.9375em) {
     .header__logo-outer {
-      order: 1; } }
+      order: 1;
+      padding: unset; } }
 .header__logo-outer .custom-logo-link {
     display: flex; }
 .header__logo-outer .custom-logo-link .custom-logo {
