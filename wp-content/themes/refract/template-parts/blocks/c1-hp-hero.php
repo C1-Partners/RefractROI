@@ -19,7 +19,7 @@ endif;
 <div class="hero">
     <?php if ($headline): ?>
     <div class="hero__headline">
-        <h2 class="hero__heading"><?php echo $headline; ?></h2>
+        <h1 class="hero__heading"><?php echo $headline; ?></h1>
     </div>
     <?php endif; ?>
     <div class="hero__lower">
