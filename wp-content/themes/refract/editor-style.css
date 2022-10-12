@@ -3546,7 +3546,7 @@ select::-ms-expand {
 .stp .staggered-content {
   justify-content: flex-start; }
 .stp .staggered-content__wrap {
-    padding-top: var(--space-xl);
+    padding-top: var(--space-lg);
     padding-left: var(--space-lg); }
 .stp .staggered-content__num {
     position: absolute;
@@ -3607,7 +3607,7 @@ select::-ms-expand {
     .cb__cols {
       flex-direction: row; } }
 .cb__title {
-  margin-bottom: var(--space-xl); }
+  margin-bottom: var(--space-md); }
 .cb__col {
   justify-content: flex-start;
   flex-direction: column;
