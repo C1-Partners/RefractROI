@@ -22,8 +22,11 @@
         flex-direction: column;
         padding-left: var(--space-xl);
         border-left: 1px solid var(--color-accent-khaki);
-        margin-bottom: var(--space-xxl);
-        width: 100%;   
+        margin-bottom: var(--space-lg);
+        width: 100%;  
+        @include brkpnt-md {
+            margin-bottom: var(--space-xxl);
+        } 
     }
     &__text {
         font-size: var(--text-lg);

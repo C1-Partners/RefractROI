@@ -18,7 +18,9 @@
     }
 
     &__left {
-        padding: var(--space-lg);
+        @include brkpnt-md {
+            padding: var(--space-lg);
+        }
         .tcl__cta-text {
             font-size: var(--text-lg);
         }

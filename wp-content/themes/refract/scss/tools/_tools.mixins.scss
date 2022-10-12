@@ -146,6 +146,12 @@ Use only what you need:
 # UX
 --------------------------------------------------------------*/
 
+@mixin colorLinkDark() {
+  color: var(--color-base-darkest);;
+  &:hover {
+    color: var(--color-primary);
+  }
+}
 @mixin colorLinkWhite() {
   color: var(--color-base-lightest);
   &:hover {

@@ -2758,8 +2758,8 @@ select::-ms-expand {
       width: 10px;
       height: 22px;
       display: inline-block;
-      -webkit-mask: url(Images/ico-fb-btn.svg) no-repeat 50% 50%;
-      mask: url(Images/ico-fb-btn.svg) no-repeat 50% 50%;
+      -webkit-mask: url(images/ico-fb-btn.svg) no-repeat 50% 50%;
+      mask: url(images/ico-fb-btn.svg) no-repeat 50% 50%;
       -webkit-mask-size: cover;
       mask-size: cover;
       background-color: var(--color-primary);
@@ -2768,8 +2768,8 @@ select::-ms-expand {
       width: 31px;
       height: 26px;
       display: inline-block;
-      -webkit-mask: url(Images/ico-email-btn.svg) no-repeat 50% 50%;
-      mask: url(Images/ico-email-btn.svg) no-repeat 50% 50%;
+      -webkit-mask: url(images/ico-email-btn.svg) no-repeat 50% 50%;
+      mask: url(images/ico-email-btn.svg) no-repeat 50% 50%;
       -webkit-mask-size: cover;
       mask-size: cover;
       background-color: var(--color-primary);
@@ -2778,8 +2778,8 @@ select::-ms-expand {
       width: 28px;
       height: 23px;
       display: inline-block;
-      -webkit-mask: url(Images/ico-print-btn.svg) no-repeat 50% 50%;
-      mask: url(Images/ico-print-btn.svg) no-repeat 50% 50%;
+      -webkit-mask: url(images/ico-print-btn.svg) no-repeat 50% 50%;
+      mask: url(images/ico-print-btn.svg) no-repeat 50% 50%;
       -webkit-mask-size: cover;
       mask-size: cover;
       background-color: var(--color-primary);
@@ -2788,8 +2788,8 @@ select::-ms-expand {
       width: 23px;
       height: 20px;
       display: inline-block;
-      -webkit-mask: url(Images/ico-twitter-btn.svg) no-repeat 50% 50%;
-      mask: url(Images/ico-twitter-btn.svg) no-repeat 50% 50%;
+      -webkit-mask: url(images/ico-twitter-btn.svg) no-repeat 50% 50%;
+      mask: url(images/ico-twitter-btn.svg) no-repeat 50% 50%;
       -webkit-mask-size: cover;
       mask-size: cover;
       background-color: var(--color-primary);
@@ -2798,8 +2798,8 @@ select::-ms-expand {
       width: 22px;
       height: 21px;
       display: inline-block;
-      -webkit-mask: url(Images/ico-rss-btn.svg) no-repeat 50% 50%;
-      mask: url(Images/ico-rss-btn.svg) no-repeat 50% 50%;
+      -webkit-mask: url(images/ico-rss-btn.svg) no-repeat 50% 50%;
+      mask: url(images/ico-rss-btn.svg) no-repeat 50% 50%;
       -webkit-mask-size: cover;
       mask-size: cover;
       background-color: var(--color-primary);
@@ -2808,8 +2808,8 @@ select::-ms-expand {
       width: 36px;
       height: 35px;
       display: inline-block;
-      -webkit-mask: url(Images/ico-youtube-btn.svg) no-repeat 50% 50%;
-      mask: url(Images/ico-youtube-btn.svg) no-repeat 50% 50%;
+      -webkit-mask: url(images/ico-youtube-btn.svg) no-repeat 50% 50%;
+      mask: url(images/ico-youtube-btn.svg) no-repeat 50% 50%;
       -webkit-mask-size: cover;
       mask-size: cover;
       background-color: var(--color-primary);
@@ -2818,8 +2818,8 @@ select::-ms-expand {
       width: 25px;
       height: 25px;
       display: inline-block;
-      -webkit-mask: url(Images/ico-li-btn.svg) no-repeat 50% 50%;
-      mask: url(Images/ico-li-btn.svg) no-repeat 50% 50%;
+      -webkit-mask: url(images/ico-li-btn.svg) no-repeat 50% 50%;
+      mask: url(images/ico-li-btn.svg) no-repeat 50% 50%;
       -webkit-mask-size: cover;
       mask-size: cover;
       background-color: var(--color-primary);
@@ -2828,8 +2828,8 @@ select::-ms-expand {
       width: 30px;
       height: 30px;
       display: inline-block;
-      -webkit-mask: url(Images/ico-ig-btn.svg) no-repeat 50% 50%;
-      mask: url(Images/ico-ig-btn.svg) no-repeat 50% 50%;
+      -webkit-mask: url(images/ico-ig-btn.svg) no-repeat 50% 50%;
+      mask: url(images/ico-ig-btn.svg) no-repeat 50% 50%;
       -webkit-mask-size: cover;
       mask-size: cover;
       background-color: var(--color-primary);
@@ -3119,10 +3119,11 @@ select::-ms-expand {
 .tcl.light {
     background-color: var(--color-base-light);
     color: var(--color-base-darkest); }
-.tcl__left {
-    padding: var(--space-lg); }
+@media only screen and (min-width: 63.9375em) {
+    .tcl__left {
+      padding: var(--space-lg); } }
 .tcl__left .tcl__cta-text {
-      font-size: var(--text-lg); }
+    font-size: var(--text-lg); }
 .tcl__right {
     display: flex;
     flex-direction: column;
@@ -3203,7 +3204,7 @@ select::-ms-expand {
     font-size: var(--text-xxl); }
 @media only screen and (min-width: 63.9375em) {
     .callout__content {
-      max-width: 45%; } }
+      max-width: 70%; } }
 .callout__cta-text {
     font-size: var(--text-lg); }
 .callout.center {
@@ -3401,6 +3402,10 @@ select::-ms-expand {
 .crd.dark .card {
     background-color: var(--color-base-light);
     color: var(--color-base-darkest); }
+.crd.dark .btn-row a {
+    color: var(--color-base-darkest); }
+.crd.dark .btn-row a:hover {
+      color: var(--color-primary); }
 .crd.light {
   background-color: var(--color-base-light);
   color: var(--color-base-darkest); }
@@ -3604,8 +3609,11 @@ select::-ms-expand {
   flex-direction: column;
   padding-left: var(--space-xl);
   border-left: 1px solid var(--color-accent-khaki);
-  margin-bottom: var(--space-xxl);
+  margin-bottom: var(--space-lg);
   width: 100%; }
+@media only screen and (min-width: 63.9375em) {
+    .cb__col {
+      margin-bottom: var(--space-xxl); } }
 .cb__text {
   font-size: var(--text-lg); }
 .cb .staggered-content img {
