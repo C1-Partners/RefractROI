@@ -3496,10 +3496,6 @@ select::-ms-expand {
 @media only screen and (min-width: 63.9375em) {
       .tcg .order-2 {
         order: 2; } }
-.tcg .order-2 .btn-row a {
-      color: var(--color-base-lightest); }
-.tcg .order-2 .btn-row a:hover {
-        color: var(--color-primary); }
 .tcg__col-1 {
     display: flex;
     flex-direction: column;
@@ -3523,6 +3519,10 @@ select::-ms-expand {
     max-width: 160px; }
 .tcg__col-2 {
     padding: var(--space-md); }
+.tcg__col-2 .btn-row a {
+      color: var(--color-base-lightest); }
+.tcg__col-2 .btn-row a:hover {
+        color: var(--color-primary); }
 /*--------------------------------------------------------------
 # Steps Block
 --------------------------------------------------------------*/
