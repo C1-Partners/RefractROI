@@ -21,6 +21,11 @@
         @include brkpnt-md {
             order: 2;
         }
+        .btn-row {
+            a {
+                @include colorLinkWhite();
+            }
+        }
     }
     &__col-1 {
         display: flex;
@@ -52,9 +57,5 @@
     }
     &__col-2 {
         padding: var(--space-md);
-        
-    }
-    &__inner {
-
     }
 }

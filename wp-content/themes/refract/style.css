@@ -3759,9 +3759,17 @@ body.show-nav .header__nav {
 .tcl.dark {
     background-color: var(--color-base-dark);
     color: var(--color-base-light); }
+.tcl.dark .btn-row a {
+      color: var(--color-base-lightest); }
+.tcl.dark .btn-row a:hover {
+        color: var(--color-primary); }
 .tcl.light {
     background-color: var(--color-base-light);
     color: var(--color-base-darkest); }
+.tcl.light .btn-row a {
+      color: var(--color-base-darkest); }
+.tcl.light .btn-row a:hover {
+        color: var(--color-primary); }
 @media only screen and (min-width: 63.9375em) {
     .tcl__left {
       padding: var(--space-lg); } }
@@ -3894,6 +3902,10 @@ body.show-nav .header__nav {
 @media only screen and (min-width: 63.9375em) {
       .tcg .order-2 {
         order: 2; } }
+.tcg .order-2 .btn-row a {
+      color: var(--color-base-lightest); }
+.tcg .order-2 .btn-row a:hover {
+        color: var(--color-primary); }
 .tcg__col-1 {
     display: flex;
     flex-direction: column;
