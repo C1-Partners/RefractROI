@@ -3923,6 +3923,10 @@ body.show-nav .header__nav {
 .crd.light .card {
     background-color: var(--color-base-dark);
     color: var(--color-base-light); }
+.crd.light .btn-row a {
+    color: var(--color-base-lightest); }
+.crd.light .btn-row a:hover {
+      color: var(--color-primary); }
 .crd__cols {
   display: flex;
   flex-direction: column;
@@ -3966,8 +3970,6 @@ body.show-nav .header__nav {
     line-height: 2.3rem; }
 .crd__col .card__actions {
     margin-top: var(--space-xl); }
-.crd__col .card__actions .btn-row a {
-      color: var(--color-base-light); }
 /*--------------------------------------------------------------
 # Page Top Block
 --------------------------------------------------------------*/

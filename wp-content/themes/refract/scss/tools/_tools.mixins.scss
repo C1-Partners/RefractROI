@@ -146,6 +146,13 @@ Use only what you need:
 # UX
 --------------------------------------------------------------*/
 
+@mixin colorLinkWhite() {
+  color: var(--color-base-lightest);
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
 @mixin pseudoStyle() {
   position: relative;
   @include brkpnt-md-down {
