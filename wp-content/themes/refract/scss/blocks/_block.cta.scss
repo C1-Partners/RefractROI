@@ -6,9 +6,11 @@
         flex-direction: row;
     }
     &__img {
+        margin-top: var(--space-xl);
         margin-bottom: var(--space-xl);
         @include brkpnt-md {
             width: 40%;
+            margin-top: 0;
             margin-bottom: 0;
             img{
                 margin-left: -50%;

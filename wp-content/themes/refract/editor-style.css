@@ -3193,10 +3193,12 @@ select::-ms-expand {
     .callout {
       flex-direction: row; } }
 .callout__img {
+    margin-top: var(--space-xl);
     margin-bottom: var(--space-xl); }
 @media only screen and (min-width: 63.9375em) {
       .callout__img {
         width: 40%;
+        margin-top: 0;
         margin-bottom: 0; }
         .callout__img img {
           margin-left: -50%; } }
@@ -3607,7 +3609,7 @@ select::-ms-expand {
 .cb__col {
   justify-content: flex-start;
   flex-direction: column;
-  padding-left: var(--space-xl);
+  padding-left: var(--space-lg);
   border-left: 1px solid var(--color-accent-khaki);
   margin-bottom: var(--space-lg);
   width: 100%; }
