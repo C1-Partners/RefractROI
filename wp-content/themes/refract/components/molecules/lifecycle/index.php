@@ -144,7 +144,7 @@ gsc_define("lifecycle", $defaults, function($data) {
 	$content = $links_str;
 
 	return "<div $id_attr $class_attr $misc_attrs>
-  				<div>
+  					<div class='tabs__actions'>
 					$links_str
 					</div>
 					<div class='tabs__panel'>
