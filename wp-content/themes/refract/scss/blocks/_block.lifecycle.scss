@@ -61,6 +61,7 @@
         &__actions {
             @include brkpnt-md {
                 padding-right: var(--space-lg);
+                min-width: 40%;;
             }
         }
         &__ctrls {
