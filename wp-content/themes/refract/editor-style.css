@@ -3328,7 +3328,11 @@ select::-ms-expand {
       margin-top: var(--space-lg); }
 @media only screen and (min-width: 63.9375em) {
         .lc .tabs__section {
-          margin-top: 0; } }
+          margin-top: 0;
+          padding-right: var(--space-lg); } }
+@media only screen and (min-width: 63.9375em) {
+      .lc .tabs__actions {
+        padding-right: var(--space-lg); } }
 .lc .tabs__ctrls {
       flex-direction: column;
       align-items: flex-start;
@@ -3337,13 +3341,11 @@ select::-ms-expand {
 .lc .tabs__panel {
       width: 100%; }
 .lc .tabs__svg {
-      margin-bottom: var(--space-md); }
+      margin-bottom: var(--space-md);
+      width: 100%; }
 .lc .tabs__section-title {
       font-size: var(--text-xxl);
       margin-bottom: var(--space-md); }
-@media only screen and (min-width: 63.9375em) {
-        .lc .tabs__section-title {
-          padding-right: var(--space-lg); } }
 .lc .tabs__list {
       flex-direction: column;
       align-items: flex-start;
