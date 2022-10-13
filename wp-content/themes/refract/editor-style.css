@@ -3556,7 +3556,8 @@ select::-ms-expand {
     .stp__col {
       margin-bottom: var(--space-sm); } }
 .stp .staggered-content {
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  width: 100%; }
 .stp .staggered-content__wrap {
     padding-top: var(--space-lg);
     padding-left: var(--space-lg); }

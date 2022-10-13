@@ -43,6 +43,7 @@
 
     .staggered-content {
         justify-content: flex-start;
+        width: 100%;
        &__wrap {
             padding-top: var(--space-lg);
             padding-left: var(--space-lg);
