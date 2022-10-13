@@ -139,10 +139,10 @@ $GMAPS_API_KEY = '';
   */
  function gsc_scripts() {
    // random version for dev cache bust. remove this before go-live!!!!!!!
-  $random_version = rand(0,9999);
-  	wp_enqueue_style( 'sw-fonts', "https://use.typekit.net/icp0jla.css", [], _S_VERSION );
- 	wp_enqueue_style( 'gsc-style', get_stylesheet_uri(), [], $random_version );
- 	wp_enqueue_script( 'gsc-bundle', get_template_directory_uri() . '/bundle.js', ["jquery"], $random_version, true );
+//   $random_version = rand(0,9999);
+  	// wp_enqueue_style( 'sw-fonts', "https://use.typekit.net/icp0jla.css", [], _S_VERSION );
+ 	wp_enqueue_style( 'gsc-style', get_stylesheet_uri(), [] );
+ 	wp_enqueue_script( 'gsc-bundle', get_template_directory_uri() . '/bundle.js', ["jquery"], true );
  }
  add_action( 'wp_enqueue_scripts', 'gsc_scripts' );
 
