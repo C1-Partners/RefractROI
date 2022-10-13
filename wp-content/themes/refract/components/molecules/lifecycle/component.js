@@ -60,45 +60,54 @@ window.gscTabInit = function (tabContainer) {
         });
   }
   // SVG event listeners for steps
-  one.addEventListener('click', resetGrid);
-  two.addEventListener('click', () => {
-    colorDots('js-cir');
-    removeElement('js-line');
-    removeElement('js-line2');
-    removeClassnames('js-cir2');
-  });
-  three.addEventListener('click', () => {
-    const coords = [
-      [122,448,242,348],
-      [242,348,356,288],
-      [356,288,482,328],
-      [482,328,602,228],
-      [602,228,722,128]
-    ];
-    drawLines(coords, 50, 'js-line');
-    colorDots('js-cir');
-    removeElement('js-line2');
-    removeClassnames('js-cir2');
-  });
-  four.addEventListener('click', () => {
-    const coords = [
-      [122,448,242,348],
-      [242,348,356,288],
-      [356,288,482,328],
-      [482,328,602,228],
-      [602,228,722,128]
-    ];
-    const coords2 = [
-      [722,128,842,8],
-      [842,8,842,128],
-      [842,8,722,8]
-    ];
-    drawLines(coords, 50, 'js-line');
-    colorDots('js-cir');
-    drawLines(coords2, 10, 'js-line2');
-    colorDots('js-cir2');
-    addAnimationClass();
-  });
+  if(one) {
+    one.addEventListener('click', resetGrid);
+  }
+  if(two) {
+    two.addEventListener('click', () => {
+      colorDots('js-cir');
+      removeElement('js-line');
+      removeElement('js-line2');
+      removeClassnames('js-cir2');
+    });
+  }
+  if (three) {
+    three.addEventListener('click', () => {
+      const coords = [
+        [122,448,242,348],
+        [242,348,356,288],
+        [356,288,482,328],
+        [482,328,602,228],
+        [602,228,722,128]
+      ];
+      drawLines(coords, 50, 'js-line');
+      colorDots('js-cir');
+      removeElement('js-line2');
+      removeClassnames('js-cir2');
+    });
+  }
+  if (four) {
+    four.addEventListener('click', () => {
+      const coords = [
+        [122,448,242,348],
+        [242,348,356,288],
+        [356,288,482,328],
+        [482,328,602,228],
+        [602,228,722,128]
+      ];
+      const coords2 = [
+        [722,128,842,8],
+        [842,8,842,128],
+        [842,8,722,8]
+      ];
+      drawLines(coords, 50, 'js-line');
+      colorDots('js-cir');
+      drawLines(coords2, 10, 'js-line2');
+      colorDots('js-cir2');
+      addAnimationClass();
+    });
+  }
+  
 
 
   let tablist = tabContainer.querySelector('[role="tablist"]');
