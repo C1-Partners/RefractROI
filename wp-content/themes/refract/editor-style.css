@@ -3614,9 +3614,17 @@ select::-ms-expand {
 .cb.dark {
   background-color: var(--color-base-dark);
   color: var(--color-base-light); }
+.cb.dark .btn-row a {
+    color: var(--color-base-lightest); }
+.cb.dark .btn-row a:hover {
+      color: var(--color-primary); }
 .cb.light {
   background-color: var(--color-base-light);
   color: var(--color-base-darkest); }
+.cb.light .btn-row a {
+    color: var(--color-base-darkest); }
+.cb.light .btn-row a:hover {
+      color: var(--color-primary); }
 .cb__cols {
   display: flex;
   flex-direction: column; }

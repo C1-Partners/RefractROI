@@ -2,10 +2,20 @@
     &.dark {
         background-color: var(--color-base-dark);
         color: var(--color-base-light);
+        .btn-row {
+            a {
+                @include colorLinkWhite();
+            }
+        }
     }
     &.light {
         background-color: var(--color-base-light);
         color: var(--color-base-darkest);
+        .btn-row {
+            a {
+                @include colorLinkDark();
+            }
+        }
     }
     &__cols {
         display:flex;
