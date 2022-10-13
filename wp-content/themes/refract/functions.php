@@ -532,6 +532,6 @@ add_filter( 'wp_get_attachment_image_src', 'fix_wp_get_attachment_image_svg', 10
             $image[1] = $image[2] = null;
         }
     }
-	var_dump($image);
+	// var_dump($image);
     return $image;
 } 
