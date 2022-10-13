@@ -63,6 +63,7 @@ gsc_define("img", $defaults, function($data) {
 	
 	if ($image_path) {
 		list($width, $height) = getimagesize($image_path);
+		var_dump($width);
 	}
 	
 	if (empty($type) || $type == "thumbnail") {

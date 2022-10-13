@@ -120,9 +120,6 @@ gsc_define("staggered-content", $defaults, function($data) {
         "src" => $data["image-content"]['src'],
         "alt" => $data["image-content"]['alt']
       ],
-      "style" => [
-        "type" => "standard"
-      ]
     ]);
   }
 

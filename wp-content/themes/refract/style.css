@@ -4144,8 +4144,9 @@ body.show-nav .header__nav {
       align-items: flex-start;
       list-style: none;
       width: 100%; }
+.lc .tabs__panel {
+      width: 100%; }
 .lc .tabs__svg {
-      width: 100%;
       margin-bottom: var(--space-md); }
 .lc .tabs__section-title {
       font-size: var(--text-xxl);
