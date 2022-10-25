@@ -778,6 +778,8 @@ svg {
   padding: 3rem 0 2rem !important;
   border-left: 1px solid var(--color-base-lighter);
   border-right: 1px solid var(--color-base-lighter); }
+.site {
+  background-color: var(--color-base-dark); }
 .posts-navigation .nav-links {
   display: flex;
   flex-direction: row-reverse;
@@ -5424,7 +5426,7 @@ body.modal-open {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding-top: var(--space-lg) !important;
-  background-color: var(--color-base);
+  background-color: var(--color-base-dark);
   color: var(--color-base-lightest);
   height: 100%;
   padding: var(--space-lg); }
