@@ -5423,15 +5423,18 @@ body.modal-open {
 .gform_wrapper {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  padding-top: 16px !important;
-  text-align: center;
-  background-color: var(--color-base-dark);
-  color: var(--color-base-lightest); }
+  padding-top: var(--space-lg) !important;
+  background-color: var(--color-base);
+  color: var(--color-base-lightest);
+  height: 100%;
+  padding: var(--space-lg); }
 .gform_wrapper .gform_body, .gform_wrapper .gform_footer {
     margin: 0 auto !important; }
 @media only screen and (min-width: 63.9375em) {
       .gform_wrapper .gform_body, .gform_wrapper .gform_footer {
         max-width: 50vw !important; } }
+.gform_heading {
+  padding-bottom: var(--space-md); }
 .gfield .medium,
 .form-control {
   background: gray;
@@ -5546,7 +5549,9 @@ input.error {
 .gform_body li:before {
       display: none !important; }
 .gform_body input[type="text"],
-  .gform_body input[type="email"] {
+  .gform_body input[type="email"],
+  .gform_body input[type="tel"],
+  .gform_body textarea {
     background: var(--color-base-light);
     border: none;
     color: var(--color-base-darkest);
@@ -5558,8 +5563,10 @@ input.error {
     margin-top: 0 !important;
     transition: .3s; }
 .gform_body input[type="text"]:focus,
-    .gform_body input[type="email"]:focus {
-      background-color: var(--color-accent-cooler-gray);
+    .gform_body input[type="email"]:focus,
+    .gform_body input[type="tel"]:focus,
+    .gform_body textarea:focus {
+      background-color: var(--color-accent-light-gray);
       outline: none;
       transition: .3s; }
 .gform_body .gfield_select {
@@ -5581,10 +5588,10 @@ input.error {
 .gform_body .gfield_select:focus {
       outline: none;
       background-color: var(--color-accent-cooler-gray); }
+.gform_body .name_first, .gform_body .name_last {
+    margin: 0 !important; }
 .gform_body .ginput_complex {
-    display: flex;
-    margin-left: -10px;
-    margin-right: -10px; }
+    display: flex; }
 .gform_body .ginput_complex span {
       flex-grow: 1;
       margin: 0 10px; }

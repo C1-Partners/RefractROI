@@ -1,10 +1,11 @@
 .gform_wrapper {
     margin-top:0!important;
     margin-bottom:0!important;
-    padding-top:16px!important;
-    text-align:center;
-    background-color: var(--color-base-dark);
+    padding-top:var(--space-lg)!important;
+    background-color: var(--color-base);
     color: var(--color-base-lightest);
+    height: 100%;
+    padding: var(--space-lg);
     .gform_body, .gform_footer {
         margin: 0 auto!important;
     @include brkpnt-md {
@@ -12,6 +13,11 @@
     }
     }
 }
+
+.gform_heading {
+	padding-bottom: var(--space-md);
+}
+
 
 .gfield .medium,
 .form-control {
@@ -130,15 +136,9 @@ input.error {
   border-color: red;
 }
 
-.gform_fields{
-	
-}
-
 .gform_ajax_spinner{
 	margin-top: 10px;
 }
-
-
 
 
 /*Global gravity form styles*/
@@ -173,7 +173,9 @@ input.error {
 
 	/*Input field types*/
 	input[type="text"],
-	input[type="email"] {
+	input[type="email"],
+	input[type="tel"], 
+	textarea {
 		background: var(--color-base-light);
 		border: none;
 		color: var(--color-base-darkest);
@@ -185,7 +187,7 @@ input.error {
         margin-top:0!important;
         transition: .3s;
 		&:focus {
-			background-color: var(--color-accent-cooler-gray);
+			background-color: var(--color-accent-light-gray);
 			outline: none;
             transition: .3s;
 		}
@@ -216,12 +218,16 @@ input.error {
             background-color: var(--color-accent-cooler-gray);
 		}
 	}
+	// fix name field margin
+	.name_first, .name_last {
+		margin: 0!important;
+	}
 
 	/*Two column support*/
 	.ginput_complex {
 		display: flex;
-		margin-left: -10px;
-		margin-right: -10px;
+		// margin-left: -10px;
+		// margin-right: -10px;
 
 		span {
 			flex-grow: 1;
