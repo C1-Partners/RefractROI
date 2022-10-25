@@ -5568,7 +5568,7 @@ input.error {
     .gform_body input[type="email"]:focus,
     .gform_body input[type="tel"]:focus,
     .gform_body textarea:focus {
-      background-color: var(--color-accent-light-gray);
+      background-color: var(--color-accent-cooler-gray);
       outline: none;
       transition: .3s; }
 .gform_body .gfield_select {
