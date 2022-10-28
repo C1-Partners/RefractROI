@@ -40,7 +40,7 @@ $contentRight = get_field('r_col', 'options');
                     </div>
                     <div class="footer__br">
                         <a href="https://www.google.com/partners/agency?id=4626088094" target="_blank">
-                            <img height="60" width="60" src="https://www.gstatic.com/partners/badge/images/2022/PartnerBadgeClickable.svg"/>
+                            <img height="60" width="60" src="https://www.gstatic.com/partners/badge/images/2022/PartnerBadgeClickable.svg" aria-label="Google Partner" alt="google partner badge" />
                         </a>
                         <?php get_template_part('template-parts/foot/copyright'); ?>
                     </div>
