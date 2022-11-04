@@ -3188,8 +3188,13 @@ select::-ms-expand {
 /*--------------------------------------------------------------
 # team
 --------------------------------------------------------------*/
+.tm .accordion__item {
+  padding-top: 0;
+  padding-bottom: 0; }
 .tm .accordion__titles {
   padding-right: var(--space-lg); }
+.tm .accordion__heading {
+  padding-top: var(--space-lg); }
 .tm .accordion__img {
   width: 100%;
   height: auto; }

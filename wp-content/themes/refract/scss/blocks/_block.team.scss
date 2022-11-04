@@ -1,15 +1,22 @@
 .tm {
     .accordion {
-       &__titles {
-           padding-right: var(--space-lg);
-       }
-       &__img {
-        width: 100%;
-        height: auto;
-
-        @include brkpnt-md {
-            max-width: 225px;
+        &__item {
+            padding-top:0;
+            padding-bottom:0;
         }
+        &__titles {
+            padding-right: var(--space-lg);
+        }
+        &__heading {
+            padding-top: var(--space-lg);
+        }
+        &__img {
+            width: 100%;
+            height: auto;
+
+            @include brkpnt-md {
+                max-width: 225px;
+            }
        }
     }
 }
