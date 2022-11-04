@@ -2081,9 +2081,6 @@ select::-ms-expand {
   display: block;
   margin-bottom: 2.5rem;
   padding-top: 25px; }
-@media only screen and (min-width: 63.9375em) {
-    .accordion__body {
-      margin-left: 11.5rem; } }
 @media print {
     .accordion__body {
       margin-left: 0; } }

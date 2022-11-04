@@ -128,9 +128,7 @@
     display: block;
     margin-bottom: rem(40);
     padding-top: 25px;
-    @include brkpnt-md {
-      margin-left: rem(184);
-    }
+  
     @media print {
       margin-left: 0;
     }
