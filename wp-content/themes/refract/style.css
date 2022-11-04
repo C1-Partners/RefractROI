@@ -2084,8 +2084,8 @@ select::-ms-expand {
 .accordion__btn::after {
     position: absolute;
     right: 0;
-    top: 19%;
-    right: -21px;
+    top: 12%;
+    right: 0;
     content: "";
     border: var(--brdr-xs) solid var(--color-secondary);
     width: 2rem;

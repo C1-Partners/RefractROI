@@ -827,37 +827,6 @@ window.gscTabInit = function (tabContainer) {
 
     ;
   }
-
-  $(document).ready(function () {
-    $('body').on("click", '.tabs__list button', function (event) {
-      $target = $(event.target);
-      var searchParams = new URLSearchParams(window.location.search);
-      var term = $target.attr('id');
-      var cut = term.search('__tab');
-      term = "t_" + term.slice(5, cut);
-
-      if ($target.closest('li').prevAll('li').length == 0) {
-        if (!firstTime) {
-          searchParams.delete(term);
-        }
-      } else {
-        var buttonLocation = $target.closest('li').prevAll('li').length + 1;
-
-        if (searchParams.has(term)) {
-          searchParams.set(term, buttonLocation);
-        } else {
-          searchParams.append(term, buttonLocation);
-        }
-      }
-
-      searchString = '?' + searchParams;
-      window.history.replaceState({}, null, searchString + window.location.hash);
-    });
-    setTimeout(function () {
-      new updateWindowState();
-      firstTime = false;
-    }, 200);
-  });
 };
 
 var tabContainers = document.querySelectorAll('.tabs');

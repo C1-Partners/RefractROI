@@ -233,38 +233,38 @@ window.gscTabInit = function (tabContainer) {
 
     }
 
-    $(document).ready(function () {
-      $('body').on("click", '.tabs__list button', function(event) {
-        $target = $(event.target);
-        let searchParams = new URLSearchParams(window.location.search);
-        let term = $target.attr('id');
-        let cut = term.search('__tab');
-        term = "t_"+term.slice(5, cut);
-        if ($target.closest('li').prevAll('li').length == 0) {
-          if (!firstTime) {
-            searchParams.delete(term);
-          }
-        }
-        else {
-          let buttonLocation = $target.closest('li').prevAll('li').length + 1;
-          if ((searchParams).has(term)) {
-            searchParams.set(term, buttonLocation);
-          } else {
-            searchParams.append(term, buttonLocation);
-          }
-        }
-        searchString = '?' + searchParams;
-        //window.history.pushState({}, null, searchString);
-        window.history.replaceState({}, null, searchString+window.location.hash);
-      });
+    // $(document).ready(function () {
+    //   $('body').on("click", '.tabs__list button', function(event) {
+    //     $target = $(event.target);
+    //     let searchParams = new URLSearchParams(window.location.search);
+    //     let term = $target.attr('id');
+    //     let cut = term.search('__tab');
+    //     term = "t_"+term.slice(5, cut);
+    //     if ($target.closest('li').prevAll('li').length == 0) {
+    //       if (!firstTime) {
+    //         searchParams.delete(term);
+    //       }
+    //     }
+    //     else {
+    //       let buttonLocation = $target.closest('li').prevAll('li').length + 1;
+    //       if ((searchParams).has(term)) {
+    //         searchParams.set(term, buttonLocation);
+    //       } else {
+    //         searchParams.append(term, buttonLocation);
+    //       }
+    //     }
+    //     searchString = '?' + searchParams;
+    //     //window.history.pushState({}, null, searchString);
+    //     window.history.replaceState({}, null, searchString+window.location.hash);
+    //   });
 
-      setTimeout(function() {
-        new updateWindowState();
-        // console.log('pushed new window state');
-        firstTime = false;
-      }, 200);
+    //   setTimeout(function() {
+    //     new updateWindowState();
+    //     // console.log('pushed new window state');
+    //     firstTime = false;
+    //   }, 200);
 
-    });
+    // });
 
 }
 
