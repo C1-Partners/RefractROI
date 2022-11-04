@@ -6,6 +6,10 @@
        &__img {
         width: 100%;
         height: auto;
+
+        @include brkpnt-md {
+            max-width: 225px;
+        }
        }
     }
 }

@@ -4266,6 +4266,9 @@ body.show-nav .header__nav {
 .tm .accordion__img {
   width: 100%;
   height: auto; }
+@media only screen and (min-width: 63.9375em) {
+    .tm .accordion__img {
+      max-width: 225px; } }
 /*--------------------------------------------------------------
 # Cta Block
 --------------------------------------------------------------*/
