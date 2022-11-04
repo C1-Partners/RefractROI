@@ -1345,10 +1345,7 @@ a:hover, a:active, a:focus {
   font-weight: 400;
   font-style: normal; }
 .arrow svg {
-    max-height: 15px;
-    position: absolute;
-    right: -25px;
-    top: 0; }
+    max-height: 17px; }
 /*--------------------------------------------------------------
 # Images
 --------------------------------------------------------------*/

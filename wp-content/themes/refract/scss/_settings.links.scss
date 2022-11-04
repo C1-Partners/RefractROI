@@ -46,10 +46,7 @@ a {
   @include font-settings(var(--font-tertiary), 400);
   
   svg {
-    max-height: 15px;
-    position: absolute;
-    right: -25px;
-    top: 0;
+    max-height: 17px;
   }
 }
 
