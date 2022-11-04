@@ -2139,7 +2139,7 @@ select::-ms-expand {
 .accordion__body {
   display: block;
   margin-bottom: 2.5rem;
-  padding-top: 8px; }
+  padding-top: 25px; }
 @media only screen and (min-width: 63.9375em) {
     .accordion__body {
       margin-left: 11.5rem; } }
