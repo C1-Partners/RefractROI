@@ -7,7 +7,6 @@
         flex-direction: row;
     }
     &__content {
-        z-index: 5;
         @include brkpnt-md {
             padding-left: var(--space-xl);
             max-width: 55%;

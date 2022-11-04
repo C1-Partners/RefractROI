@@ -1,7 +1,4 @@
 .accordion {
-  &__item {
-    
-  }
 
   &__heading {
     border-top: solid var(--brdr-xxs) var(--color-base-darker);
@@ -63,7 +60,6 @@
       border: var(--brdr-xs) solid var(--color-secondary);
       width: rem(32);
       height: rem(30);
-      margin-right: rem(18);
       flex-shrink: 0;
       background-repeat: no-repeat;
       background-position: 50%;

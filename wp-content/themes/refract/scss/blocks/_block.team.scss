@@ -1,7 +1,11 @@
 .tm {
-    // background-color: var(--color-base-light);
-
     .accordion {
-        &__info {}
+       &__titles {
+           padding-right: var(--space-lg);
+       }
+       &__img {
+        width: 100%;
+        height: auto;
+       }
     }
 }

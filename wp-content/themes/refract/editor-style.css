@@ -2032,7 +2032,6 @@ select::-ms-expand {
     border: var(--brdr-xs) solid var(--color-secondary);
     width: 2rem;
     height: 1.875rem;
-    margin-right: 1.125rem;
     flex-shrink: 0;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -3192,6 +3191,11 @@ select::-ms-expand {
 /*--------------------------------------------------------------
 # team
 --------------------------------------------------------------*/
+.tm .accordion__titles {
+  padding-right: var(--space-lg); }
+.tm .accordion__img {
+  width: 100%;
+  height: auto; }
 /*--------------------------------------------------------------
 # Cta Block
 --------------------------------------------------------------*/
@@ -3376,13 +3380,11 @@ select::-ms-expand {
 @media only screen and (min-width: 63.9375em) {
     .pgt {
       flex-direction: row; } }
-.pgt__content {
-    z-index: 5; }
 @media only screen and (min-width: 63.9375em) {
-      .pgt__content {
-        padding-left: var(--space-xl);
-        max-width: 55%;
-        border-left: 1px solid var(--color-accent-khaki); } }
+    .pgt__content {
+      padding-left: var(--space-xl);
+      max-width: 55%;
+      border-left: 1px solid var(--color-accent-khaki); } }
 .pgt__img {
     margin-top: var(--space-xl);
     z-index: 1;
