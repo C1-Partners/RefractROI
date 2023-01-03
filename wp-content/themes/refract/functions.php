@@ -481,6 +481,11 @@ add_filter('upload_mimes', 'crimson_mime_types');
 require get_template_directory() . '/inc/comment-mods.php';
 
 /**
+ * Include custom admin functions
+ */
+require get_template_directory() . '/inc/admin.php';
+
+/**
  * Custom ACF Blocks
  */
 require get_template_directory() . '/inc/acf-blocks.php';
