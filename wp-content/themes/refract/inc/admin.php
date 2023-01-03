@@ -1,37 +1,7 @@
 <?php
 
 
-function crimson_setup_theme_supported_features()
-{
-//   add_theme_support( 'editor-color-palette', array(
-//       array(
-//           'name' => __('White', 'crimson'),
-//           'slug' => 'white',
-//           'color' => '#ffffff',
-//       ),
-//   ) );
-//   add_theme_support('disable-custom-colors');
-// //   add_theme_support('editor-gradient-presets',array());
-// //   add_theme_support('disable-custom-gradients');
-//   add_theme_support('align-wide');
-//   add_theme_support('disable-custom-font-sizes');
-//   add_theme_support('wp-block-styles');
-//   add_theme_support('responsive-embeds');
-}
-add_action( 'after_setup_theme', 'crimson_setup_theme_supported_features' );
-
-add_action('admin_head', 'refract_admin_styles');
-
-// function refract_admin_styles() {
-//   echo '<script>
-//             let els = document.querySelectorAll("a[href='http://domain.example']");
-//             console.log(els);
-//         </script>';
-// }
-
-
-function refract_custom_login()
-{
+function refract_custom_login() {
     $highlight = '#c09124';
     $highlightHover = '#5f6062';
     $textColor = '#282f33';
@@ -112,19 +82,3 @@ function refract_custom_login()
     </style>';
 }
 add_action('login_head', 'refract_custom_login');
-
-/*
- * Ajax Function Example
-add_action('wp_ajax_nopriv_ajaxfunction', 'ajaxfunction');
-add_action('wp_ajax_sort_ajaxfunction', 'ajaxfunction');
-function ajaxfunction () {
-  // function logic here
-  echo $_POST['param_1'];
-  die();
-}
-
-$.post("/wp/wp-admin/admin-ajax.php", {
-   'action': 'ajaxfunction',
-   'param_1': 'Testing'
-});
-*/
