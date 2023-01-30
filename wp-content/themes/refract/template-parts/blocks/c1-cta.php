@@ -18,10 +18,6 @@ $link_style = get_field('cta_lnkstl');
                 "content" => [
                     "src" => $img['url'],
                     "alt" => $img['title']
-                ],
-                "style" => [
-                    "type" => "standard",
-                    "attrs" => []
                 ]
             ]);
     ?>
