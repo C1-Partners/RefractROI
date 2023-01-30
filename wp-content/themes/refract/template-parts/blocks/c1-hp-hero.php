@@ -43,9 +43,6 @@ endif;
                     "content" => [
                         "src" => $img['url'],
                         "alt" => $img['title']
-                    ],
-                    "style" => [
-                        "type"  => "standard",
                     ]
                 ]);
             } ?>

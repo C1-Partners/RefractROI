@@ -33,10 +33,6 @@ $text_clr = get_field('tcl_cltxt');
                 "content" => [
                     "src" => $image['url'],
                     "alt" => $image['title']
-                ],
-                "style" => [
-                    "type" => "standard",
-                    "attrs" => []
                 ]
             ]);
          } elseif ($left_style === 'cta') { ?>

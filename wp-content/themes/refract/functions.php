@@ -227,13 +227,18 @@ foreach(glob(get_template_directory() . "/inc/classes/*.php") as $file){
     require $file;
 }
 
-// retrieves the attachment ID from the file URL
+/**
+ * Get the the attachment ID of image from path
+ */
 function get_image_id($image_url) {
     global $wpdb;
     $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
         return $attachment[0]; 
 }
 
+/**
+ * Fix SVGs not having height and width when using wp_get_attachement_img_src
+ */
 add_filter( 'wp_get_attachment_image_src', 'fix_wp_get_attachment_image_svg', 10, 4 );  /* the hook */
 
  function fix_wp_get_attachment_image_svg($image, $attachment_id, $size, $icon) {
@@ -250,8 +255,5 @@ add_filter( 'wp_get_attachment_image_src', 'fix_wp_get_attachment_image_svg', 10
             $image[1] = $image[2] = null;
         }
     }
-	// echo '<pre>';
-	// var_dump($image);
-	// echo '</pre>';
     return $image;
 } 

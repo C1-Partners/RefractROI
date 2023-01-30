@@ -39,10 +39,6 @@ $link_style = get_field('pgt_lnkstl');
                 "content" => [
                     "src" => $img['url'],
                     "alt" => $img['title']
-                ],
-                "style" => [
-                    "type" => "standard",
-                    "attrs" => []
                 ]
             ]);
         } ?>
