@@ -62,8 +62,10 @@ gsc_define("img", $defaults, function($data) {
 	$image_path = $data['content']['src'];
 	
 	if ($image_path) {
-		list($width, $height) = getimagesize($image_path);
-		// var_dump($width);
+		$post_id = get_image_id($image_path);
+		$src_array = wp_get_attachment_image_src($post_id);
+		$width = $src_array[1];
+		$height = $src_array[2];
 	}
 	
 	if (empty($type) || $type == "thumbnail") {
