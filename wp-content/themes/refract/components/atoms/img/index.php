@@ -69,10 +69,10 @@ gsc_define("img", $defaults, function($data) {
 	}
 	
 	if (empty($type) || $type == "thumbnail") {
-		$content = "<img $id_attr $misc_attrs src='{$data['content']['src']}' alt='{$data['content']['alt']}' class='{$img_class}' width='{$width}' height='{$height}' loading='lazy' />";
+		$content = "<img $id_attr $misc_attrs src='{$data['content']['src']}' alt='{$data['content']['alt']}' class='{$img_class}' width='{$width}' height='{$height}' />";
 	}
 	else {
-		$content = "<img src='{$data['content']['src']}' alt='{$data['content']['alt']}' class='{$img_class}' loading='lazy' />";
+		$content = "<img src='{$data['content']['src']}' alt='{$data['content']['alt']}' class='{$img_class}' />";
 
 		if ($type == "background-pattern") {
 			$content = "<figure $id_attr $misc_attrs class='{$class}'>" . $content . "</figure>";
