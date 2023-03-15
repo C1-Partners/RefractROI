@@ -2,7 +2,6 @@
     &.dark {
         background-color: var(--color-base-dark);
         color: var(--color-base-light);
-
         .card {
             background-color: var(--color-base-light);
             color: var(--color-base-darkest);
@@ -11,13 +10,11 @@
             a {
                 @include colorLinkDark();
             }
-        }
-        
+        } 
     }
     &.light {
         background-color: var(--color-base-light);
         color: var(--color-base-darkest);
-
         .card {
             background-color: var(--color-base-dark);
             color: var(--color-base-light);
@@ -28,7 +25,6 @@
             }
         }
     }
-
     &__cols {
         display:flex;
         flex-direction: column;
@@ -37,7 +33,6 @@
             flex-direction: row;
         }
     }
-   
     &__col {
         &.l {
             @include brkpnt-md {
@@ -53,13 +48,11 @@
                 width: 65%;
             }
         }
-
         .card {
             position: relative;
             border-radius: 11px;
             padding: var(--space-xl) var(--space-md) var(--space-md);
             overflow: hidden;
-
             &__main {
                 display: flex;
                 flex-direction: column;
@@ -73,7 +66,6 @@
                 top: -10%;
                 right: -8%;
             }
-
             &__title {
                 margin-top: var(--space-sm);
                 font-size: var(--text-xl);
@@ -88,6 +80,4 @@
             }
         }
     }
-
-   
 }
