@@ -1,0 +1,168 @@
+{
+    "key": "group_61e72c5e83f4e",
+    "title": "Block: Callout - Newsletter",
+    "fields": [
+        {
+            "key": "field_61e74a6ec0bf6",
+            "label": "Block Type",
+            "name": "j-type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Choose a type of block",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "callout": "Call Out",
+                "newsletter": "Newsletter"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_61e74cb9f0329",
+            "label": "Heading",
+            "name": "j-heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61e82e0b97727",
+            "label": "Content",
+            "name": "j-content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61e74a6ec0bf6",
+                        "operator": "==",
+                        "value": "newsletter"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_61e74b11c0bf7",
+            "label": "Button",
+            "name": "j-call-btn",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_61e74f9ff5cb3",
+            "label": "Background Image",
+            "name": "j-bg",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Choose background image for this block. Your selection will override the default background image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61e812ea19ddc",
+            "label": "Posts to Feature",
+            "name": "j-posts",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Select a maximum of three posts to feature.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61e74a6ec0bf6",
+                        "operator": "==",
+                        "value": "callout"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1689021733
+}
