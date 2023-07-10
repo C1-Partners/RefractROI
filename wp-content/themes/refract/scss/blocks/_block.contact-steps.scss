@@ -1,0 +1,99 @@
+.cstp {
+    &__cols {
+        display:flex;
+        flex-direction: column;
+        margin-top: var(--space-xl);
+        @include brkpnt-md {
+            flex-direction: row;
+        }
+    }
+    &__col-1 {
+        display: flex;
+        flex-direction: column;
+        @include brkpnt-lg {
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &__col-2 {
+        @include brkpnt-lg {
+            width: 30%;
+        }
+    }
+    &__col {
+        position: relative;
+        flex-direction: column;
+        padding-right: var(--space-sm);
+        border-left: 1px solid var(--color-accent-khaki);
+        margin-bottom: var(--space-xxl);
+        @include brkpnt-md {
+            margin-bottom: var(--space-sm); 
+        }
+    }
+   
+
+    .staggered-content {
+        justify-content: flex-start;
+        width: 100%;
+       &__wrap {
+            padding-top: var(--space-lg);
+            padding-left: var(--space-lg);
+       }
+        &__num {
+            position: absolute;
+            font-family: var(--font-tertiary);
+            font-size: var(--text-4xl);
+            top: 0;
+            left: 0;
+            color: var(--color-primary);
+            @include brkpnt-md {
+                top:-46px;
+                left: 14%;
+            }
+            @include brkpnt-lg {
+                top:-67px;
+                left: 14%;
+            }
+        }
+        &__text {
+            margin-top: var(--space-md);
+            font-size: var(--text-md);
+            padding-left:0!important;
+        }
+        &__items {
+            margin-left: 0;
+     
+        }
+        &__item {
+            display: flex;
+        }
+        &__arrow-red {
+            transform: rotate(45deg);
+            max-width: 12px;
+            margin-right: var(--space-sm);
+        }
+    }
+    &__cta {
+        @include brkpnt-md {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+    &__cta-text {
+        font-size: var(--text-lg);
+        margin-bottom: 0;
+        line-height: 3rem;
+        @include brkpnt-md {
+            max-width: 60%;
+        }
+    }
+    .btn-row {
+        margin-top: var(--space-lg);
+        padding-right: var(--space-xl);
+        .btn {
+            display: inline;
+        }
+    }
+}

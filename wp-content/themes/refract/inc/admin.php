@@ -21,6 +21,7 @@ function refract_custom_login() {
         body.login {
             background: '.$backgroundColor.' !important;
             background-image: url("'.get_stylesheet_directory_uri().'/images/Stars-A-min.webp") !important;
+            background-repeat:no-repeat;
         }
         /* Button Color */
         .wp-core-ui .button-primary {

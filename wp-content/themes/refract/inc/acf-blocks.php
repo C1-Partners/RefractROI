@@ -14,6 +14,7 @@ function sw_acf_init() {
       array( 'lifecycle', 'Client Lifecycle', '', 'shield', array('lifecycle', 'accordion') ),
       array( 'team', 'Team Accordion', '', 'shield', array('team', 'accordion') ),
       array( 'two-col-grid', 'Two Column Grid', '', 'shield', array('grid', 'two column') ),
+      array( 'contact-steps', 'Numbered Steps Block with Contact form', 'Showcase content in numerical columns with form', 'shield', array('steps', 'column') ),
       array( 'steps', 'Numbered Steps Block', 'Showcase content in numerical columns', 'shield', array('steps', 'column') ),
       array( 'cards', 'Cards Block', 'Showcase services or simple content', 'shield', array('cards', 'grid') ),
       array( 'two-col-list', 'Two Column List Block', 'Use for listed content on right side', 'shield', array('two column', 'content') ),
