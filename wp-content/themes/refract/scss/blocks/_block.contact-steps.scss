@@ -2,7 +2,7 @@
     &__cols {
         display:flex;
         flex-direction: column;
-        margin-top: var(--space-xl);
+        margin-top: var(--space-xxl);
         @include brkpnt-md {
             flex-direction: row;
         }
@@ -10,6 +10,9 @@
     &__col-1 {
         display: flex;
         flex-direction: column;
+        .staggered-content__title {
+            font-size: var(--space-md);
+        }
         @include brkpnt-lg {
             width: 70%;
             display: flex;
@@ -29,6 +32,11 @@
         margin-bottom: var(--space-xxl);
         @include brkpnt-md {
             margin-bottom: var(--space-sm); 
+        }
+    }
+    &__gform{
+        .gform_wrapper {
+            background-color: var(--color-accent-rust);
         }
     }
    

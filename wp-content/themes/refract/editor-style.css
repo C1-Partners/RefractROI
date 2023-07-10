@@ -3621,13 +3621,15 @@ select::-ms-expand {
 .cstp__cols {
   display: flex;
   flex-direction: column;
-  margin-top: var(--space-xl); }
+  margin-top: var(--space-xxl); }
 @media only screen and (min-width: 63.9375em) {
     .cstp__cols {
       flex-direction: row; } }
 .cstp__col-1 {
   display: flex;
   flex-direction: column; }
+.cstp__col-1 .staggered-content__title {
+    font-size: var(--space-md); }
 @media only screen and (min-width: 75em) {
     .cstp__col-1 {
       width: 70%;
@@ -3645,6 +3647,8 @@ select::-ms-expand {
 @media only screen and (min-width: 63.9375em) {
     .cstp__col {
       margin-bottom: var(--space-sm); } }
+.cstp__gform .gform_wrapper {
+  background-color: var(--color-accent-rust); }
 .cstp .staggered-content {
   justify-content: flex-start;
   width: 100%; }
