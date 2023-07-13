@@ -877,7 +877,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var text = document.querySelector('.flf__text');
   setTimeout(function () {
     toggleFormFloat();
-  }, 4000);
+  }, 6000);
 
   var toggleFormFloat = function toggleFormFloat() {
     if (!form.classList.contains('show-flf')) {

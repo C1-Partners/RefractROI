@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Toggle form after 3 seconds
     setTimeout(() => {
         toggleFormFloat();
-    }, 4000);
+    }, 6000);
 
 
     // Toggle form float

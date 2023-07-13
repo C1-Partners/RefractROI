@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 5%;
     right: -100vw;
-    max-width: 350px;
+    max-width: 330px;
     background-color: var(--color-base-dark);
     z-index: 9999;
     border-radius: 20px;
@@ -10,9 +10,6 @@
     overflow: hidden;
     transition: all 0.8s var(--easing);
 
-    &__inner {
-
-    }
 
     &__close {
         border-bottom-right-radius: 20px;
@@ -30,8 +27,18 @@
             height: 150px!important;
         }
     }
+    .gform_body {
+        padding-bottom: 0!important;
+    }
+    .gform_footer {
+        padding-top: 0!important;
+    }
+    .gform-field-label {
+        font-size: var(--text-sm)!important;
+    }
     .gform_wrapper {
         padding-top:0!important;
+        padding-bottom:var(--space-sm)!important;
 
         form {
             transition: 2s;

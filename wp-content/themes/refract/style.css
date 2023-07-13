@@ -3550,7 +3550,7 @@ body.show-nav .header__nav {
   position: fixed;
   bottom: 5%;
   right: -100vw;
-  max-width: 350px;
+  max-width: 330px;
   background-color: var(--color-base-dark);
   z-index: 9999;
   border-radius: 20px;
@@ -3567,8 +3567,15 @@ body.show-nav .header__nav {
     transition: 2s; }
 .flf .ginput_container_textarea textarea {
     height: 150px !important; }
-.flf .gform_wrapper {
+.flf .gform_body {
+    padding-bottom: 0 !important; }
+.flf .gform_footer {
     padding-top: 0 !important; }
+.flf .gform-field-label {
+    font-size: var(--text-sm) !important; }
+.flf .gform_wrapper {
+    padding-top: 0 !important;
+    padding-bottom: var(--space-sm) !important; }
 .flf .gform_wrapper form {
       transition: 2s; }
 .flf .gform_wrapper form.shrink-flf {
