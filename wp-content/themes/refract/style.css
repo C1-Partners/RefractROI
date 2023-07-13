@@ -3544,6 +3544,36 @@ body.show-nav .header__nav {
     margin-left: 20%;
     margin-right: unset; }
 /*--------------------------------------------------------------
+# Floating form on side
+--------------------------------------------------------------*/
+.flf {
+  position: fixed;
+  bottom: 5%;
+  right: -100vw;
+  max-width: 350px;
+  background-color: var(--color-base-dark);
+  z-index: 9999;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 0 10px;
+  overflow: hidden;
+  transition: all 0.8s var(--easing); }
+.flf__close {
+    border-bottom-right-radius: 20px; }
+.flf__text {
+    color: var(--color-base-white);
+    padding: var(--space-sm) var(--space-lg) 0; }
+.flf.show-flf {
+    right: 10px;
+    transition: 2s; }
+.flf .ginput_container_textarea textarea {
+    height: 150px !important; }
+.flf .gform_wrapper {
+    padding-top: 0 !important; }
+.flf .gform_wrapper form {
+      transition: 2s; }
+.flf .gform_wrapper form.shrink-flf {
+        height: 0; }
+/*--------------------------------------------------------------
 # Carousel Block
 --------------------------------------------------------------*/
 .staggered-slider .tabs__content .card__figure img {

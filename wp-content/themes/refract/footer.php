@@ -47,6 +47,7 @@ $contentRight = get_field('r_col', 'options');
                 </div>
             </footer> <!-- END footer -->
         </div><!-- END #page -->
+        <?php get_template_part('template-parts/form'); ?>
 
     <?php wp_footer(); ?>
 

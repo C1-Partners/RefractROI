@@ -863,6 +863,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./js/form-float.js":
+/*!**************************!*\
+  !*** ./js/form-float.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.getElementById('formFloat'),
+      close = document.getElementById('flfClose'),
+      gform = document.getElementById('gform_13');
+  var text = document.querySelector('.flf__text');
+  setTimeout(function () {
+    toggleFormFloat();
+  }, 4000);
+
+  var toggleFormFloat = function toggleFormFloat() {
+    if (!form.classList.contains('show-flf')) {
+      form.classList.add('show-flf');
+    } else {
+      form.classList.remove('show-flf');
+    }
+  };
+
+  var closeDownFormKindly = function closeDownFormKindly() {
+    text.innerHTML = "No Problem! We're here if you need us.";
+    setTimeout(function () {
+      toggleFormFloat();
+    }, 2000);
+  };
+
+  if (form) {
+    close.addEventListener('click', closeDownFormKindly);
+  }
+});
+
+/***/ }),
+
 /***/ "./js/main.js":
 /*!********************!*\
   !*** ./js/main.js ***!
@@ -880,8 +918,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _post_filter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_post_filter__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _block_quote__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block-quote */ "./js/block-quote.js");
 /* harmony import */ var _block_quote__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_block_quote__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var glob_loader_config_jsglob_pattern__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! glob-loader!./../config/jsglob.pattern */ "./node_modules/glob-loader/index.js!./config/jsglob.pattern");
-/* harmony import */ var glob_loader_config_jsglob_pattern__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(glob_loader_config_jsglob_pattern__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _form_float__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./form-float */ "./js/form-float.js");
+/* harmony import */ var _form_float__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_form_float__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var glob_loader_config_jsglob_pattern__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! glob-loader!./../config/jsglob.pattern */ "./node_modules/glob-loader/index.js!./config/jsglob.pattern");
+/* harmony import */ var glob_loader_config_jsglob_pattern__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(glob_loader_config_jsglob_pattern__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 

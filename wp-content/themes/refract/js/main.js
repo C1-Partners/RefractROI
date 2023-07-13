@@ -2,6 +2,7 @@ import "core-js";
 import "regenerator-runtime/runtime";
 import './post-filter';
 import './block-quote';
+import './form-float';
 
 import "glob-loader!./../config/jsglob.pattern";
 
