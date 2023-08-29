@@ -875,9 +875,14 @@ document.addEventListener("DOMContentLoaded", function () {
       close = document.getElementById('flfClose'),
       gform = document.getElementById('gform_13');
   var text = document.querySelector('.flf__text');
-  setTimeout(function () {
-    toggleFormFloat();
-  }, 6000);
+
+  if (localStorage.getItem('formClosed')) {
+    form.style.display = 'none';
+  } else {
+    setTimeout(function () {
+      toggleFormFloat();
+    }, 6000);
+  }
 
   var toggleFormFloat = function toggleFormFloat() {
     if (!form.classList.contains('show-flf')) {
@@ -889,6 +894,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var closeDownFormKindly = function closeDownFormKindly() {
     text.innerHTML = "No Problem! We're here if you need us.";
+    localStorage.setItem('formClosed', 'true');
     setTimeout(function () {
       toggleFormFloat();
     }, 2000);
@@ -897,6 +903,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (form) {
     close.addEventListener('click', closeDownFormKindly);
   }
+
+  document.addEventListener("gform_confirmation_loaded", function (e) {
+    console.log('fired');
+    text.innerHTML = "You may close this window at any point";
+  });
 });
 
 /***/ }),

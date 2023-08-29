@@ -3567,6 +3567,8 @@ body.show-nav .header__nav {
     transition: 2s; }
 .flf .ginput_container_textarea textarea {
     height: 150px !important; }
+.flf .gform_confirmation_wrapper {
+    height: 432px !important; }
 .flf .gform_body {
     padding-bottom: 0 !important; }
 .flf .gform_footer {
