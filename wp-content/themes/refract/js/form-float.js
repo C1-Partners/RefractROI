@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem('formClosed', 'true'); // Set the flag
         setTimeout(() => {
             toggleFormFloat();
-        }, 2000);
+        }, 600);
     }
 
     // event listener for close

@@ -897,7 +897,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem('formClosed', 'true');
     setTimeout(function () {
       toggleFormFloat();
-    }, 2000);
+    }, 600);
   };
 
   if (form) {
